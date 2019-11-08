@@ -1,0 +1,120 @@
+@media only screen and (max-width: 1091px)
+.at-widgets {
+    padding: 20px 0;
+}
+    .at-widgets {
+overflow: hidden;
+    position: relative;}
+
+.contact-form {
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.at-widgets .acme-contact {
+  
+    text-align: center;
+}
+
+.at-widget-title-wrapper {
+    margin-bottom: 20px;
+    position: relative;
+text-align:center;
+}
+
+.at-widget-title-wrapper .widget-title {
+    margin-bottom: 10px;
+    margin-top: 30px;
+margin-left:270px;
+color:green;
+}
+
+.widget-title {
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: 400;
+    margin-bottom: 45px;
+    text-align: center;
+    font-style: normal;
+    font-family: 'Playfair Display', serif;
+    text-transform: capitalize;
+}
+
+.widget-title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2.5px;
+    width: 50px;
+    left: 50%;
+    margin-left: -30px;
+}
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.acme-animate .init-animate {
+animation-duration: 0.5s;
+    animation-fill-mode: both;}
+div {
+    display: block;
+}
+50% {
+    opacity: 1;
+}
+@media only screen and (max-width: 1024px) and (min-width: 768px)
+.acme-contact .contact-page-content {
+    padding: 0 0 50px 0;
+}
+.acme-contact .contact-page-content {
+    position: relative;
+    z-index: 2;
+ max-width:100%;}
+
+.acme-contact .contact-page-content .entry-title {
+    margin-bottom: 20px;
+text-align:center;
+ 
+}
+
+.container {
+    max-width: 1620px;
+}
+
+.contact-form .entry-title {
+    margin: 0;
+}
+
+.entry-title, .entry-title a {
+    font-weight: 400;
+}
+.entry-title h3{
+    color: #3a3a3a;}
+
+.row .row {
+    margin: 0;
+}
+
+.acme-contact .contact-page-content h4 {
+    margin-bottom: 25px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+h4 {
+    font-size: 16px;
+color: #3a3a3a;
+}
+
+@media only screen and (max-width: 991px)
+.at-widgets .row > div:last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,225 @@
+.vl {
+    border-left: 2px solid #2e2943;
+    height: 50px;
+    margin-left: 12px;
+}
+@media (min-width: 1200px)
+{
+    .container-adjust {
+        max-width: 1303px;
+    }
+}
+.back-color{
+    background-color: #eeeeee;
+    padding-top: 25px;
+}
+.font-sm-one{
+    font-size: 14px;
+}
+.font-sm-two{
+    font-size: 18px;
+}
+.font-sm-three{
+    font-size: 14px;
+}
+.font-sm-four{
+    font-size: 12px;
+}
+.font-sm-five{
+    font-size: 14px;
+}
+.back-color-body{
+    background-color: #eeeeee;
+}
+.card-body-space {
+    padding: 0px 0px 0px 0px;
+}
+
+@media (min-width: 768px)
+{
+
+}
+@media (min-width: 1200px)
+{
+    .col-md-12 {
+        -ms-flex: 0 0 55%;
+        flex: 0 0 55%;
+        max-width: 55%;
+        padding-right: 0px;
+    }
+}
+@media (min-width: 768px)
+{
+    .col-md-4-re {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding-right: 0px;
+    }
+}
+.header-he{
+    height: 50px;
+}
+.font-card{
+    padding: 15px 0px 5px 20px;
+}
+.bg-danger-red{
+    background-color: #f34f4f;
+    color: white;
+    padding: 12px 12px 12px 25px;
+}
+.pad-card{
+    padding: 56px 35px;
+}
+.btn-primary-one{
+    background-color:#e6e7e9;
+}
+.padding-row-card{
+    padding-top: 15px;
+}
+.label-form-card {
+    display: block;
+    margin-bottom: .1rem;
+    color:#383f45;
+    font-size:11px;
+
+
+}
+.font-color {
+    background-color: #f34f4f!important;
+}
+.hr-style {
+    margin-top: -3px!important;
+    margin-bottom: 4px!important;
+    border-top: 1px solid #f34f4f!important;
+}
+.page-font {
+    margin-top: 0em !important;
+    margin-bottom: 0rem !important;
+}
+.card-body-car{
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto; 
+    padding: 0rem;
+}
+.card-new-gap{
+    margin-top: 10px;
+}
+@font-face{
+    font-family: "Aller";
+    src: url("../../font/Font/Aller.ttf");
+}
+
+.menuSeperator {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: 5px;
+}
+.dash-col-black{
+    background-color: #2c343b;
+    padding: 12px 12px 12px 25px;
+    color: #fff;
+    font-size:14px;
+}
+.dash-col-blackone{
+    background-color: #383f45
+}
+@font-face {
+    src: url(../../font/Font/Aller_Rg.ttf);
+    font-family: aller;
+}
+.font-main{
+    font-family: aller;
+}
+
+.font-lef{
+    font-size: 14px;
+}
+.checkboxes  {
+    width:50%;
+    background-color:#e1e2e3;
+    border-radius:3px;
+    color: #383f45;
+}
+
+.checkboxes label {
+    display: inline-block;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-size: 12px;
+    margin-bottom:1px;
+}
+.checkboxes input {
+    vertical-align: middle;
+    border-color:#383f45;
+}
+.checkboxes label span {
+    vertical-align: middle;
+    font-size: 14px;
+}
+.ordiv  {
+    border:1px solid #383f45; height: 25px;width: 25px;border-radius: 50%;display: inline-block;font-size:10px;padding:4px;margin-top: 18px;color: #383f45;
+
+}
+.roomdiv  {
+    padding-top: 45px;
+    font-size: 13px;
+    color:#383f45;
+
+}
+.custombtn  {
+
+    background-color:#383f45;
+    border: none;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+    cursor: pointer;
+    border-radius:5px;
+    height:38px;
+    width:96px;
+    margin-left: 15px;
+    margin-top: 38px;
+
+}
+.btn-primary  {
+
+    background-color:#9ACD32 !important;
+    border: none;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+    cursor: pointer;
+    border-radius:5px;
+    height: 42px;
+    width: 340px;
+    padding: 10px;
+}
+.liststyle  {
+    list-style-type:none;
+}
+.linkhover:hover, .active1 {
+    background-color:#383f45 !important;
+}
+.profile-date {
+    background-image: url(../../images/date-img.png);
+    background-repeat: no-repeat;
+    background-position: 98% center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    background-color: #FFF !important;
+    outline: none;
+    padding: 5px 0px 5px 12px !important;
+    height: 42px;
+    color: #222222;
+    z-index: 31;
+    height: 33px;
+    cursor:pointer;
+}
