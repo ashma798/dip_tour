@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Flight extends CI_Controller {
+class CarRental extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,31 +20,21 @@ class Flight extends CI_Controller {
 	 */
 
 	public function index(){
-		$this->load->view('Flight/index');
+		$this->load->view('Transfer/index');
 	}
+
 
 	public function add(){
 		$data = $this->input->post();
-        /*Array ( [flight_search_type] => One-Way [origin] => [destination] => [departure_date] => 11/16/2019 [adult_count] => 5 [child_count] => 3 [infant_count] => 1 [class] => Economy [airline] => Select Airline [return_date] => 11/10/2019 [non_stop_only] => [search_time] => ) */
-        if(isset($data['non_stop_only'])){
-        	$data['non_stop_only']= 'Yes';
-        }else{
-        	$data['non_stop_only']= 'No';
-        }
-        if(isset($data['search_time'])){
-        	$data['search_time']= '1';
-        }else{
-        	$data['non_stop_only']= '0';
-        }
+        /* [pick_up_city] => Kuwait [drop_off_city] => Katar [pick_up_date] => 2019-11-16 [pick_up_time] => 09:00 [drop_off_date] => 2019-11-23 [drop_off_time] => 1:00 [vechical_type] => 2 [vehicle_class] => Business Class [vehicle_transmission_type] => Select [vehicle_air_conditioning] => Select [vehicle_charge_type] => Select */
 
-        $this->load->model('Flightsearch');
-        $tripdetails = $this->Flightsearch->insertData($data);
+        $this->load->model('Cartransfer');
+        $tripdetails = $this->Cartransfer->insertData($data);
         $message = "Our executives will connect with you over you query";
         $this->session->set_flashdata('item', $message);
-        redirect(base_url('Flight'));
+        redirect(base_url('car-rental'));
 	
 	}
-
 
 }
 ?>

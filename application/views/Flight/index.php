@@ -39,7 +39,7 @@
 
         <section>
             <nav class="navbar navbar-expand-sm   sticky-top justify-content-between" style="background-color: black;">
-                <a class="navbar-brand nav-desk" href="#">Nigeria's No.1 Tour Management Company</a>
+                <a class="navbar-brand nav-desk" href="<?php echo base_url();?>">Nigeria's No.1 Tour Management Company</a>
                 <form class="form-inline my-1">
                     <ul class="navbar-nav  ml-auto nav-desk-two nav-flex-icons">
                         <li class="nav-item ">
@@ -125,16 +125,16 @@
                     <span class="rounded-bottom"></span>
                     <ul class="navbar-nav" style=" padding-left: 60px;">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html" style="color: black;">HOME<span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="<?php echo base_url();?>" style="color: black;">HOME<span style="padding-left: 20px;">|</span></a>
                         </li>                      
                         <li class="nav-item">
                             <a class="nav-link" href="#" style="color: black;">HOTELS <span style="padding-left: 20px;">|</span></a>
                         </li>                    
                         <li class="nav-item">
-                            <a class="nav-link" href="flightsearch.html" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="<?php echo base_url();?>flight" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>
                         </li>                        
                         <li class="nav-item">
-                            <a class="nav-link" href="car.html" style="color: black;">CAR RENTALS <span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="<?php echo base_url();?>car-rental" style="color: black;">CAR RENTALS <span style="padding-left: 20px;">|</span></a>
                         </li>                   
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
@@ -172,31 +172,37 @@
                         <div class="col-12">
                             <div class="card-body bg-white pad-card border-0">
                                 <h3 class="font-sm-two">Search For Flights</h3>
+
                                 <hr>
-                                <form action="">
+                                <h2><?php echo $this->session->flashdata('item'); ?></h2> 
+                                <form action="<?php echo base_url('/flight/add'); ?>" method="post">
                                     <div class="tab">
                                         <ul class="tabs nav-flex-icons" style="padding: 0px">
-                                            <li><a href="#">One-Way</a></li>
-                                            <li><a href="#">Round-Trip</a></li>
-                                            <li><a href="#">Multi-City</a></li>
-                                        </ul> <!-- / tabs -->
+                                            <li><a href="javascript:void(0)" onclick="setTrip('One-Way');">One-Way</a></li>
+                                            <li><a href="javascript:void(0)" onclick="setTrip('Round-Trip');">Round-Trip</a></li>
+                                            <li><a href="javascript:void(0)" onclick="setTrip('Multi-City');">Multi-City</a></li>
+                                        </ul>
+                                        <div style="display:none">
+                                            <input type="hidden" name="flight_search_type" id="trip_type" value="One-Way">
+                                        </div>
+                                         <!-- / tabs -->
                                         <div class="tab_content">
                                             <div class="tabs_item">
                                                 <div class="form-row">
                                                     <div class="col-md-6 padding-row-card  font-sm-three">
                                                         <label class="label-form-card" for="">FROM</label>
-                                                        <input type="text" class="form-control font-sm-four" id="validationCustom01" placeholder="Enter Departure City"
+                                                        <input type="text" class="form-control font-sm-four" id="validationCustom01" name="origin" placeholder="Enter Departure City"
                                                                required >
                                                     </div>
                                                     <div class="col-md-6 padding-row-card  font-sm-three">
                                                         <label class="label-form-card" for="">TO</label>
-                                                        <input type="text" class="form-control font-sm-four" id="validationCustom01" placeholder="Enter Destination City" 
+                                                        <input type="text" class="form-control font-sm-four" id="validationCustom01" name="destination" placeholder="Enter Destination City" 
                                                                required >
                                                     </div>
                                                     <div class="col-md-6 col-12 padding-row-card font-sm-three">
                                                         <label class="label-form-card" for="validationCustom01">DEPART DATE</label>
                                                         <div class="input-group date" >
-                                                            <input type="text" id="datepick1" class="form-control font-sm-four profile-date" value="SUNDAY 22 SEP'2019"  ng-required="true" placeholder="mm/dd/yyyy">
+                                                            <input type="text" id="datepick1" class="form-control font-sm-four profile-date" value="<?php echo date('m/d/Y');?>" ng-required="true" placeholder="mm/dd/yyyy" name="departure_date">
                                                             <div class="input-group-addon">
                                                                 <span class="glyphicon glyphicon-th"></span>
                                                             </div>
@@ -209,7 +215,7 @@
                                                         <!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
                                                         <div class="quantity">
                                                             <a href="#" class="quantity__minus adult_minus"><span>-</span></a>
-                                                            <input name="adult" type="text" class="form-control quantity__input adult_input" value="1">
+                                                            <input name="adult_count" type="text" class="form-control quantity__input adult_input" value="1">
                                                             <a href="#" class="quantity__plus adult_plus"><span>+</span></a>
                                                         </div>
                                                     </div>
@@ -217,7 +223,7 @@
                                                         <label class="label-form-card" for="validationCustom01">Children(2-11 Yrs)</label>
                                                         <div class="quantity">
                                                             <a href="#" class="quantity__minus children_minus"><span>-</span></a>
-                                                            <input name="children" type="text" class="form-control quantity__input children_input" value="0">
+                                                            <input name="child_count" type="text" class="form-control quantity__input children_input" value="0">
                                                             <a href="#" class="quantity__plus children_plus"><span>+</span></a>
                                                         </div>
                                                     </div>
@@ -225,13 +231,13 @@
                                                         <label class="label-form-card" for="validationCustom01">Infant(-2yrs)</label>
                                                         <div class="quantity">
                                                             <a href="#" class="quantity__minus infant_minus"><span>-</span></a>
-                                                            <input name="infant" type="text" class="form-control quantity__input infant_input" value="0">
+                                                            <input name="infant_count" type="text" class="form-control quantity__input infant_input" value="0">
                                                             <a href="#" class="quantity__plus infant_plus"><span>+</span></a>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3 col-12 padding-row-card font-sm-three">
                                                         <label class="label-form-card" for="validationCustom01">Class</label>
-                                                        <select class="form-control form-control-sm">
+                                                        <select class="form-control form-control-sm" name="class">
                                                             <option>Economy</option>
                                                             <option>First Class</option>
                                                             <option>Business Class</option>
@@ -239,7 +245,7 @@
                                                     </div>
                                                     <div class="col-md-3 col-12 padding-row-card font-sm-three">
                                                         <label class="label-form-card" for="validationCustom01"><br></label>
-                                                        <select class="form-control form-control-sm">
+                                                        <select class="form-control form-control-sm" name="airline">
                                                             <option>Select Airline</option>
                                                         </select>
                                                     </div>
@@ -249,11 +255,11 @@
                                                 <div class="form-row">
                                                     <div class="col-md-6 col-12 padding-row-card font-sm-three">
                                                         <label class="label-form-card" for="validationCustom01">FROM</label>
-                                                        <input type="text" class="form-control font-sm-four" id="validationCustom01" placeholder="Enter Departure City">                                                             
+                                                        <input type="text" class="form-control font-sm-four" id="validationCustom01" placeholder="Enter Departure City" name="origin">                                                             
                                                     </div>
                                                     <div class="col-md-6 col-12 padding-row-card font-sm-three">
                                                         <label class="label-form-card" for="validationCustom01">TO</label>
-                                                        <input type="text" class="form-control font-sm-four" id="validationCustom01" placeholder="Enter Destination City">                                                
+                                                        <input type="text" class="form-control font-sm-four" id="validationCustom01" placeholder="Enter Destination City" name="destination">                                                
                                                     </div>
                                                     <div class="col-md-6 col-12 padding-row-card font-sm-three">
                                                         <label class="label-form-card" for="validationCustom01">DEPART DATE</label>
@@ -267,7 +273,7 @@
                                                     <div class="col-md-6 col-12 padding-row-card font-sm-three">
                                                         <label class="label-form-card" for="validationCustom01">RETURN DATE</label>
                                                         <div class="input-group date" >
-                                                            <input type="text" id="datepick2" class="form-control font-sm-four profile-date" value="SUNDAY 22 SEP'2019"  ng-required="true" placeholder="mm/dd/yyyy">
+                                                            <input type="text" id="datepick2" class="form-control font-sm-four profile-date" ng-required="true" placeholder="mm/dd/yyyy" value="<?php echo date('m/d/Y');?>" name="return_date">
                                                             <div class="input-group-addon">
                                                                 <span class="glyphicon glyphicon-th"></span>
                                                             </div>
@@ -278,7 +284,7 @@
                                                         <!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
                                                         <div class="quantity">
                                                             <a href="#" class="quantity__minus adult_minus"><span>-</span></a>
-                                                            <input name="adult" type="text" class="quantity__input adult_input" value="1">
+                                                            <input name="adult_count" type="text" class="quantity__input adult_input" value="1">
                                                             <a href="#" class="quantity__plus adult_plus"><span>+</span></a>
                                                         </div>
                                                     </div>
@@ -286,7 +292,7 @@
                                                         <label class="label-form-card" for="validationCustom01">Children(2-11 Yrs)</label>
                                                         <div class="quantity">
                                                             <a href="#" class="quantity__minus children_minus"><span>-</span></a>
-                                                            <input name="children" type="text" class="quantity__input children_input" value="0">
+                                                            <input name="child_count" type="text" class="quantity__input children_input" value="0">
                                                             <a href="#" class="quantity__plus children_plus"><span>+</span></a>
                                                         </div>
                                                     </div>
@@ -294,13 +300,13 @@
                                                         <label class="label-form-card" for="validationCustom01">Infant(-2yrs)</label>
                                                         <div class="quantity">
                                                             <a href="#" class="quantity__minus infant_minus"><span>-</span></a>
-                                                            <input name="infant" type="text" class="quantity__input infant_input" value="0">
+                                                            <input name="infant_count" type="text" class="quantity__input infant_input" value="0">
                                                             <a href="#" class="quantity__plus infant_plus"><span>+</span></a>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3 col-12 padding-row-card font-sm-three">
                                                         <label class="label-form-card" for="validationCustom01">Class</label>
-                                                        <select class="form-control form-control-sm">
+                                                        <select class="form-control form-control-sm" name="class">
                                                             <option>Economy</option>
                                                             <option>First Class</option>
                                                             <option>Business Class</option>
@@ -308,7 +314,7 @@
                                                     </div>
                                                     <div class="col-md-3 col-12 padding-row-card font-sm-three">
                                                         <label class="label-form-card" for="validationCustom01"><br></label>
-                                                        <select class="form-control form-control-sm">
+                                                        <select class="form-control form-control-sm" name="airline">
                                                             <option>Select Airline</option>
                                                         </select>
                                                     </div>
@@ -322,14 +328,14 @@
                                     </div> <!-- / tab -->
                                     <hr>
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="">&nbsp;Show Direct Flights Only</label>
+                                        <label><input type="checkbox" name="non_stop_only" value="">&nbsp;Show Direct Flights Only</label>
                                     </div>
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="">&nbsp;My dates are flexible(+/- 3 days)</label>
+                                        <label><input type="checkbox" name="search_time" value="">&nbsp;My dates are flexible(+/- 3 days)</label>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <button class="btn btn-primary float-right searchbtnflight">SEARCH FLIGHT</button>
+                                            <button class="btn btn-primary float-right searchbtnflight" type="submit">SEARCH FLIGHT</button>
                                         </div>
                                     </div>
                                 </form>
@@ -346,6 +352,18 @@
                     $("#datepick1").datepicker();
                     $("#datepick2").datepicker();
                 });
+
+                
+
+                 $(document).ready(function(){
+
+                    
+                });
+
+                function setTrip(type){        
+                        $("#trip_type").val(type);
+                }
+
             </script>
         </section>
 

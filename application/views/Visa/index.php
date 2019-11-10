@@ -31,7 +31,7 @@
 
         <section>
             <nav class="navbar navbar-expand-sm   sticky-top justify-content-between" style="background-color: black;">
-                <a class="navbar-brand nav-desk" href="#">Nigeria's No.1 Tour Management Company</a>
+                <a class="navbar-brand nav-desk" href="<?php echo base_url();?>">Nigeria's No.1 Tour Management Company</a>
                 <form class="form-inline my-1">
                     <ul class="navbar-nav  ml-auto nav-desk-two nav-flex-icons">
                         <li class="nav-item ">
@@ -126,16 +126,16 @@
                     <span class="rounded-bottom"></span>
                     <ul class="navbar-nav" style=" padding-left: 60px;">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html" style="color: black;">HOME<span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="<?php echo base_url();?>" style="color: black;">HOME<span style="padding-left: 20px;">|</span></a>
                         </li>                      
                         <li class="nav-item">
                             <a class="nav-link" href="#" style="color: black;">HOTELS <span style="padding-left: 20px;">|</span></a>
                         </li>                    
                         <li class="nav-item">
-                            <a class="nav-link" href="flightsearch.html" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="<?php echo base_url();?>/flight" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>
                         </li>                        
                         <li class="nav-item">
-                            <a class="nav-link" href="car.html" style="color: black;">CAR RENTALS <span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="<?php echo base_url();?>/car-rental" style="color: black;">CAR RENTALS <span style="padding-left: 20px;">|</span></a>
                         </li>                   
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">

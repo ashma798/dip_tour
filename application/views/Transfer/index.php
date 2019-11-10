@@ -38,7 +38,7 @@
     <body>
         <section>
             <nav class="navbar navbar-expand-sm   sticky-top justify-content-between" style="background-color: black;">
-                <a class="navbar-brand nav-desk" href="#">
+                <a class="navbar-brand nav-desk" href="<?php echo base_url();?>">
 
                     Nigeria's No.1 Tour Management Company
 
@@ -122,12 +122,6 @@
             </div>
         </div>
 
-
-
-
-
-
-
         <section>
             <nav class="navbar navbar-expand-sm navbar-ch navbar-light">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCustom">
@@ -137,16 +131,16 @@
                     <span class="rounded-bottom"></span>
                     <ul class="navbar-nav" style=" padding-left: 60px;">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html" style="color: black;">HOME<span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="<?php echo base_url();?>" style="color: black;">HOME<span style="padding-left: 20px;">|</span></a>
                         </li>                      
                         <li class="nav-item">
                             <a class="nav-link" href="#" style="color: black;">HOTELS <span style="padding-left: 20px;">|</span></a>
                         </li>                    
                         <li class="nav-item">
-                            <a class="nav-link" href="flightsearch.html" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="<?php echo base_url();?>/flight" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>
                         </li>                        
                         <li class="nav-item">
-                            <a class="nav-link" href="car.html" style="color: black;">CAR RENTALS <span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="<?php echo base_url();?>/car-rental" style="color: black;">CAR RENTALS <span style="padding-left: 20px;">|</span></a>
                         </li>                   
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
@@ -382,59 +376,55 @@
                                     <h3 style=" font-size: 20px;font-weight: bold;">Search <span style="color:green;">Car</span> For Rent</h3>
                                     <hr>
 
-                                    <form action="">
-
-
+                                    <h2><?php echo $this->session->flashdata('item'); ?></h2> 
+                                    <form action="<?php echo base_url('/car-rental/add'); ?>" method="post">
 
                                         <div class="form-row">
 
                                             <div class="col-md-2 padding-row-card  font-sm-three">
                                                 <label class="label-form-card" for="">Pick-up City/Airport</label>
-                                                <input type="text" class="form-control font-sm-four" id="validationCustom01" placeholder="Airport or City"
+                                                <input type="text" class="form-control font-sm-four" id="validationCustom01" placeholder="Airport or City" name="pick_up_city"
                                                        required >
                                             </div>
                                             <div class="col-md-2 padding-row-card  font-sm-three">
                                                 <label class="label-form-card" for="">Drop-off City/Airport</label>
-                                                <input type="text" class="form-control font-sm-four" id="validationCustom01" placeholder="Same as pickup location" 
+                                                <input type="text" class="form-control font-sm-four" id="validationCustom01" name="drop_off_city" placeholder="Same as pickup location" 
                                                        required >
                                             </div>
                                             <div class="col-md-2 padding-row-card  font-sm-three">
                                                 <label class="label-form-card" for="">Pick-up Date</label>
-                                                <input type="date" class="form-control font-sm-four" id="validationCustom01" placeholder="Enter Departure City"
+                                                <input type="date" class="form-control font-sm-four" id="validationCustom01" name="pick_up_date" placeholder="Enter Departure City"
                                                        required >
                                             </div>
-                                            <div class="col-md-1 padding-row-card  font-sm-three" style="margin-bottom: 0px;">
+                                            <div class="col-md-2 padding-row-card  font-sm-three" style="margin-bottom: 0px;">
                                                 <label for="sel1" style="font-size: 11px;">Select time:</label>
-                                                <select class="form-control" id="sel1" style="    margin-top: -10px;height: 31px;">
+                                                <select class="form-control" id="sel1" style="    margin-top: -10px;height: 31px;" name="pick_up_time">
                                                     <option>09:00</option>
                                                     <option>10:00</option>
                                                     <option>10:00</option>
                                                     <option>10:00</option>
                                                 </select>
-
-
-
                                             </div>
                                             <div class="col-md-2 padding-row-card  font-sm-three">
                                                 <label class="label-form-card" for="">Drop-off Date</label>
                                                 <input type="date" class="form-control font-sm-four" id="validationCustom01" placeholder="Enter Departure City"
-                                                       required >
+                                                       required name="drop_off_date">
                                             </div>
-                                            <div class="col-md-1 padding-row-card  font-sm-three" style="margin-bottom: 0px;">
+                                            <div class="col-md-2 padding-row-card  font-sm-three" style="margin-bottom: 0px;">
                                                 <label for="sel1" style="font-size: 11px;">Select time:</label>
-                                                <select class="form-control" id="sel1" style="    margin-top: -10px;height: 31px;">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
+                                                <select class="form-control" id="sel1" style="margin-top: -10px;height: 31px;" name="drop_off_time">
+                                                    <option>1:00</option>
+                                                    <option>2:00</option>
+                                                    <option>3:00</option>
+                                                    <option>4:00</option>
                                                 </select>
 
 
 
                                             </div>
-                                            <div class="col-md-2 padding-row-card  font-sm-three">
+                                            <!--div class="col-md-2 padding-row-card  font-sm-three">
                                                 <button  type="button"  class="btn" style="background-color: #9ACD32; color:white; margin-bottom: 0px; margin-top: 15px; width:100%;">SEARCH</button>
-                                            </div>
+                                            </div-->
 
                                         </div>
                                         <hr>
@@ -442,7 +432,7 @@
 
                                             <div class="col-md-1 col-12 padding-row-card font-sm-three">
                                                 <label for="sel1" style="font-size: 11px;">Vehicle Type</label>
-                                                <select class="form-control" id="sel1" style="    margin-top: -10px;height: 31px;">
+                                                <select class="form-control" id="sel1" style="margin-top: -10px;height: 31px;"  name="vechical_type">
                                                     <option>Select</option>
                                                     <option>2</option>
                                                     <option>3</option>
@@ -458,7 +448,7 @@
                                             </div>
                                             <div class="col-md-2 col-12 padding-row-card font-sm-three">
                                                 <label class="label-form-card" for="validationCustom01">Class</label>
-                                                <select class="form-control form-control-sm">
+                                                <select class="form-control form-control-sm" name="vehicle_class">
                                                     <option>Select</option>
                                                     <option>First Class</option>
                                                     <option>Business Class</option>
@@ -469,7 +459,7 @@
                                             </div>
                                             <div class="col-md-2 col-12 padding-row-card font-sm-three">
                                                 <label class="label-form-card" for="validationCustom01">Transmission Type</label>
-                                                <select class="form-control form-control-sm">
+                                                <select class="form-control form-control-sm" name="vehicle_transmission_type">
                                                     <option>Select</option>
                                                 </select>
                                             </div>
@@ -478,7 +468,7 @@
                                             </div>
                                             <div class="col-md-1 col-12 padding-row-card font-sm-three">
                                                 <label class="label-form-card" for="validationCustom01">Has Air Condition</label>
-                                                <select class="form-control form-control-sm">
+                                                <select class="form-control form-control-sm" name="vehicle_air_conditioning">
                                                     <option>Select</option>
                                                 </select>
                                             </div>
@@ -487,7 +477,7 @@
                                             </div>
                                             <div class="col-md-2 col-12 padding-row-card font-sm-three">
                                                 <label class="label-form-card" for="validationCustom01">Mileage Charge Type</label>
-                                                <select class="form-control form-control-sm">
+                                                <select class="form-control form-control-sm" name="vehicle_charge_type">
                                                     <option>Select</option>
                                                 </select>
                                             </div>
@@ -502,7 +492,7 @@
 
                                         <div class="row">
                                             <div class="col-lg-12">
-                                                <button class="btn btn-primary float-right searchbtnflight">SEARCH CAR FOR RENT</button>
+                                                <button type="submit" class="btn btn-primary float-right searchbtnflight">SEARCH CAR FOR RENT</button>
                                             </div>
                                         </div>
                                     </form>

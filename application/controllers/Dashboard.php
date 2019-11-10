@@ -20,8 +20,9 @@ class Dashboard extends CI_Controller {
 	 */
 	public function index()
 	{
-		echo "Inside";
-		echo "<a href='".base_url('User/logout')."'>Logout</a>";
+		//echo "Inside";
+		//echo "<a href='".base_url('User/logout')."'>Logout</a>";
+		$this->load->view('Dashboard/index');
 	}
 
 }
