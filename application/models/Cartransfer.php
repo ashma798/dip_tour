@@ -49,4 +49,16 @@ class Cartransfer extends CI_Model{
 	public function insertData($data){
 		return $this->dip->insert($this->getTableName(), $data);
 	}
+
+
+	public function getTransferQueryData(){
+		$query = $this->dip->get($this->getTableName());
+		$result = array();
+		foreach ($query->result() as $row)
+		{
+		        $result[] = $row;
+		}
+		return $result; 
+
+	}
 }

@@ -191,13 +191,11 @@
                                                 <div class="form-row">
                                                     <div class="col-md-6 padding-row-card  font-sm-three">
                                                         <label class="label-form-card" for="">FROM</label>
-                                                        <input type="text" class="form-control font-sm-four" id="validationCustom01" name="origin" placeholder="Enter Departure City"
-                                                               required >
+                                                        <input type="text" class="form-control font-sm-four" id="validationCustom01" name="origin" placeholder="Enter Departure City" required >
                                                     </div>
                                                     <div class="col-md-6 padding-row-card  font-sm-three">
                                                         <label class="label-form-card" for="">TO</label>
-                                                        <input type="text" class="form-control font-sm-four" id="validationCustom01" name="destination" placeholder="Enter Destination City" 
-                                                               required >
+                                                        <input type="text" class="form-control font-sm-four" id="validationCustom01" name="destination" placeholder="Enter Destination City" required >
                                                     </div>
                                                     <div class="col-md-6 col-12 padding-row-card font-sm-three">
                                                         <label class="label-form-card" for="validationCustom01">DEPART DATE</label>

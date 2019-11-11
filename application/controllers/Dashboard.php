@@ -22,7 +22,28 @@ class Dashboard extends CI_Controller {
 	{
 		//echo "Inside";
 		//echo "<a href='".base_url('User/logout')."'>Logout</a>";
-		$this->load->view('Dashboard/index');
+		$data['v'] = 'Dashboard/index';
+		$data['viewName'] = 'Dashboard';
+		$this->load->view('template',$data);
 	}
+
+	public function flights(){
+		$this->load->model('Flightsearch');
+		$getDataForFlightQuery = $this->Flightsearch->getFlightQueryData();
+		$data['viewName'] = 'Flights';
+		$data['v'] = 'Dashboard/flights';
+		$data['data'] = $getDataForFlightQuery;
+		$this->load->view('template',$data);
+	}
+
+	public function transfer(){
+		$this->load->model('Cartransfer');
+		$getDataForTransferQuery = $this->Cartransfer->getTransferQueryData();
+		$data['v'] = 'Dashboard/transfer';
+		$data['viewName'] = 'Transfer';
+		$data['data'] = $getDataForTransferQuery;
+		$this->load->view('template',$data);
+	}
+
 
 }
