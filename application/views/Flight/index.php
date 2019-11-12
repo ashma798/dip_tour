@@ -191,11 +191,11 @@
                                                 <div class="form-row">
                                                     <div class="col-md-6 padding-row-card  font-sm-three">
                                                         <label class="label-form-card" for="">FROM</label>
-                                                        <input type="text" class="form-control font-sm-four" id="validationCustom01" name="origin" placeholder="Enter Departure City" required >
+                                                        <input type="text" class="form-control font-sm-four inputautocomplete" id="validationCustom01" name="origin" placeholder="Enter Departure City" required >
                                                     </div>
                                                     <div class="col-md-6 padding-row-card  font-sm-three">
                                                         <label class="label-form-card" for="">TO</label>
-                                                        <input type="text" class="form-control font-sm-four" id="validationCustom01" name="destination" placeholder="Enter Destination City" required >
+                                                        <input type="text" class="form-control font-sm-four inputautocomplete" id="validationCustom01" name="destination" placeholder="Enter Destination City" required >
                                                     </div>
                                                     <div class="col-md-6 col-12 padding-row-card font-sm-three">
                                                         <label class="label-form-card" for="validationCustom01">DEPART DATE</label>
@@ -253,16 +253,16 @@
                                                 <div class="form-row">
                                                     <div class="col-md-6 col-12 padding-row-card font-sm-three">
                                                         <label class="label-form-card" for="validationCustom01">FROM</label>
-                                                        <input type="text" class="form-control font-sm-four" id="validationCustom01" placeholder="Enter Departure City" name="origin">                                                             
+                                                        <input type="text" class="form-control font-sm-four inputautocomplete" id="validationCustom01" placeholder="Enter Departure City" name="origin_1">                                                             
                                                     </div>
-                                                    <div class="col-md-6 col-12 padding-row-card font-sm-three">
+                                                    <div class="col-md-6 col-12 padding-row-card font-sm-three ">
                                                         <label class="label-form-card" for="validationCustom01">TO</label>
-                                                        <input type="text" class="form-control font-sm-four" id="validationCustom01" placeholder="Enter Destination City" name="destination">                                                
+                                                        <input type="text" class="form-control font-sm-four inputautocomplete" id="validationCustom01" placeholder="Enter Destination City" name="destination_1">                                                
                                                     </div>
                                                     <div class="col-md-6 col-12 padding-row-card font-sm-three">
                                                         <label class="label-form-card" for="validationCustom01">DEPART DATE</label>
                                                         <div class="input-group date" >
-                                                            <input type="text" id="datepick" class="form-control font-sm-four profile-date" value="SUNDAY 22 SEP'2019"  ng-required="true" placeholder="mm/dd/yyyy">
+                                                            <input type="text" id="datepick" class="form-control font-sm-four profile-date" value="SUNDAY 22 SEP'2019"  ng-required="true" placeholder="mm/dd/yyyy" name="departure_date_1">
                                                             <div class="input-group-addon">
                                                                 <span class="glyphicon glyphicon-th"></span>
                                                             </div>
@@ -271,7 +271,7 @@
                                                     <div class="col-md-6 col-12 padding-row-card font-sm-three">
                                                         <label class="label-form-card" for="validationCustom01">RETURN DATE</label>
                                                         <div class="input-group date" >
-                                                            <input type="text" id="datepick2" class="form-control font-sm-four profile-date" ng-required="true" placeholder="mm/dd/yyyy" value="<?php echo date('m/d/Y');?>" name="return_date">
+                                                            <input type="text" id="datepick2" class="form-control font-sm-four profile-date" ng-required="true" placeholder="mm/dd/yyyy" value="<?php echo date('m/d/Y');?>" name="return_date_1">
                                                             <div class="input-group-addon">
                                                                 <span class="glyphicon glyphicon-th"></span>
                                                             </div>
@@ -282,7 +282,7 @@
                                                         <!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
                                                         <div class="quantity">
                                                             <a href="#" class="quantity__minus adult_minus"><span>-</span></a>
-                                                            <input name="adult_count" type="text" class="quantity__input adult_input" value="1">
+                                                            <input name="adult_count_1" type="text" class="quantity__input adult_input" value="1">
                                                             <a href="#" class="quantity__plus adult_plus"><span>+</span></a>
                                                         </div>
                                                     </div>
@@ -290,7 +290,7 @@
                                                         <label class="label-form-card" for="validationCustom01">Children(2-11 Yrs)</label>
                                                         <div class="quantity">
                                                             <a href="#" class="quantity__minus children_minus"><span>-</span></a>
-                                                            <input name="child_count" type="text" class="quantity__input children_input" value="0">
+                                                            <input name="child_count_1" type="text" class="quantity__input children_input" value="0">
                                                             <a href="#" class="quantity__plus children_plus"><span>+</span></a>
                                                         </div>
                                                     </div>
@@ -298,13 +298,13 @@
                                                         <label class="label-form-card" for="validationCustom01">Infant(-2yrs)</label>
                                                         <div class="quantity">
                                                             <a href="#" class="quantity__minus infant_minus"><span>-</span></a>
-                                                            <input name="infant_count" type="text" class="quantity__input infant_input" value="0">
+                                                            <input name="infant_count_1" type="text" class="quantity__input infant_input" value="0">
                                                             <a href="#" class="quantity__plus infant_plus"><span>+</span></a>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3 col-12 padding-row-card font-sm-three">
                                                         <label class="label-form-card" for="validationCustom01">Class</label>
-                                                        <select class="form-control form-control-sm" name="class">
+                                                        <select class="form-control form-control-sm" name="class_1">
                                                             <option>Economy</option>
                                                             <option>First Class</option>
                                                             <option>Business Class</option>
@@ -312,7 +312,7 @@
                                                     </div>
                                                     <div class="col-md-3 col-12 padding-row-card font-sm-three">
                                                         <label class="label-form-card" for="validationCustom01"><br></label>
-                                                        <select class="form-control form-control-sm" name="airline">
+                                                        <select class="form-control form-control-sm" name="airline_1">
                                                             <option>Select Airline</option>
                                                         </select>
                                                     </div>
@@ -345,16 +345,19 @@
             <br><br><br>
             <!-- SCRIPTS -->
             <script>
+                var availableTags = <?php echo json_encode($airport); ?>;
+                //console.log(availableTags);
+                $( ".inputautocomplete" ).autocomplete({
+                        source: availableTags
+                    }); 
                 $(function () {
                     $("#datepick").datepicker();
                     $("#datepick1").datepicker();
                     $("#datepick2").datepicker();
                 });
-
-                
-
                  $(document).ready(function(){
-
+                   
+                   
                     
                 });
 
