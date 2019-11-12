@@ -20,7 +20,14 @@ class CarRental extends CI_Controller {
 	 */
 
 	public function index(){
-		$this->load->view('Transfer/index');
+		$this->load->model('Airport');
+		$airports = $this->Airport->getAirportData();
+        $returnAirport = array();
+        foreach($airports as $v){
+        	$returnAirport[] = $v->airport_name;
+        }
+        $data['airport'] = $returnAirport;
+		$this->load->view('Transfer/index',$data);
 	}
 
 

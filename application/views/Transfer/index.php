@@ -383,12 +383,12 @@
 
                                             <div class="col-md-2 padding-row-card  font-sm-three">
                                                 <label class="label-form-card" for="">Pick-up City/Airport</label>
-                                                <input type="text" class="form-control font-sm-four" id="validationCustom01" placeholder="Airport or City" name="pick_up_city"
+                                                <input type="text" class="form-control font-sm-four inputautocomplete" id="validationCustom01" placeholder="Airport or City" name="pick_up_city"
                                                        required >
                                             </div>
                                             <div class="col-md-2 padding-row-card  font-sm-three">
                                                 <label class="label-form-card" for="">Drop-off City/Airport</label>
-                                                <input type="text" class="form-control font-sm-four" id="validationCustom01" name="drop_off_city" placeholder="Same as pickup location" 
+                                                <input type="text" class="form-control font-sm-four inputautocomplete" id="validationCustom01" name="drop_off_city" placeholder="Same as pickup location" 
                                                        required >
                                             </div>
                                             <div class="col-md-2 padding-row-card  font-sm-three">
@@ -571,7 +571,13 @@
 
 
         </section>
-
+        <script type="text/javascript">
+            var availableTags = <?php echo json_encode($airport); ?>;
+                //console.log(availableTags);
+                $( ".inputautocomplete" ).autocomplete({
+                        source: availableTags
+                    }); 
+        </script>
 
 
 
