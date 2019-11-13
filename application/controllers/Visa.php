@@ -23,5 +23,17 @@ class Visa extends CI_Controller {
 		$this->load->view('Visa/index');
 	}
 
+	public function visaquery(){
+		$this->load->view('Visa/visaquery');
+	}
+
+	public function add(){
+		$data = $this->input->post();
+		$this->load->model('Visaquery');
+        $tripdetails = $this->Visaquery->insertData($data);
+        $message = "Our executives will connect with you over you query";
+        $this->session->set_flashdata('item', $message);
+        redirect(base_url('Visa/visaquery'));
+	}
 }
 ?>
