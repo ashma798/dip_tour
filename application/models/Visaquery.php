@@ -50,4 +50,28 @@ class Visaquery extends CI_Model{
 	public function insertData($data){
 		return $this->dip->insert($this->getTableName(), $data);
 	}
+
+
+
+	/**
+	 * @description get user data according username
+	 * @param String $username
+	 * @author Suprabha Mishra
+	 * @date_created 04-10-2019
+	 * @date_modified 04-10-2019
+	 * 
+	 * @return Array $results
+	 */
+
+	public function get(){
+		$query = $this->dip->get($this->getTableName());
+		$result = array();
+		foreach ($query->result() as $row)
+		{
+		        $result[] = $row;
+		}
+		return $result; 
+
+	}
+
 }

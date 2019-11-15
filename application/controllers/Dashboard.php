@@ -46,4 +46,13 @@ class Dashboard extends CI_Controller {
 	}
 
 
+	public function visa(){
+		$this->load->model('Visaquery');
+		$getDataForVisaQuery = $this->Visaquery->get();
+		$data['v'] = 'Dashboard/visa';
+		$data['viewName'] = 'Visa';
+		$data['data'] = json_decode(json_encode($getDataForVisaQuery), true);
+		$this->load->view('template',$data);
+	}
+
 }

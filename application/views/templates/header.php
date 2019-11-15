@@ -15,30 +15,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>admin_css/bootstrap.min.css" rel="stylesheet">
     <!-- mailbox -->
-    <link href="<?php echo base_url();?>css/mailbox.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>admin_css/mailbox.css" rel="stylesheet">
     <!-- slimscroll -->
-    <link href="<?php echo base_url();?>css/jquery.slimscroll.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>admin_css/jquery.slimscroll.css" rel="stylesheet">
     <!-- Fontes -->
-    <link href="<?php echo base_url();?>css/font-awesome.min.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>css/simple-line-icons.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>admin_css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>admin_css/simple-line-icons.css" rel="stylesheet">
     <!-- flotCart css -->
-    <link href="<?php echo base_url();?>css/flotCart.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>admin_css/flotCart.css" rel="stylesheet">
     <!-- all buttons css -->
-    <link href="<?php echo base_url();?>css/buttons.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>admin_css/buttons.css" rel="stylesheet">
     <!-- animate css -->
-    <link href="<?php echo base_url();?>css/animate.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>admin_css/animate.css" rel="stylesheet">
     <!-- adminbag main css -->
-    <link href="<?php echo base_url();?>css/main.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>admin_css/main.css" rel="stylesheet">
     <!-- media css for responsive  -->
-    <link href="<?php echo base_url();?>css/main.media.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>admin_css/main.media.css" rel="stylesheet">
     <!-- eCommerce css -->
-    <link href="<?php echo base_url();?>css/eCommerce.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>admin_css/eCommerce.css" rel="stylesheet">
     <!-- icheck -->
-    <link href="<?php echo base_url();?>css/all.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>admin_css/all.css" rel="stylesheet">
     <!-- aqua black theme css -->
-    <link href="<?php echo base_url();?>css/aqua-black.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>admin_css/aqua-black.css" rel="stylesheet">
 
     <link href="<?php echo base_url();?>js/DataTables/datatables.css" rel="stylesheet">
     <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
@@ -232,7 +232,7 @@
                          
                     </li>
                     <li >
-                       <a class="nav-link " href="visa.html"> <i class="fa fa-th-large"></i> <span class="title">Visa</span> <i class="fa fa-chevron-right" aria-hidden="true"></i> </a>
+                       <a class="nav-link " href="<?php echo base_url('Dashboard/visa');?>"> <i class="fa fa-th-large"></i> <span class="title">Visa</span> <i class="fa fa-chevron-right" aria-hidden="true"></i> </a>
                          
                     </li>
                     <li >

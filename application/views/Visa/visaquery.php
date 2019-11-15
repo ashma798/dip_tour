@@ -962,7 +962,7 @@ button:hover {
 <h2><?php echo $this->session->flashdata('item'); ?></h2> 
   <h6 style="color:black; font-weight: bold;">Personal details (as it appears on passport)</h6>
   
-<form method="post" action="<?php echo base_url('/visa/add'); ?>">
+<form method="post" action="<?php echo base_url('/visa/add'); ?>" enctype="multipart/form-data">
   <div>
   <p>
     <label>
