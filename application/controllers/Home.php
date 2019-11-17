@@ -20,7 +20,15 @@ class Home extends CI_Controller {
 	 */
 
 	public function index(){
-		$this->load->view('Home/index');
+		$this->load->model('Contactinfo');
+		$this->load->model('Banners');
+		$this->load->model('Footerinfo');
+		$this->load->model('Partnerdetails');
+		$data['contact_info'] = json_decode(json_encode($this->Contactinfo->get()), true);
+		$data['banners'] = json_decode(json_encode($this->Banners->get()), true);
+		$data['footer_info'] = json_decode(json_encode($this->Footerinfo->get()), true);
+		$data['partner_details'] = json_decode(json_encode($this->Partnerdetails->get()), true);
+		$this->load->view('Home/index',$data);
 	}
 
 

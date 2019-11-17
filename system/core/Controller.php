@@ -113,11 +113,12 @@ class CI_Controller {
 
 	public function uploadImageFileToPath($files, $type, $name){
 		$target_dir = $type."/";
+		$save_to_db = "/tmp/".$type."/".$files[$name]["name"];
         $target_file = $_SERVER['DOCUMENT_ROOT'] ."/tmp/". $target_dir . basename($files[$name]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 		if (isset($files[$name]) && empty($files[$name]['error'])) {
-			if ($files[$name]["size"] > 500000) {
+			if ($files[$name]["size"] > 5000000) {
     			$message = "Sorry, your file is too large.";
                 $this->session->set_flashdata('item', $message);
     			$uploadOk = 0;
@@ -133,13 +134,19 @@ class CI_Controller {
 
 			if ($uploadOk != 0) {
 	    		if (move_uploaded_file($files[$name]["tmp_name"], $target_file)) {
-	        		return $target_file;
+	        		return $save_to_db;
 			    } else {
 			        $message = "Sorry, there was an error uploading your file.";
 			        $this->session->set_flashdata('item', $message);
 			        return 0;
 			    }
 		  	}
+		}
+		else if(!empty($files[$name]['error'])){
+			$message = "Sorry, error uploading file.";
+            $this->session->set_flashdata('item', $message);
+    		$uploadOk = 0;
+    		return 0;			
 		}
 	}
 

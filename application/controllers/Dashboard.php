@@ -92,13 +92,14 @@ class Dashboard extends CI_Controller {
 
 	}
 
+
 	public function addBanner(){
 		$inputData['banner1'] = $this->uploadImageFileToPath($_FILES, 'banner', 'banner_1');
 		$inputData['banner2'] = $this->uploadImageFileToPath($_FILES, 'banner', 'banner_2');
 		$inputData['banner3'] = $this->uploadImageFileToPath($_FILES, 'banner', 'banner_3');
 
 		$this->load->model('Banners');
-		if($inputData['banner1'] !== 0 && $inputData['banner2'] !== 0 && $inputData['banner3'] !== 0){
+		if($inputData['banner1'] != 0 && $inputData['banner2'] != 0 && $inputData['banner3'] != 0){
 			$partnerLogo = $this->Banners->insertData($inputData);
 			$message = "Banner data saved successfully";
 			$this->session->set_flashdata('item', $message);
@@ -116,6 +117,7 @@ class Dashboard extends CI_Controller {
 		$this->load->view('template',$data);
 
 	}
+
 
 	public function addfooterInfo(){
 		$data = $this->input->post();
@@ -142,7 +144,6 @@ class Dashboard extends CI_Controller {
 
 	public function addContactInfo(){
 		$data = $this->input->post();
-		print_r($data);
 		$this->load->model('Contactinfo');
         $tripdetails = $this->Contactinfo->insertData($data);
         $message = "Contact Info info saved";

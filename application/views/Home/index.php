@@ -94,9 +94,9 @@
                 <div class="offset-lg-5 col-lg-3 col-6">
                     <ul style="list-style-type: none; margin-top: 30px; font-weight: bold;">
                         <li>Contact Us</li>
-                        <li>+2347046226590</li>
-                        <li>+2348170592433 {24/7,WHATSAPP}</li>
-                        <li>INFO@DIPTOURLTD.COM</li>
+                        <li><?php  echo $contact_info[0]['phone_no_1']; ?></li>
+                        <li><?php  echo $contact_info[0]['phone_no_2']; ?>{24/7,WHATSAPP}</li>
+                        <li><?php  echo $contact_info[0]['phone_no_3']; ?></li>
                     </ul>
                 </div>
             </div>
@@ -116,13 +116,13 @@
                 <!-- The slideshow -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="./images/banner.png" alt="Los Angeles" width="2000" height="500">
+                        <img src="<?php echo "./".$banners[0]['banner1'];?>" alt="Los Angeles" width="2000" height="500">
                     </div>
                     <div class="carousel-item">
-                        <img src="./images/banner.png" alt="Chicago" width="2000" height="500">
+                        <img src="<?php echo "./".$banners[0]['banner2'];?>" alt="Chicago" width="2000" height="500">
                     </div>
                     <div class="carousel-item">
-                        <img src="./images/banner.png" alt="New York" width="2000" height="500">
+                        <img src="<?php echo "./".$banners[0]['banner3'];?>" alt="New York" width="2000" height="500">
                     </div>
                 </div>
                 <!-- Left and right controls -->
@@ -844,14 +844,12 @@
         <h1 style="color:green; margin-bottom: 20px;">Our Partners</h1>
     </div>
     <section class="customer-logos slider"  style="margin-bottom: 40px;">
-
-        <div class="slide"><img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
-        <div class="slide"><img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
-        <div class="slide"><img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
-        <div class="slide"><img src="https://image.freepik.com/free-vector/retro-label-on-rustic-background_82147503374.jpg"></div>
-        <div class="slide"><img src="https://image.freepik.com/free-vector/retro-label-on-rustic-background_82147503374.jpg"></div>
-        <div class="slide"><img src="https://image.freepik.com/free-vector/retro-label-on-rustic-background_82147503374.jpg"></div>
-        <div class="slide"><img src="https://image.freepik.com/free-vector/retro-label-on-rustic-background_82147503374.jpg"></div>
+        <?php foreach($partner_details as $k => $v){ ?>
+            <div class="slide"><img src="<?php echo $v['file_path']; ?>" /></div>
+        <?php } ?>
+        <?php foreach($partner_details as $k => $v){ ?>
+            <div class="slide"><img src="<?php echo $v['file_path']; ?>" /></div>
+        <?php } ?>  
     </section>
         <footer class="mainfooter" role="contentinfo" style="margin-top: 0px;">
         <div class="footer-middle">
@@ -861,15 +859,12 @@
                         <!--Column1-->
                         <div class="footer-pad">
                             <img class="" src="./images/l2.png">
-                            <p>Dip Tour with recorded success and continuous accomplishment is today reckoned as the preferred One Stop Travel Shop and one of the Leading Global Travel Management Company / with a focus on Promotion of Tourism Worldwide through its network and alliance. </p><br/>
-
-                            <p>It has grown into a company having multiple years of global working experience and sound understanding of domestic and international travel markets and protocols that guarantees effective & on time deliveries, value for money, and customers' satisfaction focus on the 5A'S of Tourism  - Accessibility, Accommodation, Activities, Amenities and Attractions.
-                            </p>
+                            <?php echo $footer_info[0]['footer_text'];?>
                             <ul class="list-unstyled">
                                 <li><a href="#"></a></li>
                                 <li>Address: Suite 7, Block 1, Bar Beach Towers, Bishop Oluwole &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Street Victoria Island, Lagos (LandMark: Eko Atlantic)</li>
-                                <li>Phone: +234 8122820856 <br/>  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;+234 8170592433</li>
-                                <li><a href="#">Email: info@diptourltd.com</a></li>
+                                <li><?php  echo $contact_info[0]['phone_no_1']; ?><br/><?php  echo $contact_info[0]['phone_no_2']; ?></li>
+                                <li><a href="#">Email: <?php  echo $contact_info[0]['phone_no_3']; ?></a></li>
 
                             </ul>
                         </div>

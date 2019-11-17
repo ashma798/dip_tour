@@ -74,4 +74,9 @@ class Partnerdetails extends CI_Model{
 
 	}
 
+	public function update(){
+		$data['is_active'] = 0;
+		$this->dip->update($this->getTableName(),$data);
+	}
+
 }
