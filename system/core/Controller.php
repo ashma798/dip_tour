@@ -111,4 +111,36 @@ class CI_Controller {
 		unlink($filename);
 	}
 
+	public function uploadImageFileToPath($files, $type, $name){
+		$target_dir = $type."/";
+        $target_file = $_SERVER['DOCUMENT_ROOT'] ."/tmp/". $target_dir . basename($files[$name]["name"]);
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+		if (isset($files[$name]) && empty($files[$name]['error'])) {
+			if ($files[$name]["size"] > 500000) {
+    			$message = "Sorry, your file is too large.";
+                $this->session->set_flashdata('item', $message);
+    			$uploadOk = 0;
+    			return 0;
+			}
+
+			if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif"){
+    			$message = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    			$this->session->set_flashdata('item', $message);
+    			$uploadOk = 0;
+    			return 0;
+			}
+
+			if ($uploadOk != 0) {
+	    		if (move_uploaded_file($files[$name]["tmp_name"], $target_file)) {
+	        		return $target_file;
+			    } else {
+			        $message = "Sorry, there was an error uploading your file.";
+			        $this->session->set_flashdata('item', $message);
+			        return 0;
+			    }
+		  	}
+		}
+	}
+
 }

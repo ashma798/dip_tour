@@ -217,6 +217,23 @@
                         <a class="nav-link nav-toggle" href="<?php echo base_url('Dashboard');?>"> <i class="fa fa-th-large"></i> <span class="title">Dashboard</span> <i class="fa fa-chevron-right" aria-hidden="true" style="padding-left: 80px;"></i> </a>
                         
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-toggle" href="javascript:;"> <i class="fa fa-th-large"></i> <span class="title">CMS </span> <i class="fa fa-chevron-right" aria-hidden="true" style="padding-left: 80px;"></i> </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo base_url('Dashboard/partnersDetails');?>"> <span class="title">Partner</span> </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo base_url('Dashboard/banners');?>"> <span class="title">Banner</span> </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo base_url('Dashboard/footerInfo');?>"> <span class="title">Footer Info</span> </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo base_url('Dashboard/contactUs');?>"> <span class="title">Contact Us</span> </a>
+                            </li>
+                        </ul>
+                    </li>
                      <li >
                        <a class="nav-link " href="<?php echo base_url('Dashboard/transfer');?>"> <i class="fa fa-th-large"></i> <span class="title">Transfer</span> <span class="arrow"></span> </a>
                          

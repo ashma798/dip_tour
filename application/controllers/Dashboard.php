@@ -55,4 +55,98 @@ class Dashboard extends CI_Controller {
 		$this->load->view('template',$data);
 	}
 
+	public function partnersDetails(){
+		//$this->load->model('Partnerdetails');
+
+		$data['v'] = 'Dashboard/partnerDetails';
+		$data['viewName'] = 'CMS | Our Partners';
+		//$data['data'] = json_decode(json_encode($getDataForVisaQuery), true);
+		$this->load->view('template',$data);
+
+	}
+
+	public function addPartnerLogo(){
+		$data = $this->input->post();
+		$pathToFile = $this->uploadImageFileToPath($_FILES, 'partners_logo', 'file_name');
+		$inputData = array();
+		$inputData['first_name'] = $data['first_name'];
+		$inputData['last_name'] = $data['last_name'];
+		$inputData['file_path'] = $pathToFile;
+		$this->load->model('Partnerdetails');
+		if($pathToFile !== 0){
+			$partnerLogo = $this->Partnerdetails->insertData($inputData);
+			$message = "Partner data saved successfully";
+			$this->session->set_flashdata('item', $message);
+			redirect(base_url('Dashboard/partnersDetails'));
+		}
+	}
+
+
+	public function banners(){
+		//$this->load->model('Partnerdetails');
+
+		$data['v'] = 'Dashboard/banners';
+		$data['viewName'] = 'CMS | Banners';
+		//$data['data'] = json_decode(json_encode($getDataForVisaQuery), true);
+		$this->load->view('template',$data);
+
+	}
+
+	public function addBanner(){
+		$inputData['banner1'] = $this->uploadImageFileToPath($_FILES, 'banner', 'banner_1');
+		$inputData['banner2'] = $this->uploadImageFileToPath($_FILES, 'banner', 'banner_2');
+		$inputData['banner3'] = $this->uploadImageFileToPath($_FILES, 'banner', 'banner_3');
+
+		$this->load->model('Banners');
+		if($inputData['banner1'] !== 0 && $inputData['banner2'] !== 0 && $inputData['banner3'] !== 0){
+			$partnerLogo = $this->Banners->insertData($inputData);
+			$message = "Banner data saved successfully";
+			$this->session->set_flashdata('item', $message);
+			redirect(base_url('Dashboard/banners'));
+		}
+	}
+
+
+	public function footerInfo(){
+		//$this->load->model('Partnerdetails');
+
+		$data['v'] = 'Dashboard/footer_info';
+		$data['viewName'] = 'CMS | Footer Info';
+		//$data['data'] = json_decode(json_encode($getDataForVisaQuery), true);
+		$this->load->view('template',$data);
+
+	}
+
+	public function addfooterInfo(){
+		$data = $this->input->post();
+		print_r($data);
+		$this->load->model('Footerinfo');
+        $tripdetails = $this->Footerinfo->insertData($data);
+        $message = "Footer info saved";
+        $this->session->set_flashdata('item', $message);
+        redirect(base_url('Dashboard/footerInfo'));
+	}
+
+
+	public function contactUs(){
+		//$this->load->model('Partnerdetails');
+
+		$data['v'] = 'Dashboard/contact_us';
+		$data['viewName'] = 'CMS | Contact Us Info';
+		//$data['data'] = json_decode(json_encode($getDataForVisaQuery), true);
+		$this->load->view('template',$data);
+
+	}
+
+
+
+	public function addContactInfo(){
+		$data = $this->input->post();
+		print_r($data);
+		$this->load->model('Contactinfo');
+        $tripdetails = $this->Contactinfo->insertData($data);
+        $message = "Contact Info info saved";
+        $this->session->set_flashdata('item', $message);
+        redirect(base_url('Dashboard/contactUs'));
+	}
 }
