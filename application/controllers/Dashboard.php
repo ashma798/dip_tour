@@ -233,4 +233,14 @@ class Dashboard extends CI_Controller {
         $this->session->set_flashdata('item', $message);
 		redirect(base_url('Dashboard/editOurNetwork'));
 	}
+
+
+	public function hotel(){
+		$this->load->model('Hotelquery');
+		$getDataForVisaQuery = $this->Hotelquery->get();
+		$data['v'] = 'Dashboard/hotel';
+		$data['viewName'] = 'Hotel';
+		$data['data'] = json_decode(json_encode($getDataForVisaQuery), true);
+		$this->load->view('template',$data);
+	}
 }

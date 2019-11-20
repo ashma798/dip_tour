@@ -124,10 +124,10 @@
                     <span class="rounded-bottom"></span>
                     <ul class="navbar-nav" style=" padding-left: 60px;">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html" style="color: black;">HOME<span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="<?php echo base_url()?>Home" style="color: black;">HOME<span style="padding-left: 20px;">|</span></a>
                         </li>                      
                         <li class="nav-item">
-                            <a class="nav-link" href="hotelsearch.html" style="color: black;">HOTELS <span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="<?php echo base_url()?>Hotels" style="color: black;">HOTELS <span style="padding-left: 20px;">|</span></a>
                         </li>                    
                         <li class="nav-item">
                             <a class="nav-link" href="flightsearch.html" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>

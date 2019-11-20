@@ -459,7 +459,7 @@ updateSymbol()
             </li>
             <li class="nav-item"><a class="nav-link"  href="" style="color: black;">|</a></li>
             <li class="nav-item">
-                <a class="nav-link" href="#" style="color: black;">HOTELS</a>
+                <a class="nav-link" href="<?php echo base_url()?>Hotels" style="color: black;">HOTELS</a>
             </li>
             <li class="nav-item"><a class="nav-link"  href="" style="color: black;">|</a></li>
             <li class="nav-item">

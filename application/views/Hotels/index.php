@@ -1,4 +1,3 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -39,7 +38,7 @@
 
         <section>
             <nav class="navbar navbar-expand-sm   sticky-top justify-content-between" style="background-color: black;">
-                <a class="navbar-brand nav-desk" href="<?php echo base_url();?>">Nigeria's No.1 Tour Management Company</a>
+                <a class="navbar-brand nav-desk" href="#">Nigeria's No.1 Tour Management Company</a>
                 <form class="form-inline my-1">
                     <ul class="navbar-nav  ml-auto nav-desk-two nav-flex-icons">
                         <li class="nav-item ">
@@ -77,23 +76,23 @@
                             <div class="input-group-addon currency-addon" >
                                 <select class="currency-selector" style="color: white; background-color: black; margin-top: 10px; ">
                                     <option  class="opt" data-symbol="₦" data-placeholder="0.00" selected >ENG</option>
-                                    <option data-symbol="€" data-placeholder="0.00">ARABIC</option>
-                                    <option data-symbol="£" data-placeholder="0.00">HINDI</option>
+                                    <option data-symbol="€" data-placeholder="0.00">FRENCH</option>
+                                    <option data-symbol="£" data-placeholder="0.00">SPANISH</option>
                                 </select>
                             </div>
                         </li>
                         <li class="nav-item"><a class="nav-link"  href="" style="color: white;">|</a></li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.facebook.com/diptourltd" style="color:white;"><i class="fa fa-facebook"></i> </a>
+                            <a class="nav-link" href="#" style="color:white;"><i class="fa fa-facebook"></i> </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.twitter.com/diptourltd" style="color:white;"><i class="fa fa-twitter"></i> </a>
+                            <a class="nav-link" href="#" style="color:white;"><i class="fa fa-twitter"></i> </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.instagram.com/diptourltd" style="color:white;"><i class="fa fa-instagram"></i> </a>
+                            <a class="nav-link" href="#" style="color:white;"><i class="fa fa-instagram"></i> </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.linkedin.com/company/dip-tour-ltd" style="color:white;"><i class="fa fa-linkedin"></i> </a>
+                            <a class="nav-link" href="#" style="color:white;"><i class="fa fa-linkedin"></i> </a>
                         </li>
                     </ul>
                 </form>
@@ -125,40 +124,40 @@
                     <span class="rounded-bottom"></span>
                     <ul class="navbar-nav" style=" padding-left: 60px;">
                         <li class="nav-item active">
-                            <a class="nav-link" href="<?php echo base_url();?>" style="color: black;">HOME<span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="index.html" style="color: black;">HOME<span style="padding-left: 20px;">|</span></a>
                         </li>                      
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo base_url()?>Hotels" style="color: black;">HOTELS <span style="padding-left: 20px;">|</span></a>
                         </li>                    
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url();?>flight" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="flightsearch.html" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>
                         </li>                        
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url();?>car-rental" style="color: black;">CAR RENTALS <span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="car.html" style="color: black;">CAR RENTALS <span style="padding-left: 20px;">|</span></a>
                         </li>                   
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
                                 TOUR PACKAGES
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Asia</a>
+                                <a class="dropdown-item" href="#">Africa</a>
+                                <a class="dropdown-item" href="#">Europe</a>
                             </div>
                         </li>
                         <li class="nav-item  dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
                                 VISAS</a>                          
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="search.html">Search</a>
-                                <a class="dropdown-item" href="visa_form.html">Visa Booking</a>
+                                <a class="dropdown-item" href="visa1.html">Visa Booking</a>
                                 <a class="dropdown-item" href="#">Dubai UAE</a>                                
                             </div>                              
                         </li>
                     </ul>
                 </div>
                 <ul class="navbar-nav nav-flex-icons">
-                    <a href="<?php echo base_url();?>Register/login" class="btn " role="button" style=" margin-left:40px; margin-right:0px; background-color: black; color:white;"><i class="fa fa-lock xs-nav"></i>LOGIN</a>
-                    <a href="<?php echo base_url(); ?>Register" class="btn " role="button" style=" margin-left:20px; margin-right:30px; background-color: green; color:white;"><i class="fa fa-user xs-naav"></i>REGISTER</a>
+                    <a href="<??>" class="btn " role="button" style=" margin-left:40px; margin-right:0px; background-color: black; color:white;"><i class="fa fa-lock xs-nav"></i>LOGIN</a>
+                    <a href="register.html" class="btn " role="button" style=" margin-left:20px; margin-right:30px; background-color: green; color:white;"><i class="fa fa-user xs-naav"></i>REGISTER</a>
                 </ul>
             </nav>
         </section>
@@ -171,172 +170,133 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card-body bg-white pad-card border-0">
-                                <h3 class="font-sm-two">Search For Flights</h3>
-
+                                <h3 class="font-sm-two">Search Hotels</h3>
                                 <hr>
                                 <h2><?php echo $this->session->flashdata('item'); ?></h2> 
-                                <form action="<?php echo base_url('/flight/add'); ?>" method="post">
-                                    <div class="tab">
-                                        <ul class="tabs nav-flex-icons" style="padding: 0px">
-                                            <li><a href="javascript:void(0)" onclick="setTrip('One-Way');">One-Way</a></li>
-                                            <li><a href="javascript:void(0)" onclick="setTrip('Round-Trip');">Round-Trip</a></li>
-                                            <li><a href="javascript:void(0)" onclick="setTrip('Multi-City');">Multi-City</a></li>
-                                        </ul>
-                                        <div style="display:none">
-                                            <input type="hidden" name="flight_search_type" id="trip_type" value="One-Way">
-                                        </div>
-                                         <!-- / tabs -->
-                                        <div class="tab_content">
-                                            <div class="tabs_item">
-                                                <div class="form-row">
-                                                    <div class="col-md-6 padding-row-card  font-sm-three">
-                                                        <label class="label-form-card" for="">FROM</label>
-                                                        <input type="text" class="form-control font-sm-four inputautocomplete" id="validationCustom01" name="origin" placeholder="Enter Departure City" required >
-                                                    </div>
-                                                    <div class="col-md-6 padding-row-card  font-sm-three">
-                                                        <label class="label-form-card" for="">TO</label>
-                                                        <input type="text" class="form-control font-sm-four inputautocomplete" id="validationCustom01" name="destination" placeholder="Enter Destination City" required >
-                                                    </div>
-                                                    <div class="col-md-6 col-12 padding-row-card font-sm-three">
-                                                        <label class="label-form-card" for="validationCustom01">DEPART DATE</label>
-                                                        <div class="input-group date" >
-                                                            <input type="text" id="datepick1" class="form-control font-sm-four profile-date" value="<?php echo date('m/d/Y');?>" ng-required="true" placeholder="mm/dd/yyyy" name="departure_date">
+                                <form action="<?php echo base_url()?>Hotels/add" method="post">
+                                <div class="checkboxes">
+                                <label class="pl-4">CATEGORY</label>
+                               <label for="x"><input class="check" type="checkbox" id="x" name="category_1"/> <span>2</span></label>
+                              <label for="y"><input class="check" type="checkbox" id="y" name="category_2"/> <span>3</span></label>
+                               <label for="z"><input class="check" type="checkbox" id="z" name="category_3"/> <span>4</span></label>
+                               <label for="y"><input class="check" type="checkbox" id="y" name="category_4"/> <span>5</span></label>
+                               <label for="z"><input  class="all" type="checkbox" id="z" name="category_5"/> <span>All</span></label>
+                               
+                               </div>
+                                <div class="tab_content mt-4">
+
+                                    <div class="tabs_item">
+                                        <div class="form-row">
+                                            <div  class="col-lg-12">
+                                                <div class="row">
+                                            <div class="col-md-5 col-12 padding-row-card font-sm-three">
+                                               
+                                                <input type="text" class="form-control font-sm-four" id="validationCustom01" placeholder="Select Destination" name="destination"
+                                                       required>
+                                            </div>
+                                            
+                                            <span  class="ordiv">
+                                            OR
+                                            </span>
+                                            
+                                            
+                                            <div class="col-md-5 col-12 padding-row-card font-sm-three">
+                                               
+                                                <input type="text" class="form-control font-sm-four" id="validationCustom01" placeholder="Enter Hotel Name" name="hotel_name"
+                                                       required>
+                                            </div>
+                                     </div></div>
+                                     <div  class="col-lg-12">
+                                                <div class="row">
+                                            <div class="col-md-5 col-12 padding-row-card font-sm-three">
+                                                <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold;">CHECK IN DATE</label>
+
+
+                                                 <div class="input-group date" >
+                                            
+                                             <input type="text" id="datepick" class="form-control font-sm-four profile-date" value="SUNDAY 22 SEP'2019"  ng-required="true" placeholder="mm/dd/yyyy" name="check_in_date">
+                                                     <div class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-th"></span>
+                                                            </div>
+                                                        </div>
+
+                                            </div>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                             <div class="col-md-5 col-12 padding-row-card font-sm-three">
+                                                <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold; margin-left: 20px;" >CHECK OUT DATE</label>
+
+
+                                                 <div class="input-group date" >
+                                             <input type="text" id="datepick1" class="form-control font-sm-four profile-date" value="SUNDAY 22 SEP'2019"  ng-required="true" placeholder="mm/dd/yyyy"  name="check_out_date">
                                                             <div class="input-group-addon">
                                                                 <span class="glyphicon glyphicon-th"></span>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="col-md-4 col-4 padding-row-card font-sm-three">
-                                                        <label class="label-form-card" for="validationCustom01">Adults(11 Yrs)</label>
-                                                        <!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
-                                                        <div class="quantity">
-                                                            <a href="#" class="quantity__minus adult_minus"><span>-</span></a>
-                                                            <input name="adult_count" type="text" class="form-control quantity__input adult_input" value="1">
-                                                            <a href="#" class="quantity__plus adult_plus"><span>+</span></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4 col-4 padding-row-card font-sm-three" style="white-space:nowrap">
-                                                        <label class="label-form-card" for="validationCustom01">Children(2-11 Yrs)</label>
-                                                        <div class="quantity">
-                                                            <a href="#" class="quantity__minus children_minus"><span>-</span></a>
-                                                            <input name="child_count" type="text" class="form-control quantity__input children_input" value="0">
-                                                            <a href="#" class="quantity__plus children_plus"><span>+</span></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4 col-4 padding-row-card font-sm-three">
-                                                        <label class="label-form-card" for="validationCustom01">Infant(-2yrs)</label>
-                                                        <div class="quantity">
-                                                            <a href="#" class="quantity__minus infant_minus"><span>-</span></a>
-                                                            <input name="infant_count" type="text" class="form-control quantity__input infant_input" value="0">
-                                                            <a href="#" class="quantity__plus infant_plus"><span>+</span></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3 col-12 padding-row-card font-sm-three">
-                                                        <label class="label-form-card" for="validationCustom01">Class</label>
-                                                        <select class="form-control form-control-sm" name="class">
-                                                            <option>Economy</option>
-                                                            <option>First Class</option>
-                                                            <option>Business Class</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-md-3 col-12 padding-row-card font-sm-three">
-                                                        <label class="label-form-card" for="validationCustom01"><br></label>
-                                                        <select class="form-control form-control-sm" name="airline">
-                                                            <option>Select Airline</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div> <!-- / tabs_item -->
-                                            <div class="tabs_item">
-                                                <div class="form-row">
-                                                    <div class="col-md-6 col-12 padding-row-card font-sm-three">
-                                                        <label class="label-form-card" for="validationCustom01">FROM</label>
-                                                        <input type="text" class="form-control font-sm-four inputautocomplete" id="validationCustom01" placeholder="Enter Departure City" name="origin_1">                                                             
-                                                    </div>
-                                                    <div class="col-md-6 col-12 padding-row-card font-sm-three ">
-                                                        <label class="label-form-card" for="validationCustom01">TO</label>
-                                                        <input type="text" class="form-control font-sm-four inputautocomplete" id="validationCustom01" placeholder="Enter Destination City" name="destination_1">                                                
-                                                    </div>
-                                                    <div class="col-md-6 col-12 padding-row-card font-sm-three">
-                                                        <label class="label-form-card" for="validationCustom01">DEPART DATE</label>
-                                                        <div class="input-group date" >
-                                                            <input type="text" id="datepick" class="form-control font-sm-four profile-date" value="SUNDAY 22 SEP'2019"  ng-required="true" placeholder="mm/dd/yyyy" name="departure_date_1">
-                                                            <div class="input-group-addon">
-                                                                <span class="glyphicon glyphicon-th"></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-12 padding-row-card font-sm-three">
-                                                        <label class="label-form-card" for="validationCustom01">RETURN DATE</label>
-                                                        <div class="input-group date" >
-                                                            <input type="text" id="datepick2" class="form-control font-sm-four profile-date" ng-required="true" placeholder="mm/dd/yyyy" value="<?php echo date('m/d/Y');?>" name="return_date_1">
-                                                            <div class="input-group-addon">
-                                                                <span class="glyphicon glyphicon-th"></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2 col-12 padding-row-card font-sm-three">
-                                                        <label class="label-form-card" for="validationCustom01">Adults(11 Yrs)</label>
-                                                        <!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
-                                                        <div class="quantity">
-                                                            <a href="#" class="quantity__minus adult_minus"><span>-</span></a>
-                                                            <input name="adult_count_1" type="text" class="quantity__input adult_input" value="1">
-                                                            <a href="#" class="quantity__plus adult_plus"><span>+</span></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2 col-12 padding-row-card font-sm-three">
-                                                        <label class="label-form-card" for="validationCustom01">Children(2-11 Yrs)</label>
-                                                        <div class="quantity">
-                                                            <a href="#" class="quantity__minus children_minus"><span>-</span></a>
-                                                            <input name="child_count_1" type="text" class="quantity__input children_input" value="0">
-                                                            <a href="#" class="quantity__plus children_plus"><span>+</span></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2 col-12 padding-row-card font-sm-three">
-                                                        <label class="label-form-card" for="validationCustom01">Infant(-2yrs)</label>
-                                                        <div class="quantity">
-                                                            <a href="#" class="quantity__minus infant_minus"><span>-</span></a>
-                                                            <input name="infant_count_1" type="text" class="quantity__input infant_input" value="0">
-                                                            <a href="#" class="quantity__plus infant_plus"><span>+</span></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3 col-12 padding-row-card font-sm-three">
-                                                        <label class="label-form-card" for="validationCustom01">Class</label>
-                                                        <select class="form-control form-control-sm" name="class_1">
-                                                            <option>Economy</option>
-                                                            <option>First Class</option>
-                                                            <option>Business Class</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-md-3 col-12 padding-row-card font-sm-three">
-                                                        <label class="label-form-card" for="validationCustom01"><br></label>
-                                                        <select class="form-control form-control-sm" name="airline_1">
-                                                            <option>Select Airline</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div> <!-- / tabs_item -->
-                                            <div class="tabs_item">
-                                                <h4>Tab03</h4>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, excepturi, minima, corporis deserunt quia quae sit officiis labore inventore autem a delectus consequuntur voluptatem modi eligendi similique sed nam vitae.</p>
-                                            </div> <!-- / tabs_item -->
-                                        </div> <!-- / tab_content -->
-                                    </div> <!-- / tab -->
-                                    <hr>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" name="non_stop_only" value="">&nbsp;Show Direct Flights Only</label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" name="search_time" value="">&nbsp;My dates are flexible(+/- 3 days)</label>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <button class="btn btn-primary float-right searchbtnflight" type="submit">SEARCH FLIGHT</button>
+
+                                            </div>
+
+                                          </div>
+                                      </div>
+                                             <div  class="col-lg-12">
+                                                <div class="row">
+                                            <div class="col-md-5 col-12 padding-row-card font-sm-three" >
+                                                <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold;">ROOMS</label>
+
+                                                <input type="text" class="form-control font-sm-four" id="select_room" placeholder="1 Room 2 Person" name="no_of_rooms"
+                                                       required>
+                                                       </div>
                                         </div>
                                     </div>
-                                </form>
+                                        <div class="col-12 user-details pl-0 pr-0">
+                                        <div id="divRoom1" class="form-row user_data">
+                                          <div class="col-md-2  col-3 roomdiv">
+                                            ROOM 1
+                                            </div>
+                                          
+                                            <div class="col-md-2 col-4 padding-row-card font-sm-three ">
+                                                <label class="label-form-card" for="validationCustom01">Adults(>11 Yrs)</label>
+                                                <!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
+
+
+                                                <div class="quantity">
+                                                    
+                                                     <input id="room1AdultMinus" class="quantity__minus adult_minus" type="button" value="-" style="color:#ffffff;">
+                                                    <input  type="text" class="form-control quantity__input adult_input" value="2" data-val="true" data-val-number="The field NoOfAdults must be a number." data-val-required="The NoOfAdults field is required." id="room1Adult" name="no_of_adults">
+                                                    
+                                                    <input id="room1AdultPlus" class="quantity__plus adult_plus" type="button" value="+" style="color:#ffffff;">
+                                                </div>
+
+
+
+                                            </div>
+                                            <div class="col-md-2  col-4 padding-row-card font-sm-three ml-4" style="white-space:nowrap">
+                                                <label class="label-form-card" for="validationCustom01">Children(2-11 Yrs)</label>
+                                                <div class="quantity">
+                                                    <input id="room1ChildMinus" class="quantity__minus children_minus" type="button" value="-" style="color:#ffffff;">
+                                                    <input  type="text" class="form-control quantity__input children_input" data-val="true" data-val-number="The field NoOfChildren must be a number." data-val-required="The NoOfChildren field is required." id="room1Child" name="no_of_children" type="text" value="0">
+                                                   <input id="room1ChildPlus" class="quantity__plus children_plus" type="button" value="+" style="color:#ffffff;">
+                                                </div>
+                                            </div>
+                                           
+
+                                        </div>
+                                        </div>
+                                    </div> <!-- / tabs_item -->
+
+                                </div> <!-- / tab_content -->
+                            </div> <!-- / tab -->
+
+
+
+                            <hr>
+                           
+
+                            <div class="row">
+                                <div class="col-lg-12 col-12"><a href="hotellist.html"></a>
+                                    <button class="btn float-right" style="background-color: #28a745; color: #ffffff; width: 340px; font-size: 15px;"><b>SEARCH HOTEL</b></button>
+                                </div>
+                            </div>
+                            </form>
                             </div>
                         </div>
                     </div>
@@ -345,86 +305,18 @@
             <br><br><br>
             <!-- SCRIPTS -->
             <script>
-                var availableTags = <?php echo json_encode($airport); ?>;
-                //console.log(availableTags);
-                $( ".inputautocomplete" ).autocomplete({
-                        source: availableTags
-                    }); 
                 $(function () {
                     $("#datepick").datepicker();
                     $("#datepick1").datepicker();
                     $("#datepick2").datepicker();
                 });
-                 $(document).ready(function(){
-                   
-                   
-                    
-                });
-
-                function setTrip(type){        
-                        $("#trip_type").val(type);
-                }
-
             </script>
-        </section>
-
-
-
-
-
-
-
-
-
-
-        <section>
-
-            <div class="container newsletter-bg-colour" style="margin-top:0px;
-                 background-color: #ffffff; border-style: solid; padding-bottom: 20px;padding-top: 20px;">
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-2">
-                            <label for="inputEmail4">Keywords</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Keywords">
-                        </div>
-                        <div class="form-group col-md-1">
-                            <label for="inputPassword4">Category</label>
-                            <input type="password" class="form-control" id="inputPassword4" placeholder="Category">
-                        </div>
-                        <div class="form-group col-md-1">
-                            <label for="inputAddress">Duration</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Duration">
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label for="inputAddress2">Date</label>
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="Date">
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label for="inputCity">Min Price</label>
-                            <select id="inputState" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>...</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label for="inputState">Max Price</label>
-                            <select id="inputState" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>...</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-2 ">
-                            <a href="contact.html" class="theme-btn btn-2" role="button"  style="background-color: green; text-align: center;"   type="button">SEARCH</a>
-                        </div>
-                    </div>
-                </form>
-            </div>
         </section>
 
         <br><br><br>
 
 
-        <section>
+         <section>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -441,7 +333,7 @@
 
 
 
-        <section> 
+        <section  style="margin-top: 50px;"> 
             <div class="container">
                 <h3 class="text-center">TOP TRAVEL PRODUCTS</h3>
                 <div class="row">
@@ -451,7 +343,7 @@
                             <div class="card-body ">
 
                                 <img src="./images/card1.jpg" width="100%">
-                                <p class="card-text">All in one package, experience a seamless Nigerian-Inbound (Domestic) Travel Process; which includes Meet & Greet, Airport Transfers, Local Flight Schedules, Hotel / Service Apartment Reservations, MICE, Expatriate Quotas, Local Attractions & Tour Activities with our certified Tour Guides</p>
+                                <p class="card-text">Have the best of experience with seamless Nigerian-Inbound (Domestic) Travel Process - all in one package with inclusion on Nigerian Visa Facilitation / Visa Extension, Meet & Greet Services, Airport Transfers / Ground Transportation, Local Flight Schedules between Nigerian Cities, Hotel Accommodation, Nigerian Attractions & Tour Activities with Dip Tour certified and experience travel experts.</p>
                                 <a href="#" class="btn btn-success">CONTACT US</a>
                             </div>
                         </div>
@@ -462,8 +354,8 @@
                             <div class="card-body ">
 
                                 <img src="./images/card2.jpg" width="100%">
-                                <p class="card-text" style="padding-bottom: 25px;">For every season, get connected and be updated with top travel deals and discounted / promotional fares of different travel products; inclusive of Flight Tickets, Hotels, Tour Packages and other exciting tour services globally</p>
-                                <a href="#" class="btn btn-success">GET LATEST UPDATES</a>
+                                <p class="card-text" style="padding-bottom: 25px;">Get your Local and International Flight Tickets seamlessly with best price guarantee on flight deals, promotional fares with easy ticket upgrade and real time flight change.</p>
+                                <a href="#" class="btn btn-success" style="margin-top: 95px;">GET LATEST UPDATES</a>
                             </div>
                         </div>
                     </div>
@@ -473,8 +365,8 @@
                             <div class="card-body ">
 
                                 <img src="./images/card_1.jpg" width="100%">
-                                <p class="card-text"  style="padding-bottom: 3px;">Now you can Travel the world including Nigeria with your own mobile number when you purchase our Travel Sim Card. By default, your Sim comes with a free $10 air time credit, and both UK & US telephone numbers. Contact us to request for your own SIM, plus additional Airtime.</p>
-                                <a href="#" class="btn btn-success">READ MORE</a>
+                                <p class="card-text"  style="padding-bottom: 3px;">Travel the world anytime having your own mobile number with you to connect with family, friends & Business associates. Sim Card possess $10 air time credit, UK & US telephone numbers. </p>
+                                <a href="#" class="btn btn-success" style="margin-top: 115px;">READ MORE</a>
                             </div>
                         </div>
                     </div>
@@ -498,18 +390,18 @@
                             <div class="card-body ">
 
                                 <img src="./images/card5.jpg" width="100%">
-                                <p class="card-text"   style="padding-bottom: 0px;">Request for our tailor-made Tour Packages with excellent deliveries, rewarding relationship and cost reduction, from start to finish to different destinations around the world. Also, Travel to Dubai as a destination inclusive with your Dubai (UAE) Visa for $100 and be left with a memorable travel experience</p>
-                                <a href="#" class="btn btn-success">BOOK NOW</a>
+                                <p class="card-text"   style="padding-bottom: 0px;">Get the best Ready or Custom Made Tour Package to your Preferred Destination at any given season inclusive of Flight + Hotel + Visa + Attractions/Activities + Ground Transportation + Dubai (UAE) Package + Many More suitable for Solo, Business and Group Travelers.</p>
+                                <a href="#" class="btn btn-success" style="margin-top: 25px;">BOOK NOW</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card border-success mb-3">
-                            <h5 class="card-header bg-success text-white" style="text-align: center; padding-bottom: 35px;">--TRAVEL & HEALTH INSURANCE--</h5>
+                            <h5 class="card-header bg-success text-white" style="text-align: center; padding-bottom: 12px;">--TRAVEL & HEALTH INSURANCE--</h5>
                             <div class="card-body ">
 
                                 <img src="./images/card6.jpg" width="100%">
-                                <p class="card-text"  style="padding-bottom:45px;">Request for your Travel Insurance in minutes with guaranteed covers on emergency medical expenses abroad, travel delays (per night), evacuation & repatriation, loss & delay of baggage, passport theft, escort of beneficiary etc</p>
+                                <p class="card-text"  style="padding-bottom:45px;">In minutes, get your Travel Insurance which guarantee covers for emergency medical expenses abroad, travel delays, evacuation & repatriation, loss or delayed baggage, passport theft, free escort of beneficiary + many more.</p>
                                 <a href="#" class="btn btn-success">CONTACT US</a>
                             </div>
                         </div>
@@ -517,7 +409,6 @@
                 </div>
             </div>
         </section>
-
 
 
         <section class="container p-t-3">
@@ -848,7 +739,7 @@
                                 <img class="card-img-top" src="./images/logo1.png" alt="Card image top" style="height: 73px; width: 100px;  padding-top: 20px;">
                             </div>
                             <div class="card-body">
-                                <h6 class="card-title">EXCELLENT DELIVERABLES</h6>
+                                <h6 class="card-title">ONTIME & EXCELLENT DELIVERIES</h6>
 
                                 <p class="card-text" style="font-size: 11px;">Get assistance 24/7 on any kind of travel related
                                     query. We are happy to assist you.</p>
@@ -861,7 +752,7 @@
                                 <img class="card-img-top" src="./images/logo1.png" alt="Card image top" style="height: 73px; width: 100px;  padding-top: 20px;">
                             </div>
                             <div class="card-body">
-                                <h6 class="card-title">CAR LEASE DISPLAY</h6>
+                                <h6 class="card-title">BEST PRICE & VALUE FOR MONEY</h6>
 
                                 <p class="card-text" style="font-size: 11px;">Get assistance 24/7 on any kind of travel related
                                     query. We are happy to assist you.</p>
@@ -876,57 +767,7 @@
 
 
 
-        <section>
-            <div class="card border-0">
-                <div class="card-body">
-                    <div class="container" style="padding-top: 50px; border: 4px solid green;">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <h2 class="let_text">Lets get Started ?</h2>
-                                <p class="let_des">Whether you are booking a plane ticket,looking for a hotel room,need help with viasas or want to insure your trip</p><p class="help_text">Need Help?</p>                   
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="row">
-                                    <div class="col-lg-4 col-6 na-paff">
-                                        <div class="col_box">
-                                            <img src="./images/c1.png" width="100%"><p>Best Price</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-6 na-paff">
-                                        <div class="col_box">
-                                            <img src="./images/c2.png" width="100%"><p>Easy Booking</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-6 na-paff">
-                                        <div class=" col_box">
-                                            <img src="./images/c3.png" width="100%"><p>Trust &amp; Safety</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-6 na-paff">
-                                        <div class="col_box">
-                                            <img class="img-responsive " src="./images/c4.png"><p>24/7 Customer<br> Support</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-6 na-paff">
-                                        <div class="col_box" style="padding-bottom: 20px">
-                                            <img class="img-responsive " src="./images/c2.png"><p>Excellent Deliverables</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-6 na-paff">
-                                        <div class=" col_box" style="padding-bottom: 20px">
-                                            <img class="img-responsive " src="./images/c2.png"><p>Car Lease Display</p>
-                                        </div>
-                                    </div>
 
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-        </section>
 
 
 
@@ -959,9 +800,9 @@
                                                 <img src="./images/test1.jpg" style="margin-right:20px;"></div>
                                             <div class="col-9 offset-2">
 
-                                                <p style="margin-top: 20px;">Thank you for booking the flight for us, you are the best we have seen in the market. </p>
+                                                <p style="margin-top: 20px;">''These guys are cool with time management when it comes to complex travel arrangement. I do recommend their service to any corporate.''</p>
 
-                                                <small>- Elvis</small>
+                                                <small>- Bakare Joseph - Google Map Nigeria</small>
                                             </div>
                                         </div>
                                     </blockquote>
@@ -973,8 +814,8 @@
                                             <div class="col-1 ">
                                                 <img src="./images/test2.jpg" style="margin-right:20px;"></div>
                                             <div class="col-9 offset-2">
-                                                <p>"I am happy for all your help to make my tour a success. I will surely come again."</p>
-                                                <small>- I am happy</small>
+                                                <p>''Dip Tour coordinates all our traveling plans from successful visa entry, flight, accommodation, ground transportation and other travel amenities, just name it. We really have never sweat it. Chris or Frida are always a call away''</p>
+                                                <small>- Jude Iyhobhebhe - COO, Meridian Energy </small>
                                             </div>
                                         </div>
                                     </blockquote>
@@ -986,8 +827,8 @@
                                             <div class="col-1 ">
                                                 <img src="./images/test3.png" style="margin-right:20px;"></div>
                                             <div class="col-9 offset-2">
-                                                <p>"DTLtd is 'ur preferred partner' in flight ticketing, hotels andamp; serviced apartments, worldwide-ful tour packages n affordable car hire/leasing. "</p>
-                                                <small>- Sunny Canto.</small>
+                                                <p>"Oh yes, all the way from Europe, i and my team toured Nigeria in about 2 to 3 weeks touching many attractions at same time. Thanks to the Dip Tour team for such a remarkable & well detailed arrangement towards making history. "</p>
+                                                <small>- Elvis & John Adeba - Cloveebiz Limited</small>
                                             </div>
                                         </div>
                                     </blockquote>
@@ -996,36 +837,26 @@
                                     <blockquote>
                                         <div class="row">
                                             <div class="col-10 offset-1">
-                                                <p>"I like the 'Dip Tour', their representative is a just a call away"
+                                                <p>"Their passion in contributing their quota to the promotion of tourism is quite huge. Their team are professionals who knows their opinions."
                                                 </p>
-                                                <small>-Aminat Momoh</small>
+                                                <small>- Amao Nurudeen - Deputy Leader, Eti Osa Local Government</small>
                                             </div>
                                         </div>
                                     </blockquote>
                                 </div> 
-                                <div class="carousel-item">
-                                    <blockquote>
-                                        <div class="row">
-                                            <div class="col-1 ">
-                                                <img src="./images/test4.jpg" style="margin-right:20px;"></div>
-                                            <div class="col-9 offset-2">
-                                                <p>"I JUST LOVE THEM"</p>
-                                                <small>- Sunny Canto.</small>
-                                            </div>
-                                        </div>
-                                    </blockquote>
-                                </div> 
+
                                 <div class="carousel-item">
                                     <blockquote>
                                         <div class="row">
                                             <div class="col-10 offset-1">
-                                                <p>"Dip Tour does all my travelling processes. From visa arrangement to hotel reservation, just name it. When am ready for my next vacation, I need not to sweat it because Mr Emeka in Dip Tour is just a call away. They are simply the best."
+                                                <p>"I really recommend you guys for the credible and unprecedented attention you accorded my request. You guided i and family to a successful Canadian visa application process, flight, accommodation, tour activities and even a travel sim to keep me in constant communication with my friends in Nigeria. The best part was it was within my budget."
                                                 </p>
-                                                <small>- Betty</small>
+                                                <small>- Elvis & John Adeba - Cloveebiz Limited</small>
                                             </div>
                                         </div>
                                     </blockquote>
-                                </div>  <!-- .item -->
+                                </div> 
+                                <!-- .item -->
 
                             </div> <!-- .carousel-inner -->
                         </div>  <!-- #my-carousel -->
@@ -1039,12 +870,12 @@
 
             <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
             <script>$('#myCarousel').carousel({
-                    interval: 3000
-                });
+                                    interval: 3000
+                                });
 
-                window.sr = ScrollReveal({reset: true});
+                                window.sr = ScrollReveal({reset: true});
 
-                sr.reveal('.company-stuff', {duration: 700});</script>
+                                sr.reveal('.company-stuff', {duration: 700});</script>
         </section>
 
 
@@ -1052,28 +883,27 @@
             <div class="footer-middle">
                 <div class="container" >
                     <div class="row">
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-5 col-sm-6">
                             <!--Column1-->
                             <div class="footer-pad">
-                                <img class="" src="./images/logo.png">
-                                <p>Lorem Ipsum is simply dummy text of the
-                                    printing and typesetting industry. Lorem Ipsum
-                                    has been the industry's when an unknown
-                                    printer took a galley of type and scrambled it
-                                    to make a type specimen book.</p>
+                                <img class="" src="./images/l2.png">
+                                <p>Dip Tour with recorded success and continuous accomplishment is today reckoned as the preferred One Stop Travel Shop and one of the Leading Global Travel Management Company / with a focus on Promotion of Tourism Worldwide through its network and alliance. </p><br/>
+
+                                <p>It has grown into a company having multiple years of global working experience and sound understanding of domestic and international travel markets and protocols that guarantees effective & on time deliveries, value for money, and customers' satisfaction focus on the 5A'S of Tourism  - Accessibility, Accommodation, Activities, Amenities and Attractions.
+                                </p>
                                 <ul class="list-unstyled">
                                     <li><a href="#"></a></li>
-                                    <li><a href="#">Address</a></li>
-                                    <li><a href="#">Phone:</a></li>
+                                    <li>Address: Suite 7, Block 1, Bar Beach Towers, Bishop Oluwole &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Street Victoria Island, Lagos (LandMark: Eko Atlantic)</li>
+                                    <li>Phone: +234 8122820856 <br/>  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;+234 8170592433</li>
                                     <li><a href="#">Email: info@diptourltd.com</a></li>
 
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-2 col-sm-6">
                             <!--Column1-->
                             <div class="footer-pad">
-                                <h6 ><u style="color:white; padding-left: 100px;">POPULAR LINKS</u></h6>
+                                <h6 ><u style="color:white; ">COMPANY INFO</u></h6>
                                 <ul class="list-unstyled" style="margin-top: 25px; margin-right: 20px;">
                                     <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">About us</a></li>
                                     <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Services</a></li>
@@ -1081,19 +911,18 @@
                                     <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Privacy Policy</a></li>
                                     <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Our Network</a></li>
                                     <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Contact</a></li>
-                                    <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Blog</a></li>
+
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-2 col-sm-6">
                             <!--Column1-->
 
-
-                            <ul class="list-unstyled" style="margin-top: 60px; margin-left: 0">
-                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Press</a></li>
+                            <h6 ><u style="color:white; ">POPULAR LINKS</u></h6>
+                            <ul class="list-unstyled" style="margin-top: 30px; margin-left: 0">
+                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Blog</a></li>
                                 <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">FAQ</a></li>
                                 <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Terms & Conditons</a></li>
-                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Reach Us</a></li>
 
                                 <li>
                                     <a href="#"></a>
@@ -1109,7 +938,8 @@
                                     <div class="content">
                                         <p>You can get latest update from us by subscribing to
                                             our newsletter.</p>  <div class="input-group">
-                                            <input type="email" class="form-control" placeholder="Enter your email">
+
+                                            <input type="email" class="form-control" placeholder="Name/Telephone">
                                             <span class="input-group-btn">
                                                 <button class="btn" type="submit">Subscribe</button>
                                             </span>
@@ -1119,12 +949,12 @@
 
                             </div> <div class="social" style="margin-top: 20px;">
                                 <h6 style="padding-left: 70px;"><u style="color:white;" >GET CONNECTED</u></h6>
-                                <a href="#" class="fa fa-facebook"></a>
-                                <a href="#" class="fa fa-twitter"></a>
-                                <a href="#" class="fa fa-youtube"></a>
-                                <a href="#" class="fa fa-linkedin"></a>
+                                <a href="https://www.facebook.com/diptourltd" class="fa fa-facebook"></a>
+                                <a href="https://www.twitter.com/diptourltd" class="fa fa-twitter"></a>
+                                <a href="https://www.youtube.com/user/diptourltd" class="fa fa-youtube"></a>
+                                <a href="https://www.linkedin.com/company/dip-tour-ltd" class="fa fa-linkedin"></a>
                                 <a href="#" class="fa fa-google-plus"></a> 
-                                <a href="#" class="fa fa-instagram"></a>  
+                                <a href="https://www.instagram.com/diptourltd" class="fa fa-instagram"></a>  
                             </div>
                         </div>
 

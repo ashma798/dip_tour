@@ -257,7 +257,7 @@
                     </li>
                    
                    <li >
-                       <a class="nav-link " href="javascript:;"> <i class="fa fa-th-large"></i> <span class="title">Hotel</span> <i class="fa fa-chevron-right" aria-hidden="true"></i> </a>
+                       <a class="nav-link " href="<?php echo base_url('Dashboard/hotel')?>"> <i class="fa fa-th-large"></i> <span class="title">Hotel</span> <i class="fa fa-chevron-right" aria-hidden="true"></i> </a>
                          
                     </li>
                     <li >

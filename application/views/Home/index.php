@@ -148,7 +148,7 @@
                             <a class="nav-link" href="<?php echo base_url();?>" style="color: black;">HOME<span style="padding-left: 20px;">|</span></a>
                         </li>                      
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: black;">HOTELS <span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="<?php echo base_url()?>Hotels" style="color: black;">HOTELS <span style="padding-left: 20px;">|</span></a>
                         </li>                    
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo base_url();?>/flight" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>
