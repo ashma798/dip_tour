@@ -121,7 +121,6 @@ class Dashboard extends CI_Controller {
 
 	public function addfooterInfo(){
 		$data = $this->input->post();
-		print_r($data);
 		$this->load->model('Footerinfo');
         $tripdetails = $this->Footerinfo->insertData($data);
         $message = "Footer info saved";
@@ -146,8 +145,92 @@ class Dashboard extends CI_Controller {
 		$data = $this->input->post();
 		$this->load->model('Contactinfo');
         $tripdetails = $this->Contactinfo->insertData($data);
-        $message = "Contact Info info saved";
+        $message = "Contact Info saved";
         $this->session->set_flashdata('item', $message);
         redirect(base_url('Dashboard/contactUs'));
+	}
+
+
+	public function editAboutUs(){
+		$data['v'] = 'Dashboard/edit_about_us';
+		$data['viewName'] = 'CMS | About Us';
+		$this->load->model('Aboutus');
+        $getAboutUsData = $this->Aboutus->get();
+        $data['about_us'] = html_entity_decode($getAboutUsData);
+        $this->load->view('template',$data);
+
+	}
+
+	public function addAboutUs(){
+		$data = $this->input->post();
+        $this->load->model('Aboutus');
+        $inserData['about_us'] = htmlentities($data['about_us']);
+        $this->Aboutus->update($inserData);
+        $message = "About us Info saved";
+        $this->session->set_flashdata('item', $message);
+		redirect(base_url('Dashboard/editAboutUs'));
+	}
+
+	// our network
+
+	public function editServices(){
+		$data['v'] = 'Dashboard/services';
+		$data['viewName'] = 'CMS | Services';
+		$this->load->model('Services');
+        $getServicesData = $this->Services->get();
+        $data['services'] = html_entity_decode($getServicesData);
+        $this->load->view('template',$data);
+
+	}
+
+	public function addServices(){
+		$data = $this->input->post();
+        $this->load->model('Services');
+        $inserData['services'] = htmlentities($data['services']);
+        $this->Services->update($inserData);
+        $message = "Services Info saved";
+        $this->session->set_flashdata('item', $message);
+		redirect(base_url('Dashboard/editServices'));
+	}
+
+
+	public function editPrivacyPolicy(){
+		$data['v'] = 'Dashboard/privacy_policy';
+		$data['viewName'] = 'CMS | Privacy Policy';
+		$this->load->model('Privacypolicy');
+        $getServicesData = $this->Privacypolicy->get();
+        $data['privacy_policy'] = html_entity_decode($getServicesData);
+        $this->load->view('template',$data);
+
+	}
+
+	public function addPrivacyPolicy(){
+		$data = $this->input->post();
+        $this->load->model('Privacypolicy');
+        $inserData['privacy_policy'] = htmlentities($data['privacy_policy']);
+        $this->Privacypolicy->update($inserData);
+        $message = "Services Info saved";
+        $this->session->set_flashdata('item', $message);
+		redirect(base_url('Dashboard/editPrivacyPolicy'));
+	}
+
+	public function editOurNetwork(){
+		$data['v'] = 'Dashboard/our_network';
+		$data['viewName'] = 'CMS | Our Network';
+		$this->load->model('Ournetwork');
+        $getServicesData = $this->Ournetwork->get();
+        $data['our_network'] = html_entity_decode($getServicesData);
+        $this->load->view('template',$data);
+
+	}
+
+	public function addOurNetwork(){
+		$data = $this->input->post();
+        $this->load->model('Ournetwork');
+        $inserData['our_network'] = htmlentities($data['our_network']);
+        $this->Ournetwork->update($inserData);
+        $message = "Our Network Info saved";
+        $this->session->set_flashdata('item', $message);
+		redirect(base_url('Dashboard/editOurNetwork'));
 	}
 }

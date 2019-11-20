@@ -232,6 +232,18 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="<?php echo base_url('Dashboard/contactUs');?>"> <span class="title">Contact Us</span> </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo base_url('Dashboard/editAboutUs');?>"> <span class="title">About Us</span> </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo base_url('Dashboard/editServices');?>"> <span class="title">Services</span> </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo base_url('Dashboard/editPrivacyPolicy');?>"> <span class="title">Privacy Policy</span> </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo base_url('Dashboard/editOurNetwork');?>"> <span class="title">Our Network</span> </a>
+                            </li>
                         </ul>
                     </li>
                      <li >
