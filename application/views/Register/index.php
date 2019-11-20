@@ -156,7 +156,7 @@
                     </ul>
                 </div>
                 <ul class="navbar-nav nav-flex-icons">
-                    <a href="#" class="btn " role="button" style=" margin-left:40px; margin-right:0px; background-color: black; color:white;"><i class="fa fa-lock xs-nav"></i>LOGIN</a>
+                    <a href="<?php echo base_url();?>Register/login" class="btn " role="button" style=" margin-left:40px; margin-right:0px; background-color: black; color:white;"><i class="fa fa-lock xs-nav"></i>LOGIN</a>
                     <a href="#" class="btn " role="button" style=" margin-left:20px; margin-right:30px; background-color: green; color:white;"><i class="fa fa-user xs-naav"></i>REGISTER</a>
                 </ul>
             </nav>
@@ -210,11 +210,11 @@ background:#2d2d2d;}</style>       <h6>Passport Photo upload:</h6>
                             <label>Salutation</label> 
                             <div class="styled-select-filters selectBox ">
                                 <select name="salutation" id="salutation">
-<option value="1" selected="selected">Mr</option>
-<option value="2">Mrs</option>
-<option value="3">Ms</option>
-<option value="4">Dr</option>
-<option value="5">Sr</option>
+<option value="Mr" selected="selected">Mr</option>
+<option value="Mrs">Mrs</option>
+<option value="Ms">Ms</option>
+<option value="Dr">Dr</option>
+<option value="Sr">Sr</option>
 </select>
                             </div>
                           </div>

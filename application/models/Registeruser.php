@@ -72,4 +72,15 @@ class Registeruser extends CI_Model{
 
 	}
 
+
+	public function userData($username = '')
+	{
+		$results = $this->dip->from($this->getTableName() . " as t")
+			//->where('t.user_active', 1)
+			->where('login_email', $username)
+			->get()->result_array();
+
+		return $results;
+	}
+
 }

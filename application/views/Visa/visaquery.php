@@ -487,7 +487,7 @@ updateSymbol()
            
         </ul>
        <ul class="navbar-nav " style="margin-left: 50px;">
-          <a href="#" class="btn " role="button" style=" margin-left:40px; margin-right:0px; background-color: black; color:white;"><i class="fa fa-lock" style=" margin-right: 15px; border: 2px solid white;
+          <a href="<?php echo base_url();?>Register/login" class="btn " role="button" style=" margin-left:40px; margin-right:0px; background-color: black; color:white;"><i class="fa fa-lock" style=" margin-right: 15px; border: 2px solid white;
  border-radius: 50%;
  border-color:  3x solid white;
  padding:10px;
