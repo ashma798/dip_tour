@@ -492,7 +492,7 @@ updateSymbol()
  border-color:  3x solid white;
  padding:10px;
  color:white;"></i>LOGIN</a>
-  <a href="#" class="btn " role="button" style=" margin-left:20px; margin-right:30px; background-color: green; color:white;"><i class="fa fa-user" style=" margin-right: 15px; border: 2px solid black;
+  <a href="<?php echo base_url(); ?>Register" class="btn " role="button" style=" margin-left:20px; margin-right:30px; background-color: green; color:white;"><i class="fa fa-user" style=" margin-right: 15px; border: 2px solid black;
  border-radius: 50%;
  border-color:  3x solid black;
  padding:10px;

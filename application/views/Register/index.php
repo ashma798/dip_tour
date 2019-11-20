@@ -1,4 +1,3 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,10 +18,9 @@
         <!--      <script type="text/javascript" src="./js/mdb.min.js"></script>-->
         <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
 
-
-
+        <script type="text/javascript" src="./js/menu-scripts.js"></script>
+        <script type="text/javascript" src="./js/flight-scripts.js"></script>
         <script src="./js/jquery-ui.js"></script>
-        <link href="./css/sty1.css" rel="stylesheet">
 
 
         <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -30,19 +28,17 @@
 
 
         <link href="./css/style.css" rel="stylesheet">
-        <link href="./css/carnew.css" rel="stylesheet">
-        <link href="./css/new.css" rel="stylesheet">
+        <link href="./css/flightex.css" rel="stylesheet">
+        <link href="./css/newstyle.css" rel="stylesheet">
+        <link href="./css/flight-style.css" rel="stylesheet">
         <link rel="stylesheet" href="./css/jquery-ui.css">
     </head>
 
     <body>
+
         <section>
             <nav class="navbar navbar-expand-sm   sticky-top justify-content-between" style="background-color: black;">
-                <a class="navbar-brand nav-desk" href="<?php echo base_url();?>">
-
-                    Nigeria's No.1 Tour Management Company
-
-                </a>
+                <a class="navbar-brand nav-desk" href="#">Nigeria's No.1 Tour Management Company</a>
                 <form class="form-inline my-1">
                     <ul class="navbar-nav  ml-auto nav-desk-two nav-flex-icons">
                         <li class="nav-item ">
@@ -80,38 +76,35 @@
                             <div class="input-group-addon currency-addon" >
                                 <select class="currency-selector" style="color: white; background-color: black; margin-top: 10px; ">
                                     <option  class="opt" data-symbol="₦" data-placeholder="0.00" selected >ENG</option>
-                                    <option data-symbol="€" data-placeholder="0.00">ARABIC</option>
-                                    <option data-symbol="£" data-placeholder="0.00">HINDI</option>
+                                    <option data-symbol="€" data-placeholder="0.00">FRENCH</option>
+                                    <option data-symbol="£" data-placeholder="0.00">SPANISH</option>
                                 </select>
                             </div>
                         </li>
                         <li class="nav-item"><a class="nav-link"  href="" style="color: white;">|</a></li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.facebook.com/diptourltd" style="color:white;"><i class="fa fa-facebook"></i> </a>
+                            <a class="nav-link" href="#" style="color:white;"><i class="fa fa-facebook"></i> </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.twitter.com/diptourltd" style="color:white;"><i class="fa fa-twitter"></i> </a>
+                            <a class="nav-link" href="#" style="color:white;"><i class="fa fa-twitter"></i> </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.instagram.com/diptourltd" style="color:white;"><i class="fa fa-instagram"></i> </a>
+                            <a class="nav-link" href="#" style="color:white;"><i class="fa fa-instagram"></i> </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.linkedin.com/company/dip-tour-ltd" style="color:white;"><i class="fa fa-linkedin"></i> </a>
+                            <a class="nav-link" href="#" style="color:white;"><i class="fa fa-linkedin"></i> </a>
                         </li>
                     </ul>
                 </form>
             </nav>
         </section>
 
-
-
-
         <div class="topnav">
             <div class="row">
-                <div class="col-lg-4 col-6 ">
+                <div class="col-lg-4 col-5 ">
                     <img class="nav-img" src="./images/logo.png" alt=""/>
                 </div>
-                <div class="offset-lg-5 col-lg-3 col-6">
+                <div class="offset-lg-4 col-lg-4 col-7">
                     <ul style="list-style-type: none; margin-top: 30px; font-weight: bold;">
                         <li>Contact Us</li>
                         <li>+2347046226590</li>
@@ -131,32 +124,32 @@
                     <span class="rounded-bottom"></span>
                     <ul class="navbar-nav" style=" padding-left: 60px;">
                         <li class="nav-item active">
-                            <a class="nav-link" href="<?php echo base_url();?>" style="color: black;">HOME<span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="index.html" style="color: black;">HOME<span style="padding-left: 20px;">|</span></a>
                         </li>                      
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: black;">HOTELS <span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="hotelsearch.html" style="color: black;">HOTELS <span style="padding-left: 20px;">|</span></a>
                         </li>                    
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url();?>/flight" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="flightsearch.html" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>
                         </li>                        
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url();?>/car-rental" style="color: black;">CAR RENTALS <span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="car.html" style="color: black;">CAR RENTALS <span style="padding-left: 20px;">|</span></a>
                         </li>                   
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
                                 TOUR PACKAGES
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Asia</a>
+                                <a class="dropdown-item" href="#">Africa</a>
+                                <a class="dropdown-item" href="#">Europe</a>
                             </div>
                         </li>
                         <li class="nav-item  dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
                                 VISAS</a>                          
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="search.html">Search</a>
-                                <a class="dropdown-item" href="visa_form.html">Visa Booking</a>
+                                <a class="dropdown-item" href="visa1.html">Visa Booking</a>
                                 <a class="dropdown-item" href="#">Dubai UAE</a>                                
                             </div>                              
                         </li>
@@ -164,440 +157,216 @@
                 </div>
                 <ul class="navbar-nav nav-flex-icons">
                     <a href="#" class="btn " role="button" style=" margin-left:40px; margin-right:0px; background-color: black; color:white;"><i class="fa fa-lock xs-nav"></i>LOGIN</a>
-                    <a href="<?php echo base_url(); ?>Register" class="btn " role="button" style=" margin-left:20px; margin-right:30px; background-color: green; color:white;"><i class="fa fa-user xs-naav"></i>REGISTER</a>
+                    <a href="#" class="btn " role="button" style=" margin-left:20px; margin-right:30px; background-color: green; color:white;"><i class="fa fa-user xs-naav"></i>REGISTER</a>
                 </ul>
             </nav>
         </section>
 
-
-        <section id="" class="at-widgets acme-contact ">  <style type="text/css">
-                @import url('https://fonts.googleapis.com/css?family=Yantramanav:100,300');
-
-                /* ------------- */
-                /* GLOBAL STYLES */
-                /* ------------- */
-
-                * {
-                    box-sizing: border-box;
-                }
-
-                body {
-                    background:white;
-                    color: #485e74;
-                    line-height: 1.6;
-                    font-family: 'Yantramanav', sans-serif;
-                    padding: 1em;
-                }
-
-                .container {
-                    max-width: 1170px;
-                    margin-left: auto;
-                    margin-right: auto;
-                    padding: 1em;
-                }
-
-                ul {
-                    list-style: none;
-                    padding: 0;
-                }
-
-                .brand {
-                    text-align: center;
-                    font-weight: 300;
-                    text-transform: uppercase;
-                    letter-spacing: 0.1em;
-                }
-
-                .brand span {
-                    color: #ffffff;
-                }
-
-                .wrapper {
-                    box-shadow: 0 0 20px 0 rgba(57, 82, 163, 0.7);
-                }
-
-                .wrapper > * {
-                    padding: 1em;
-                }
-
-                /* ------------------- */
-                /* COMPANY INFORMATION */
-                /* ------------------- */
-
-                .company-info {
-                    background: #77a339;
-                    border-top-left-radius: 4px;
-                    border-top-right-radius: 4px;
-                }
-
-                .company-info h3,
-                .company-info ul {
-                    text-align: center;
-                    margin: 0 0 1rem 0;
-                }
-
-                /* ------- */
-                /* CONTACT */
-                /* ------- */
-
-                .contact {
-                    background: #c5dea2;
-                    border-bottom-left-radius: 4px;
-                    border-bottom-right-radius: 4px;
-                }
-
-                /* ---- */
-                /* FORM */
-                /* ---- */
-
-                .contact form {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-gap: 20px;
-                }
-
-                .contact form label {
-                    display: block;
-                }
-
-                .contact form p {
-                    margin: 0;
-                }
-
-                .contact form .full {
-                    grid-column: 1 / 3;
-                }
-
-                .contact form button,
-                .contact form input,
-                .contact form textarea {
-                    width: 100%;
-                    padding: 1em;
-                    border: solid 1px #627EDC;
-                    border-radius: 4px;
-                }
-
-                .contact form textarea {
-                    resize: none;
-                }
-
-                .contact form button {
-                    background: #627EDC;
-                    border: 0;
-                    color: #e4e4e4;
-                    text-transform: uppercase;
-                    font-size: 14px;
-                    font-weight: bold;
-                }
-
-                .contact form button:hover,
-                .contact form button:focus {
-                    background: #3952a3;
-                    color: #ffffff;
-                    outline: 0;
-                    transition: background-color 2s ease-out;
-                }
-
-                /* ------------- */
-                /* MEDIA QUERIES */
-                /* ------------- */
-                input[type=checkbox] + label {
-                    display: block;
-                    margin: 0.2em;
-                    cursor: pointer;
-                    padding: 0.2em;
-                }
-
-                input[type=checkbox] {
-                    display: none;
-                }
-
-                input[type=checkbox] + label:before {
-                    content: "\2714";
-                    border: 0.1em solid #000;
-                    border-radius: 0.2em;
-                    display: inline-block;
-                    width: 1em;
-                    height: 1em;
-                    padding-left: 0.2em;
-                    padding-bottom: 0.3em;
-                    margin-right: 0.2em;
-                    vertical-align: bottom;
-                    color: transparent;
-                    transition: .2s;
-                }
-
-
-
-                input[type=checkbox]:checked + label:before {
-                    background-color: MediumSeaGreen;
-                    border-color: MediumSeaGreen;
-                    color: #fff;
-                }
-
-
-                @media only screen and (min-width: 400px) {
-                    .wrapper {
-                        display: grid;
-                        grid-template-columns: 1fr 2fr;
-                    }
-
-                    .wrapper > * {
-                        padding: 2em;
-                    }
-
-                    .company-info {
-                        border-radius: 4px 0 0 4px;
-                    }
-
-                    .contact {
-                        border-radius: 0 4px 4px 0;
-                    }
-
-                    .company-info h3,
-                    .company-info ul,
-                    .brand {
-                        text-align: left;
-                    }
-                }
-            </style>
-            <section>
-
-                <br>
-
-                <div class="card" style="border:3px solid green;">
-                    <div class="container container-adjust">
-                        <div class="row">
-
-
-
-                            <div class="col-12">
-                                <div class="card-body bg-white pad-card border-0">
-                                    <h3 style=" font-size: 20px;font-weight: bold;">Search <span style="color:green;">Car</span> For Rent</h3>
-                                    <hr>
-
-                                    <h2><?php echo $this->session->flashdata('item'); ?></h2> 
-                                    <form action="<?php echo base_url('/car-rental/add'); ?>" method="post">
-
-                                        <div class="form-row">
-
-                                            <div class="col-md-2 padding-row-card  font-sm-three">
-                                                <label class="label-form-card" for="">Pick-up City/Airport</label>
-                                                <input type="text" class="form-control font-sm-four inputautocomplete" id="validationCustom01" placeholder="Airport or City" name="pick_up_city"
-                                                       required >
-                                            </div>
-                                            <div class="col-md-2 padding-row-card  font-sm-three">
-                                                <label class="label-form-card" for="">Drop-off City/Airport</label>
-                                                <input type="text" class="form-control font-sm-four inputautocomplete" id="validationCustom01" name="drop_off_city" placeholder="Same as pickup location" 
-                                                       required >
-                                            </div>
-                                            <div class="col-md-2 padding-row-card  font-sm-three">
-                                                <label class="label-form-card" for="">Pick-up Date</label>
-                                                <input type="date" class="form-control font-sm-four" id="validationCustom01" name="pick_up_date" placeholder="Enter Departure City"
-                                                       required >
-                                            </div>
-                                            <div class="col-md-2 padding-row-card  font-sm-three" style="margin-bottom: 0px;">
-                                                <label for="sel1" style="font-size: 11px;">Select time:</label>
-                                                <select class="form-control" id="sel1" style="    margin-top: -10px;height: 31px;" name="pick_up_time">
-                                                    <option>09:00</option>
-                                                    <option>10:00</option>
-                                                    <option>10:00</option>
-                                                    <option>10:00</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-2 padding-row-card  font-sm-three">
-                                                <label class="label-form-card" for="">Drop-off Date</label>
-                                                <input type="date" class="form-control font-sm-four" id="validationCustom01" placeholder="Enter Departure City"
-                                                       required name="drop_off_date">
-                                            </div>
-                                            <div class="col-md-2 padding-row-card  font-sm-three" style="margin-bottom: 0px;">
-                                                <label for="sel1" style="font-size: 11px;">Select time:</label>
-                                                <select class="form-control" id="sel1" style="margin-top: -10px;height: 31px;" name="drop_off_time">
-                                                    <option>1:00</option>
-                                                    <option>2:00</option>
-                                                    <option>3:00</option>
-                                                    <option>4:00</option>
-                                                </select>
-
-
-
-                                            </div>
-                                            <!--div class="col-md-2 padding-row-card  font-sm-three">
-                                                <button  type="button"  class="btn" style="background-color: #9ACD32; color:white; margin-bottom: 0px; margin-top: 15px; width:100%;">SEARCH</button>
-                                            </div-->
-
-                                        </div>
-                                        <hr>
-                                        <div class="form-row">
-
-                                            <div class="col-md-1 col-12 padding-row-card font-sm-three">
-                                                <label for="sel1" style="font-size: 11px;">Vehicle Type</label>
-                                                <select class="form-control" id="sel1" style="margin-top: -10px;height: 31px;"  name="vechical_type">
-                                                    <option>Select</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                </select>
-
-
-
-                                            </div>
-
-                                            <div class="col-md-1">
-
-                                            </div>
-                                            <div class="col-md-2 col-12 padding-row-card font-sm-three">
-                                                <label class="label-form-card" for="validationCustom01">Class</label>
-                                                <select class="form-control form-control-sm" name="vehicle_class">
-                                                    <option>Select</option>
-                                                    <option>First Class</option>
-                                                    <option>Business Class</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-1">
-
-                                            </div>
-                                            <div class="col-md-2 col-12 padding-row-card font-sm-three">
-                                                <label class="label-form-card" for="validationCustom01">Transmission Type</label>
-                                                <select class="form-control form-control-sm" name="vehicle_transmission_type">
-                                                    <option>Select</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-1">
-
-                                            </div>
-                                            <div class="col-md-1 col-12 padding-row-card font-sm-three">
-                                                <label class="label-form-card" for="validationCustom01">Has Air Condition</label>
-                                                <select class="form-control form-control-sm" name="vehicle_air_conditioning">
-                                                    <option>Select</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-1">
-
-                                            </div>
-                                            <div class="col-md-2 col-12 padding-row-card font-sm-three">
-                                                <label class="label-form-card" for="validationCustom01">Mileage Charge Type</label>
-                                                <select class="form-control form-control-sm" name="vehicle_charge_type">
-                                                    <option>Select</option>
-                                                </select>
-                                            </div>
-
-                                        </div>
-
-
-
-
-                                        <hr>
-
-
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <button type="submit" class="btn btn-primary float-right searchbtnflight">SEARCH CAR FOR RENT</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
+        <section id="" class=""><style type="text/css">#hero {
+    position: relative;
+    background-size: cover;
+    color: #fff;
+    width: 100%;
+    font-size: 16px;
+    display: table;
+    z-index: 99;
+    text-align: center;
+    text-transform: uppercase
+}</style> <div class="container" style="margin-top: 20px; border:5px solid green; padding-left: 150px;">
+           
+              <div class="row">
+                 <div class="col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-8">
+                    <div id="">
+                        <h2><?php echo $this->session->flashdata('item'); ?></h2> 
+                     <br/>
+                       <form action="<?php echo base_url(); ?>Register/add" enctype="multipart/form-data" id="user_register_form" autocomplete="off" onsubmit="return validate_user_register()" method="post" accept-charset="utf-8">
+                          <div class="row">
+                            <div class="col-md-8 form-group"><style type="text/css">img{
+  max-width:180px;
+}
+input[type=file]{
+padding:10px;
+background:#2d2d2d;}</style>       <h6>Passport Photo upload:</h6>
+                                <input type='file' name="passport_photo" onchange="readURL(this);" />
                             </div>
+                            <div class="col-md-2 form-group"><script type="text/javascript">function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }</script>
+
+                            <img id="blah" src="http://placehold.it/180" alt="your image" />
                         </div>
-
-
-
-
                     </div>
-                </div>
-                </div>
-                </div>
-            </section>
+                    <div class="row">
+                          <div class="col-md-3 col-sm-3 col-xs-6 form-group">
+                            <label>Salutation</label> 
+                            <div class="styled-select-filters selectBox ">
+                                <select name="salutation" id="salutation">
+<option value="1" selected="selected">Mr</option>
+<option value="2">Mrs</option>
+<option value="3">Ms</option>
+<option value="4">Dr</option>
+<option value="5">Sr</option>
+</select>
+                            </div>
+                          </div>
+                          <div class="col-md-3 form-group">
+                             <label for="fname">First Name</label>
+                             <input type="text" name="first_name" value="" id="first_name" pattern=".{2,24}" title="2 to 24 Characters" class="form-control capitalize " required="required" autocomplete="off" placeholder="Enter Your First Name" minlength="2" maxlength="24"  />
+                          </div>
+                          <div class="col-md-3 form-group">
+                             <label>Middle Name</label>
+                             <input type="text" name="middle_name" value="" id="middle_name" pattern=".{0,24}" title="0 to 24 Characters" class="form-control capitalize" autocomplete="off" placeholder="Enter Your Middle Name" minlength="0" maxlength="24"  />
+                          </div>
+                          <div class="col-md-3 form-group">
+                             <label>Last Name</label>
+                             <input type="text" name="last_name" value="" id="last_name" pattern=".{2,24}" title="2 to 24 Characters" class="form-control capitalize" required="required" autocomplete="off" placeholder="Enter Your Last Name" minlength="2" maxlength="24"  />
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-12 error_message"></div>
+                          <div class="col-md-6 form-group">
+                             <label>Email Address</label>
+                             <input type="email" name="login_email" value="" id="login_email" pattern=".{6,64}" title="6 to 64 Characters" class="form-control email" required="required" autocomplete="off" placeholder="Enter Your Registered Email Address" minlength="6" maxlength="64"  />
+                          </div>
+                          <div class="col-md-6 form-group">
+                             <label>Mobile Number</label>
+                             <input type="text" name="cell_phone" value="" id="cell_phone" pattern=".{6,12}" title="6 to 12 Characters" class="form-control mobile" required="required" autocomplete="off" placeholder="Enter Your Cell Phone" minlength="6" maxlength="12"  />
+                          </div></div>
+ <div class="row">                          <div class="col-md-12 error_message" id="email_error_message"></div>
+                              
+                          <div class="col-md-12 error_message"></div>
+                          <div class="col-md-6 form-group">
+                             <label>Company Name</label>
+                             <input type="text" name="company_name" value="" id="company_name" pattern=".{0,128}" title="0 to 128 Characters" class="form-control" required="required" autocomplete="off" placeholder="Enter Your Company Name" minlength="0" maxlength="128"  />
+                          </div>
+                          <div class="col-md-6 form-group">
+                             <label>Address</label>
+                             <input type="text" name="address" value="" onkeypress="googleAddressWithAutoFill(this.id)" id="address" pattern=".{0,128}" title="0 to 128 Characters" class="form-control" required="required" placeholder="Address" autocomplete="off" minlength="0" maxlength="128" min="0" max="128"  />
+                             <!-- Hidden Variable as per the Google address Information - Auto Fill Functionality -->
+                             <input type="hidden" name="city" value="" id="city" pattern=".{2,24}" title="2 to 24 Characters" class="form-control capitalize" required="required" autocomplete="off" placeholder="Enter Your Last Name" minlength="2" maxlength="24"  />
+                             <input type="hidden" name="state" value="" id="state" pattern=".{2,24}" title="2 to 24 Characters" class="form-control capitalize" required="required" autocomplete="off" placeholder="Enter Your Last Name" minlength="2" maxlength="24"  />
+                             <input type="hidden" name="country" value="" id="country" pattern=".{2,24}" title="2 to 24 Characters" class="form-control capitalize" required="required" autocomplete="off" placeholder="Enter Your Last Name" minlength="2" maxlength="24"  />
+                             <input type="hidden" name="zip_code" value="" id="zip_code" pattern=".{2,24}" title="2 to 24 Characters" class="form-control capitalize" required="required" autocomplete="off" placeholder="Enter Your Last Name" minlength="2" maxlength="24"  />
+                          </div>
+                      </div>
+                      
+                          <div class="col-md-12 error_message" id="company_error_message"></div>
+                         <div class="row">
+                                <div class="col-md-3 form-group"> <script type="text/javascript">var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;</script>  <label for="exampleInputPassword1">Password</label><input type="password" placeholder="Password" id="password" name="password" required></div>
+<div class="col-md-3 form-group"> <label for="exampleInputPassword1">Confirm Password</label>
+        <input type="password" placeholder="Confirm Password" id="confirm_password" required>
+
+        
+    </div>
+    
+                                <div class="col-md-6 form-group"><div class="row" style="padding-top: 30px"><form method="post" id="subForm"><script type="text/javascript">$(function(){
+  $('#subForm').ebcaptcha();
+});
+
+(function($){
+
+    jQuery.fn.ebcaptcha = function(options){
+
+        var element = this; 
+        var input = this.find('#ebcaptchainput'); 
+        var label = this.find('#ebcaptchatext'); 
+                $(element).find('button[type=submit]').attr('disabled','disabled'); 
+
+        var randomNr1 = 0; 
+        var randomNr2 = 0;
+        var totalNr = 0;
 
 
+        randomNr1 = Math.floor(Math.random()*10);
+        randomNr2 = Math.floor(Math.random()*10);
+        totalNr = randomNr1 + randomNr2;
+        var texti = "What is "+randomNr1+" + "+randomNr2;
+        $(label).text(texti);
+        
+    
+        $(input).keyup(function(){
 
+            var nr = $(this).val();
+            if(nr==totalNr)
+            {
+                $(element).find('button[type=submit]').removeAttr('disabled');              
+            }
+            else{
+                $(element).find('button[type=submit]').attr('disabled','disabled');
+            }
+            
+        });
 
+        $(document).keypress(function(e)
+        {
+            if(e.which==13)
+            {
+                if((element).find('button[type=submit]').is(':disabled')==true)
+                {
+                    e.preventDefault();
+                    return false;
+                }
+            }
 
+        });
 
-            <section class="">
-                <div class="newsletter" >
-                    <div class="container newsletter-bg-colour" style="margin-top:0px;
-                         background-color: #ffffff; border-style: solid; padding-bottom: 20px;padding-top: 20px;">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-2">
-                                    <label for="inputEmail4">Keywords</label>
-                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Keywords">
-                                </div>
-                                <div class="form-group col-md-1">
-                                    <label for="inputPassword4">Category</label>
-                                    <input type="password" class="form-control" id="inputPassword4" placeholder="Category">
-                                </div>
+    };
 
-                                <div class="form-group col-md-1">
-                                    <label for="inputAddress">Duration</label>
-                                    <input type="text" class="form-control" id="inputAddress" placeholder="Duration">
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label for="inputAddress2">Date</label>
-                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Date">
-                                </div>
+})(jQuery);</script>
 
-                                <div class="form-group col-md-2">
-                                    <label for="inputCity">Min Price</label>
-                                    <select id="inputState" class="form-control">
-                                        <option selected>Choose...</option>
-                                        <option>...</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label for="inputState">Max Price</label>
-                                    <select id="inputState" class="form-control">
-                                        <option selected>Choose...</option>
-                                        <option>...</option>
-                                    </select>
-                                </div>
+  <label id="ebcaptchatext">What is 4+7</label>
+  <input type="text" class="textbox" id="ebcaptchainput" style="margin-left: 20px;" />
+  <!--button type="submit">Submit</button-->
 
-
-
-                                <div class="form-group col-md-2 ">
-                                    <a href="contact.html" class="theme-btn btn-2" role="button"  style="background-color: green; text-align: center;"   type="button">SEARCH</a>
-                                </div>
-
-
-
-
-
-                        </form>
-                    </div>
-                </div>
-            </section>
-
-
-
+                        </div>    </div>
+                            
+                         </div>
+                          <div class="col-lg-12">
+                          <hr style="width: 100%;"></div>
+                          <div class="col-lg-12 form-group">
+                          <div class="row">
+                          <div class="col-lg-6 form-group">
+                              <input type="checkbox" name="i_agree" value="accept" checked="checked"  />
+ By signing up you accept our terms of use and privacy policy
+                          </div>
+                          
+                          <div class="col-lg-6 form-group pull-right">
+                            <button type="submit" class="btn-success" style="background-color: green;opacity: 0.7;" >Create an account</button>
+                          </div>
+                      </div>
+                  </div>
+                          <div id="pass-info" class="clearfix"></div>
+                       </form>                  </div>
+                 </div>
+              </div>
+           </div>
         </section>
-        <script type="text/javascript">
-            var availableTags = <?php echo json_encode($airport); ?>;
-                //console.log(availableTags);
-                $( ".inputautocomplete" ).autocomplete({
-                        source: availableTags
-                    }); 
-        </script>
+
+        <br><br><br>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <section>
+         <section>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -624,7 +393,7 @@
                             <div class="card-body ">
 
                                 <img src="./images/card1.jpg" width="100%">
-                                <p class="card-text">All in one package, experience a seamless Nigerian-Inbound (Domestic) Travel Process; which includes Meet & Greet, Airport Transfers, Local Flight Schedules, Hotel / Service Apartment Reservations, MICE, Expatriate Quotas, Local Attractions & Tour Activities with our certified Tour Guides</p>
+                                <p class="card-text">Have the best of experience with seamless Nigerian-Inbound (Domestic) Travel Process - all in one package with inclusion on Nigerian Visa Facilitation / Visa Extension, Meet & Greet Services, Airport Transfers / Ground Transportation, Local Flight Schedules between Nigerian Cities, Hotel Accommodation, Nigerian Attractions & Tour Activities with Dip Tour certified and experience travel experts.</p>
                                 <a href="#" class="btn btn-success">CONTACT US</a>
                             </div>
                         </div>
@@ -635,8 +404,8 @@
                             <div class="card-body ">
 
                                 <img src="./images/card2.jpg" width="100%">
-                                <p class="card-text" style="padding-bottom: 25px;">For every season, get connected and be updated with top travel deals and discounted / promotional fares of different travel products; inclusive of Flight Tickets, Hotels, Tour Packages and other exciting tour services globally</p>
-                                <a href="#" class="btn btn-success">GET LATEST UPDATES</a>
+                                <p class="card-text" style="padding-bottom: 25px;">Get your Local and International Flight Tickets seamlessly with best price guarantee on flight deals, promotional fares with easy ticket upgrade and real time flight change.</p>
+                                <a href="#" class="btn btn-success" style="margin-top: 95px;">GET LATEST UPDATES</a>
                             </div>
                         </div>
                     </div>
@@ -646,8 +415,8 @@
                             <div class="card-body ">
 
                                 <img src="./images/card_1.jpg" width="100%">
-                                <p class="card-text"  style="padding-bottom: 3px;">Now you can Travel the world including Nigeria with your own mobile number when you purchase our Travel Sim Card. By default, your Sim comes with a free $10 air time credit, and both UK & US telephone numbers. Contact us to request for your own SIM, plus additional Airtime.</p>
-                                <a href="#" class="btn btn-success">READ MORE</a>
+                                <p class="card-text"  style="padding-bottom: 3px;">Travel the world anytime having your own mobile number with you to connect with family, friends & Business associates. Sim Card possess $10 air time credit, UK & US telephone numbers. </p>
+                                <a href="#" class="btn btn-success" style="margin-top: 115px;">READ MORE</a>
                             </div>
                         </div>
                     </div>
@@ -671,18 +440,18 @@
                             <div class="card-body ">
 
                                 <img src="./images/card5.jpg" width="100%">
-                                <p class="card-text"   style="padding-bottom: 0px;">Request for our tailor-made Tour Packages with excellent deliveries, rewarding relationship and cost reduction, from start to finish to different destinations around the world. Also, Travel to Dubai as a destination inclusive with your Dubai (UAE) Visa for $100 and be left with a memorable travel experience</p>
-                                <a href="#" class="btn btn-success">BOOK NOW</a>
+                                <p class="card-text"   style="padding-bottom: 0px;">Get the best Ready or Custom Made Tour Package to your Preferred Destination at any given season inclusive of Flight + Hotel + Visa + Attractions/Activities + Ground Transportation + Dubai (UAE) Package + Many More suitable for Solo, Business and Group Travelers.</p>
+                                <a href="#" class="btn btn-success" style="margin-top: 25px;">BOOK NOW</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card border-success mb-3">
-                            <h5 class="card-header bg-success text-white" style="text-align: center; padding-bottom: 35px;">--TRAVEL & HEALTH INSURANCE--</h5>
+                            <h5 class="card-header bg-success text-white" style="text-align: center; padding-bottom: 12px;">--TRAVEL & HEALTH INSURANCE--</h5>
                             <div class="card-body ">
 
                                 <img src="./images/card6.jpg" width="100%">
-                                <p class="card-text"  style="padding-bottom:45px;">Request for your Travel Insurance in minutes with guaranteed covers on emergency medical expenses abroad, travel delays (per night), evacuation & repatriation, loss & delay of baggage, passport theft, escort of beneficiary etc</p>
+                                <p class="card-text"  style="padding-bottom:45px;">In minutes, get your Travel Insurance which guarantee covers for emergency medical expenses abroad, travel delays, evacuation & repatriation, loss or delayed baggage, passport theft, free escort of beneficiary + many more.</p>
                                 <a href="#" class="btn btn-success">CONTACT US</a>
                             </div>
                         </div>
@@ -1020,7 +789,7 @@
                                 <img class="card-img-top" src="./images/logo1.png" alt="Card image top" style="height: 73px; width: 100px;  padding-top: 20px;">
                             </div>
                             <div class="card-body">
-                                <h6 class="card-title">EXCELLENT DELIVERABLES</h6>
+                                <h6 class="card-title">ONTIME & EXCELLENT DELIVERIES</h6>
 
                                 <p class="card-text" style="font-size: 11px;">Get assistance 24/7 on any kind of travel related
                                     query. We are happy to assist you.</p>
@@ -1033,7 +802,7 @@
                                 <img class="card-img-top" src="./images/logo1.png" alt="Card image top" style="height: 73px; width: 100px;  padding-top: 20px;">
                             </div>
                             <div class="card-body">
-                                <h6 class="card-title">CAR LEASE DISPLAY</h6>
+                                <h6 class="card-title">BEST PRICE & VALUE FOR MONEY</h6>
 
                                 <p class="card-text" style="font-size: 11px;">Get assistance 24/7 on any kind of travel related
                                     query. We are happy to assist you.</p>
@@ -1048,57 +817,7 @@
 
 
 
-        <section>
-            <div class="card border-0">
-                <div class="card-body">
-                    <div class="container" style="padding-top: 50px; border: 4px solid green;">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <h2 class="let_text">Lets get Started ?</h2>
-                                <p class="let_des">Whether you are booking a plane ticket,looking for a hotel room,need help with viasas or want to insure your trip</p><p class="help_text">Need Help?</p>                   
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="row">
-                                    <div class="col-lg-4 col-6 na-paff">
-                                        <div class="col_box">
-                                            <img src="./images/c1.png" width="100%"><p>Best Price</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-6 na-paff">
-                                        <div class="col_box">
-                                            <img src="./images/c2.png" width="100%"><p>Easy Booking</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-6 na-paff">
-                                        <div class=" col_box">
-                                            <img src="./images/c3.png" width="100%"><p>Trust &amp; Safety</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-6 na-paff">
-                                        <div class="col_box">
-                                            <img class="img-responsive " src="./images/c4.png"><p>24/7 Customer<br> Support</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-6 na-paff">
-                                        <div class="col_box" style="padding-bottom: 20px">
-                                            <img class="img-responsive " src="./images/c2.png"><p>Excellent Deliverables</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-6 na-paff">
-                                        <div class=" col_box" style="padding-bottom: 20px">
-                                            <img class="img-responsive " src="./images/c2.png"><p>Car Lease Display</p>
-                                        </div>
-                                    </div>
 
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-        </section>
 
 
 
@@ -1131,9 +850,9 @@
                                                 <img src="./images/test1.jpg" style="margin-right:20px;"></div>
                                             <div class="col-9 offset-2">
 
-                                                <p style="margin-top: 20px;">Thank you for booking the flight for us, you are the best we have seen in the market. </p>
+                                                <p style="margin-top: 20px;">''These guys are cool with time management when it comes to complex travel arrangement. I do recommend their service to any corporate.''</p>
 
-                                                <small>- Elvis</small>
+                                                <small>- Bakare Joseph - Google Map Nigeria</small>
                                             </div>
                                         </div>
                                     </blockquote>
@@ -1145,8 +864,8 @@
                                             <div class="col-1 ">
                                                 <img src="./images/test2.jpg" style="margin-right:20px;"></div>
                                             <div class="col-9 offset-2">
-                                                <p>"I am happy for all your help to make my tour a success. I will surely come again."</p>
-                                                <small>- I am happy</small>
+                                                <p>''Dip Tour coordinates all our traveling plans from successful visa entry, flight, accommodation, ground transportation and other travel amenities, just name it. We really have never sweat it. Chris or Frida are always a call away''</p>
+                                                <small>- Jude Iyhobhebhe - COO, Meridian Energy </small>
                                             </div>
                                         </div>
                                     </blockquote>
@@ -1158,8 +877,8 @@
                                             <div class="col-1 ">
                                                 <img src="./images/test3.png" style="margin-right:20px;"></div>
                                             <div class="col-9 offset-2">
-                                                <p>"DTLtd is 'ur preferred partner' in flight ticketing, hotels andamp; serviced apartments, worldwide-ful tour packages n affordable car hire/leasing. "</p>
-                                                <small>- Sunny Canto.</small>
+                                                <p>"Oh yes, all the way from Europe, i and my team toured Nigeria in about 2 to 3 weeks touching many attractions at same time. Thanks to the Dip Tour team for such a remarkable & well detailed arrangement towards making history. "</p>
+                                                <small>- Elvis & John Adeba - Cloveebiz Limited</small>
                                             </div>
                                         </div>
                                     </blockquote>
@@ -1168,36 +887,26 @@
                                     <blockquote>
                                         <div class="row">
                                             <div class="col-10 offset-1">
-                                                <p>"I like the 'Dip Tour', their representative is a just a call away"
+                                                <p>"Their passion in contributing their quota to the promotion of tourism is quite huge. Their team are professionals who knows their opinions."
                                                 </p>
-                                                <small>-Aminat Momoh</small>
+                                                <small>- Amao Nurudeen - Deputy Leader, Eti Osa Local Government</small>
                                             </div>
                                         </div>
                                     </blockquote>
                                 </div> 
-                                <div class="carousel-item">
-                                    <blockquote>
-                                        <div class="row">
-                                            <div class="col-1 ">
-                                                <img src="./images/test4.jpg" style="margin-right:20px;"></div>
-                                            <div class="col-9 offset-2">
-                                                <p>"I JUST LOVE THEM"</p>
-                                                <small>- Sunny Canto.</small>
-                                            </div>
-                                        </div>
-                                    </blockquote>
-                                </div> 
+
                                 <div class="carousel-item">
                                     <blockquote>
                                         <div class="row">
                                             <div class="col-10 offset-1">
-                                                <p>"Dip Tour does all my travelling processes. From visa arrangement to hotel reservation, just name it. When am ready for my next vacation, I need not to sweat it because Mr Emeka in Dip Tour is just a call away. They are simply the best."
+                                                <p>"I really recommend you guys for the credible and unprecedented attention you accorded my request. You guided i and family to a successful Canadian visa application process, flight, accommodation, tour activities and even a travel sim to keep me in constant communication with my friends in Nigeria. The best part was it was within my budget."
                                                 </p>
-                                                <small>- Betty</small>
+                                                <small>- Elvis & John Adeba - Cloveebiz Limited</small>
                                             </div>
                                         </div>
                                     </blockquote>
-                                </div>  <!-- .item -->
+                                </div> 
+                                <!-- .item -->
 
                             </div> <!-- .carousel-inner -->
                         </div>  <!-- #my-carousel -->
@@ -1224,28 +933,27 @@
             <div class="footer-middle">
                 <div class="container" >
                     <div class="row">
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-5 col-sm-6">
                             <!--Column1-->
                             <div class="footer-pad">
-                                <img class="" src="./images/logo.png">
-                                <p>Lorem Ipsum is simply dummy text of the
-                                    printing and typesetting industry. Lorem Ipsum
-                                    has been the industry's when an unknown
-                                    printer took a galley of type and scrambled it
-                                    to make a type specimen book.</p>
+                                <img class="" src="./images/l2.png">
+                                <p>Dip Tour with recorded success and continuous accomplishment is today reckoned as the preferred One Stop Travel Shop and one of the Leading Global Travel Management Company / with a focus on Promotion of Tourism Worldwide through its network and alliance. </p><br/>
+
+                                <p>It has grown into a company having multiple years of global working experience and sound understanding of domestic and international travel markets and protocols that guarantees effective & on time deliveries, value for money, and customers' satisfaction focus on the 5A'S of Tourism  - Accessibility, Accommodation, Activities, Amenities and Attractions.
+                                </p>
                                 <ul class="list-unstyled">
                                     <li><a href="#"></a></li>
-                                    <li><a href="#">Address</a></li>
-                                    <li><a href="#">Phone:</a></li>
+                                    <li>Address: Suite 7, Block 1, Bar Beach Towers, Bishop Oluwole &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Street Victoria Island, Lagos (LandMark: Eko Atlantic)</li>
+                                    <li>Phone: +234 8122820856 <br/>  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;+234 8170592433</li>
                                     <li><a href="#">Email: info@diptourltd.com</a></li>
 
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-2 col-sm-6">
                             <!--Column1-->
                             <div class="footer-pad">
-                                <h6 ><u style="color:white; padding-left: 100px;">POPULAR LINKS</u></h6>
+                                <h6 ><u style="color:white; ">COMPANY INFO</u></h6>
                                 <ul class="list-unstyled" style="margin-top: 25px; margin-right: 20px;">
                                     <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">About us</a></li>
                                     <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Services</a></li>
@@ -1253,19 +961,18 @@
                                     <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Privacy Policy</a></li>
                                     <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Our Network</a></li>
                                     <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Contact</a></li>
-                                    <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Blog</a></li>
+
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-2 col-sm-6">
                             <!--Column1-->
 
-
-                            <ul class="list-unstyled" style="margin-top: 60px; margin-left: 0">
-                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Press</a></li>
+                            <h6 ><u style="color:white; ">POPULAR LINKS</u></h6>
+                            <ul class="list-unstyled" style="margin-top: 30px; margin-left: 0">
+                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Blog</a></li>
                                 <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">FAQ</a></li>
                                 <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Terms & Conditons</a></li>
-                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Reach Us</a></li>
 
                                 <li>
                                     <a href="#"></a>
@@ -1281,7 +988,8 @@
                                     <div class="content">
                                         <p>You can get latest update from us by subscribing to
                                             our newsletter.</p>  <div class="input-group">
-                                            <input type="email" class="form-control" placeholder="Enter your email">
+
+                                            <input type="email" class="form-control" placeholder="Name/Telephone">
                                             <span class="input-group-btn">
                                                 <button class="btn" type="submit">Subscribe</button>
                                             </span>
@@ -1291,12 +999,12 @@
 
                             </div> <div class="social" style="margin-top: 20px;">
                                 <h6 style="padding-left: 70px;"><u style="color:white;" >GET CONNECTED</u></h6>
-                                <a href="#" class="fa fa-facebook"></a>
-                                <a href="#" class="fa fa-twitter"></a>
-                                <a href="#" class="fa fa-youtube"></a>
-                                <a href="#" class="fa fa-linkedin"></a>
+                                <a href="https://www.facebook.com/diptourltd" class="fa fa-facebook"></a>
+                                <a href="https://www.twitter.com/diptourltd" class="fa fa-twitter"></a>
+                                <a href="https://www.youtube.com/user/diptourltd" class="fa fa-youtube"></a>
+                                <a href="https://www.linkedin.com/company/dip-tour-ltd" class="fa fa-linkedin"></a>
                                 <a href="#" class="fa fa-google-plus"></a> 
-                                <a href="#" class="fa fa-instagram"></a>  
+                                <a href="https://www.instagram.com/diptourltd" class="fa fa-instagram"></a>  
                             </div>
                         </div>
 
