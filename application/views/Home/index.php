@@ -859,6 +859,7 @@
                         <!--Column1-->
                         <div class="footer-pad">
                             <img class="" src="./images/l2.png">
+
                             <?php echo $footer_info[0]['footer_text'];?>
                             <ul class="list-unstyled">
                                 <li><a href="#"></a></li>
@@ -874,11 +875,11 @@
                         <div class="footer-pad">
                             <h6 ><u style="color:white; ">COMPANY INFO</u></h6>
                             <ul class="list-unstyled" style="margin-top: 25px; margin-right: 20px;">
-                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">About us</a></li>
-                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Services</a></li>
+                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="<?php echo base_url();?>About">About us</a></li>
+                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="<?php echo base_url();?>ServicesProvided">Services</a></li>
 
-                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Privacy Policy</a></li>
-                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Our Network</a></li>
+                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="<?php echo base_url();?>OurPrivacyPolicy">Privacy Policy</a></li>
+                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="<?php echo base_url();?>Network">Our Network</a></li>
                                 <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Contact</a></li>
 
                             </ul>
