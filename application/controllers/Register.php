@@ -95,8 +95,8 @@ class Register extends CI_Controller {
         public function saveLoginSession($user_details)
         {                                     
                 $session_data['feuser_id'] =  $user_details['id'];
-                $session_data['feusername'] = $user_details['username'];
-                $session_data['fename'] = $user_details['fname'] . ' ' . $user_details['lname'];
+                $session_data['feusername'] = $user_details['login_email'];
+                $session_data['fename'] = $user_details['first_name'] . ' ' . $user_details['last_name'];
                 $this->session->set_userdata($session_data);
 
         }

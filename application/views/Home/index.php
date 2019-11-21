@@ -196,10 +196,11 @@
                     </ul>
                 </div>
                 <ul class="navbar-nav nav-flex-icons">
-                    <?php print_r($_SESSION); if(isset($_SESSION['feusername'])){?>
+                    <?php if(isset($_SESSION['feusername'])){?>
                            <li> Welcome, <?php echo $_SESSION['fename']; ?>
-                           </li>
-                           <li> <a href="<?php echo base_url();?>Register/logout"> Logout </a>
+
+                           <p> <a href="<?php echo base_url();?>Register/logout"> Logout </a>
+                           </p>
                            </li>
                     <?php }else{?>
                     <a href="<?php echo base_url();?>Register/login" class="btn " role="button" style=" margin-left:40px; margin-right:0px; background-color: black; color:white;"><i class="fa fa-lock xs-nav"></i>LOGIN</a>
