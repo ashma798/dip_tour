@@ -65,20 +65,16 @@ class Footerinfo extends CI_Model{
 	 */
 
 	public function get(){
-		$this->dip->where('is_active =', 1);
+		$this->dip->where('id', '1');
 		$query = $this->dip->get($this->getTableName());
-		$result = array();
-		foreach ($query->result() as $row)
-		{
-		        $result[] = $row;
-		}
-		return $result; 
+		$result = $query->result();
+		return $result[0]->footer_text; 
 
 	}
 
 
-	public function update(){
-		$data['is_active'] = 0;
+	public function update($data){
+		$this->dip->where('id', '1');
 		$this->dip->update($this->getTableName(),$data);
 	}
 

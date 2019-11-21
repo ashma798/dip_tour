@@ -115,6 +115,7 @@ h3{
 }.</style>
                        <form action="<?php echo base_url('/Dashboard/addfooterInfo'); ?>" method="post">
                        <textarea rows="8" cols="100"  name="footer_text" placeholder="Edit diptour footer info.....">
+                        <?php echo $footer_info; ?>
 </textarea>
     
 </div>

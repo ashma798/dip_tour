@@ -113,8 +113,10 @@ class Dashboard extends CI_Controller {
 
 		$data['v'] = 'Dashboard/footer_info';
 		$data['viewName'] = 'CMS | Footer Info';
-		//$data['data'] = json_decode(json_encode($getDataForVisaQuery), true);
-		$this->load->view('template',$data);
+		$this->load->model('Footerinfo');
+        $getAboutUsData = $this->Footerinfo->get();
+        $data['footer_info'] = html_entity_decode($getAboutUsData);
+        $this->load->view('template',$data);
 
 	}
 
@@ -122,7 +124,7 @@ class Dashboard extends CI_Controller {
 	public function addfooterInfo(){
 		$data = $this->input->post();
 		$this->load->model('Footerinfo');
-        $tripdetails = $this->Footerinfo->insertData($data);
+        $tripdetails = $this->Footerinfo->update($data);
         $message = "Footer info saved";
         $this->session->set_flashdata('item', $message);
         redirect(base_url('Dashboard/footerInfo'));
