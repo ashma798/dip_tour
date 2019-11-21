@@ -26,7 +26,9 @@ class OurPrivacyPolicy extends CI_Controller {
 		$data['contact_info'] = json_decode(json_encode($this->Contactinfo->get()), true);
 		$data['footer_info'] = json_decode(json_encode($this->Footerinfo->get()), true);
 		$data['privacy_policy'] = html_entity_decode(json_decode(json_encode($this->Privacypolicy->get()), true));
+		$this->load->view('common/common_header',$data);
 		$this->load->view('Privacypolicy/index',$data);
+		$this->load->view('common/common_footer',$data);
 	}
 
 

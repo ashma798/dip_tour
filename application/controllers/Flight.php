@@ -22,12 +22,19 @@ class Flight extends CI_Controller {
 	public function index(){
 		$this->load->model('Airport');
 		$airports = $this->Airport->getAirportData();
-        $returnAirport = array();
-        foreach($airports as $v){
-        	$returnAirport[] = $v->airport_name;
-        }
-        $data['airport'] = $returnAirport;
+                $returnAirport = array();
+                foreach($airports as $v){
+                	$returnAirport[] = $v->airport_name;
+                }
+                $data['airport'] = $returnAirport;
+                $this->load->model('Contactinfo');
+                $this->load->model('Footerinfo');
+                $this->load->model('Services');
+                $data['contact_info'] = json_decode(json_encode($this->Contactinfo->get()), true);
+                $data['footer_info'] = json_decode(json_encode($this->Footerinfo->get()), true);
+                $this->load->view('common/common_header',$data);
 		$this->load->view('Flight/index',$data);
+                $this->load->view('common/common_footer',$data);
 	}
 
 	public function add(){

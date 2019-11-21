@@ -20,13 +20,16 @@ class ServicesProvided extends CI_Controller {
 	 */
 
 	public function index(){
+
 		$this->load->model('Contactinfo');
 		$this->load->model('Footerinfo');
 		$this->load->model('Services');
 		$data['contact_info'] = json_decode(json_encode($this->Contactinfo->get()), true);
 		$data['footer_info'] = json_decode(json_encode($this->Footerinfo->get()), true);
 		$data['services'] = html_entity_decode(json_decode(json_encode($this->Services->get()), true));
+		$this->load->view('common/common_header',$data);
 		$this->load->view('Services/index',$data);
+		$this->load->view('common/common_footer',$data);
 	}
 
 

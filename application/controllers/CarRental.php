@@ -27,7 +27,13 @@ class CarRental extends CI_Controller {
         	$returnAirport[] = $v->airport_name;
         }
         $data['airport'] = $returnAirport;
+        $this->load->model('Contactinfo');
+		$this->load->model('Footerinfo');
+		$data['contact_info'] = json_decode(json_encode($this->Contactinfo->get()), true);
+		$data['footer_info'] = json_decode(json_encode($this->Footerinfo->get()), true);
+        $this->load->view('common/common_header',$data);
 		$this->load->view('Transfer/index',$data);
+		$this->load->view('common/common_footer',$data);
 	}
 
 

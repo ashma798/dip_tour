@@ -148,37 +148,63 @@
                             <a class="nav-link" href="<?php echo base_url();?>" style="color: black;">HOME<span style="padding-left: 20px;">|</span></a>
                         </li>                      
                         <li class="nav-item">
+                        <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url()?>Hotels" style="color: black;">HOTELS <span style="padding-left: 20px;">|</span></a>
+                        <?php } else{ ?>
+                             <a class="nav-link" style="color: black;" href="<?php echo base_url();?>Register/login">HOTELS<span style="padding-left: 20px;">|</span></a>
+                        <?php } ?>
                         </li>                    
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url();?>/flight" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>
+                            <?php if(isset($_SESSION['feusername'])){?>
+                            <a class="nav-link" href="<?php echo base_url();?>flight" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>
+                            <?php } else{ ?>
+                              <a class="nav-link" style="color: black;" href="<?php echo base_url();?>Register/login">FLIGHTS <span style="padding-left: 20px;">|</span></a>
+                        <?php } ?>
                         </li>                        
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url();?>/car-rental" style="color: black;">CAR RENTALS <span style="padding-left: 20px;">|</span></a>
+                            <?php if(isset($_SESSION['feusername'])){?>
+                            <a class="nav-link" href="<?php echo base_url();?>car-rental" style="color: black;">CAR RENTALS <span style="padding-left: 20px;">|</span></a>
+                            <?php } else{ ?>
+                             <a class="nav-link" style="color: black;" href="<?php echo base_url();?>Register/login">CAR RENTALS<span style="padding-left: 20px;">|</span></a>
+                        <?php } ?>
                         </li>                   
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
                                 TOUR PACKAGES
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Asia</a>
+                                <a class="dropdown-item" href="#">Africa</a>
+                                <a class="dropdown-item" href="#">Europe</a>
                             </div>
                         </li>
                         <li class="nav-item  dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
                                 VISAS</a>                          
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="search.html">Search</a>
-                                <a class="dropdown-item" href="visa_form.html">Visa Booking</a>
-                                <a class="dropdown-item" href="#">Dubai UAE</a>                                
+                                <?php if(isset($_SESSION['feusername'])){?>
+                                <a class="dropdown-item" href="<?php echo base_url();?>Visa">Search</a>
+                                <?php } else{ ?>
+                             <a class="dropdown-item" href="<?php echo base_url();?>Register/login">Search</a>
+                        <?php } ?>
+                         <?php if(isset($_SESSION['feusername'])){?>
+                                <a class="dropdown-item" href="<?php echo base_url();?>Visa/visaquery">Visa Booking</a>
+                         <?php } else{ ?>
+                             <a class="dropdown-item" href="<?php echo base_url();?>Register/login">Visa Booking</a>
+                        <?php } ?>                              
                             </div>                              
                         </li>
                     </ul>
                 </div>
                 <ul class="navbar-nav nav-flex-icons">
+                    <?php print_r($_SESSION); if(isset($_SESSION['feusername'])){?>
+                           <li> Welcome, <?php echo $_SESSION['fename']; ?>
+                           </li>
+                           <li> <a href="<?php echo base_url();?>Register/logout"> Logout </a>
+                           </li>
+                    <?php }else{?>
                     <a href="<?php echo base_url();?>Register/login" class="btn " role="button" style=" margin-left:40px; margin-right:0px; background-color: black; color:white;"><i class="fa fa-lock xs-nav"></i>LOGIN</a>
                     <a href="<?php echo base_url(); ?>Register" class="btn " role="button" style=" margin-left:20px; margin-right:30px; background-color: green; color:white;"><i class="fa fa-user xs-naav"></i>REGISTER</a>
+                <?php }?>
                 </ul>
             </nav>
         </section>
@@ -246,7 +272,7 @@
 
 
     <section class="container p-t-5 ">
-        <div class="row" style="margin-top:470px; margin-bottom: 50px;border-radius: 5px solid ">
+        <div class="row" style="margin-top:120px; margin-bottom: 5px;border-radius: 5px solid ">
             <div class="col-lg-12">
                 <h5 style="text-align: center;">W E L C O M E T O D I P T O U R T R A V E L</h5>
 

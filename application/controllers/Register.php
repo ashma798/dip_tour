@@ -20,8 +20,14 @@ class Register extends CI_Controller {
 	 */
 
 	public function index(){
-             $this->load->view('Register/index');
-	}
+        $this->load->model('Contactinfo');
+        $this->load->model('Footerinfo');
+        $data['contact_info'] = json_decode(json_encode($this->Contactinfo->get()), true);
+        $data['footer_info'] = json_decode(json_encode($this->Footerinfo->get()), true);
+        $this->load->view('common/common_header',$data);    
+        $this->load->view('Register/index');
+	    $this->load->view('common/common_footer',$data);
+    }
 
 	public function add(){
 	    $data = $this->input->post(); 
@@ -38,7 +44,12 @@ class Register extends CI_Controller {
 
         public function login()
         {
-                //$data =  $this->input->post();
+            $this->load->model('Contactinfo');
+            $this->load->model('Footerinfo');
+                $data['contact_info'] = json_decode(json_encode($this->Contactinfo->get()), true);
+                $data['footer_info'] = json_decode(json_encode($this->Footerinfo->get()), true);
+            $this->load->view('common/common_header',$data);
+
                 $data['response'] = '';
                 $this->load->model('Registeruser');
                 //print_r($this->session);
@@ -77,16 +88,22 @@ class Register extends CI_Controller {
                  $this->load->view('Register/login', $data);
                 }
 
+                $this->load->view('common/common_footer',$data);
         }
 
 
         public function saveLoginSession($user_details)
-        {                                                                                                                                                                       
-                $session_data['user_id'] =  $user_details['id'];
-                $session_data['username'] = $user_details['username'];
-                $session_data['name'] = $user_details['fname'] . ' ' . $user_details['lname'];
+        {                                     
+                $session_data['feuser_id'] =  $user_details['id'];
+                $session_data['feusername'] = $user_details['username'];
+                $session_data['fename'] = $user_details['fname'] . ' ' . $user_details['lname'];
                 $this->session->set_userdata($session_data);
 
+        }
+
+        public function logout(){
+            $this->session->sess_destroy();
+            redirect(base_url('Home'));
         }
 }
 ?>
