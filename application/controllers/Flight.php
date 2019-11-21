@@ -40,52 +40,56 @@ class Flight extends CI_Controller {
 	public function add(){
 		$data = $this->input->post();
         /*Array ( [flight_search_type] => One-Way [origin] => [destination] => [departure_date] => 11/16/2019 [adult_count] => 5 [child_count] => 3 [infant_count] => 1 [class] => Economy [airline] => Select Airline [return_date] => 11/10/2019 [non_stop_only] => [search_time] => ) */
-        $insertData =  array();
-        if($data['flight_search_type'] == 'One-Way'){
-        	$insertData['flight_search_type'] = $data['flight_search_type'];
-        	$insertData['origin'] = $data['origin'];
-        	$insertData['destination'] = $data['destination'];
-        	$insertData['departure_date'] = $data['departure_date'];
-        	$insertData['adult_count'] = $data['adult_count'];
-        	$insertData['child_count'] = $data['child_count'];
-        	$insertData['infant_count'] = $data['infant_count'];
-        	$insertData['class'] = $data['class'];
-        	$insertData['airline'] = $data['airline'];
-        	$insertData['non_stop_only'] = $data['non_stop_only'];
-        	$insertData['search_time'] = $data['search_time'];
-        }
+                $insertData =  array();
+                if($data['flight_search_type'] == 'One-Way'){
+                	$insertData['flight_search_type'] = $data['flight_search_type'];
+                	$insertData['origin'] = $data['origin'];
+                	$insertData['destination'] = $data['destination'];
+                	$insertData['departure_date'] = $data['departure_date'];
+                	$insertData['adult_count'] = $data['adult_count'];
+                	$insertData['child_count'] = $data['child_count'];
+                	$insertData['infant_count'] = $data['infant_count'];
+                	$insertData['class'] = $data['class'];
+                	$insertData['airline'] = $data['airline'];
+                	$insertData['non_stop_only'] = $data['non_stop_only'];
+                	$insertData['search_time'] = $data['search_time'];
+                        $insertData['user_email'] = $_SESSION['feuser_id'];
+                        $insertData['user_id'] = $_SESSION['feusername'];
+                }
 
-        if($data['flight_search_type'] == 'Round-Trip'){
-        	$insertData['flight_search_type'] = $data['flight_search_type'];
-        	$insertData['origin'] = $data['origin_1'];
-        	$insertData['destination'] = $data['destination_1'];
-        	$insertData['departure_date'] = $data['departure_date_1'];
-        	$insertData['departure_date'] = $data['departure_date_1'];
-        	$insertData['adult_count'] = $data['adult_count_1'];
-        	$insertData['child_count'] = $data['child_count_1'];
-        	$insertData['infant_count'] = $data['infant_count_1'];
-        	$insertData['class'] = $data['class_1'];
-        	$insertData['airline'] = $data['airline_1'];
-        	$insertData['non_stop_only'] = $data['non_stop_only_1'];
-        	$insertData['search_time'] = $data['search_time_1'];
-        }
+                if($data['flight_search_type'] == 'Round-Trip'){
+                	$insertData['flight_search_type'] = $data['flight_search_type'];
+                	$insertData['origin'] = $data['origin_1'];
+                	$insertData['destination'] = $data['destination_1'];
+                	$insertData['departure_date'] = $data['departure_date_1'];
+                	$insertData['departure_date'] = $data['departure_date_1'];
+                	$insertData['adult_count'] = $data['adult_count_1'];
+                	$insertData['child_count'] = $data['child_count_1'];
+                	$insertData['infant_count'] = $data['infant_count_1'];
+                	$insertData['class'] = $data['class_1'];
+                	$insertData['airline'] = $data['airline_1'];
+                	$insertData['non_stop_only'] = $data['non_stop_only_1'];
+                	$insertData['search_time'] = $data['search_time_1'];
+                        $insertData['user_email'] = $_SESSION['feuser_id'];
+                        $insertData['user_id'] = $_SESSION['feusername'];
+                }
 
-        if(isset($insertData['non_stop_only'])){
-        	$insertData['non_stop_only']= 'Yes';
-        }else{
-        	$insertData['non_stop_only']= 'No';
-        }
-        if(isset($insertData['search_time'])){
-        	$insertData['search_time']= '1';
-        }else{
-        	$insertData['search_time']= '0';
-        }
+                if(isset($insertData['non_stop_only'])){
+                	$insertData['non_stop_only']= 'Yes';
+                }else{
+                	$insertData['non_stop_only']= 'No';
+                }
+                if(isset($insertData['search_time'])){
+                	$insertData['search_time']= '1';
+                }else{
+                	$insertData['search_time']= '0';
+                }
 
-        $this->load->model('Flightsearch');
-        $tripdetails = $this->Flightsearch->insertData($insertData);
-        $message = "Our executives will connect with you over you query";
-        $this->session->set_flashdata('item', $message);
-        redirect(base_url('Flight'));
+                $this->load->model('Flightsearch');
+                $tripdetails = $this->Flightsearch->insertData($insertData);
+                $message = "Our executives will connect with you over you query";
+                $this->session->set_flashdata('item', $message);
+                redirect(base_url('Flight'));
 	
 	}
 
