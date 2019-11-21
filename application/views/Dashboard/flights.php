@@ -33,6 +33,8 @@
                 <th>Class</th>
                 <th>Non Stop</th>
                 <th>Search Date</th>
+                <th>Email</th>
+                <th>User Id</th>
             </tr>
         </thead>
         <tbody>
@@ -50,6 +52,8 @@
                 <td><?php echo $v->class;?></td>
                 <td><?php echo $v->non_stop_only ;?></td>
                 <td><?php echo $v->search_time;?></td>
+                <td><?php echo $v->user_email;?></td>
+                <td><?php echo $v->user_id;?></td>
             </tr>
             <?php }?>
             

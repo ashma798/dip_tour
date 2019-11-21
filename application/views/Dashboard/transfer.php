@@ -30,6 +30,8 @@
                                         <th>Transmission Type</th>
                                         <th>Air Condition</th>
                                         <th>Mileage Charge Type</th>
+                                        <th>Email</th>
+                                        <th>User Id</th>
 
                                     </tr>
                                 </thead>
@@ -45,6 +47,8 @@
                                         <td><?php echo $v->vehicle_transmission_type ;?></td>
                                         <td><?php echo $v->vehicle_air_conditioning ;?></td>
                                         <td><?php echo $v->vehicle_charge_type  ;?></td>
+                                        <td><?php echo $v->user_email  ;?></td>
+                                        <td><?php echo $v->user_id  ;?></td>
                                     </tr> 
                                     <?php }?>
                                 </tbody>
