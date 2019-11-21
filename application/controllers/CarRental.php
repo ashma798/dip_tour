@@ -42,8 +42,8 @@ class CarRental extends CI_Controller {
         /* [pick_up_city] => Kuwait [drop_off_city] => Katar [pick_up_date] => 2019-11-16 [pick_up_time] => 09:00 [drop_off_date] => 2019-11-23 [drop_off_time] => 1:00 [vechical_type] => 2 [vehicle_class] => Business Class [vehicle_transmission_type] => Select [vehicle_air_conditioning] => Select [vehicle_charge_type] => Select */
 
         $this->load->model('Cartransfer');
-        $data['user_email'] = $_SESSION['feuser_id'];
-        $data['user_id'] = $_SESSION['feusername'];
+        $data['user_email'] = $_SESSION['feusername'];
+        $data['user_id'] = $_SESSION['feuser_id'];
         $tripdetails = $this->Cartransfer->insertData($data);
         $message = "Our executives will connect with you over you query";
         $this->session->set_flashdata('item', $message);

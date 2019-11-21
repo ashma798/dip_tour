@@ -53,8 +53,7 @@ class Flight extends CI_Controller {
                 	$insertData['airline'] = $data['airline'];
                 	$insertData['non_stop_only'] = $data['non_stop_only'];
                 	$insertData['search_time'] = $data['search_time'];
-                        $insertData['user_email'] = $_SESSION['feuser_id'];
-                        $insertData['user_id'] = $_SESSION['feusername'];
+                        
                 }
 
                 if($data['flight_search_type'] == 'Round-Trip'){
@@ -70,8 +69,7 @@ class Flight extends CI_Controller {
                 	$insertData['airline'] = $data['airline_1'];
                 	$insertData['non_stop_only'] = $data['non_stop_only_1'];
                 	$insertData['search_time'] = $data['search_time_1'];
-                        $insertData['user_email'] = $_SESSION['feuser_id'];
-                        $insertData['user_id'] = $_SESSION['feusername'];
+                        
                 }
 
                 if(isset($insertData['non_stop_only'])){
@@ -84,6 +82,8 @@ class Flight extends CI_Controller {
                 }else{
                 	$insertData['search_time']= '0';
                 }
+                $insertData['user_email'] = $_SESSION['feusername'];
+                $insertData['user_id'] = $_SESSION['feuser_id'];
 
                 $this->load->model('Flightsearch');
                 $tripdetails = $this->Flightsearch->insertData($insertData);

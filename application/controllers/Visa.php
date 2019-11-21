@@ -42,8 +42,8 @@ class Visa extends CI_Controller {
 	public function add(){
 		$data = $this->input->post();
 		$this->load->model('Visaquery');
-		$data['user_email'] = $_SESSION['feuser_id'];
-        $data['user_id'] = $_SESSION['feusername'];
+		$data['user_email'] = $_SESSION['feusername'];
+        $data['user_id'] = $_SESSION['feuser_id'];
         $tripdetails = $this->Visaquery->insertData($data);
         $message = "Our executives will connect with you over you query";
         $this->session->set_flashdata('item', $message);
