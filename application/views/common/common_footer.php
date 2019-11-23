@@ -11,7 +11,7 @@
                             <div class="footer-pad">
                                <img class="" src="<?php echo base_url();?>images/l2.png">
 
-                            <?php echo $footer_info[0]['footer_text'];?>
+                            <?php echo $footer_info;?>
                             <ul class="list-unstyled">
                                 <li><a href="#"></a></li>
                                 <li>Address: Suite 7, Block 1, Bar Beach Towers, Bishop Oluwole &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Street Victoria Island, Lagos (LandMark: Eko Atlantic)</li>
