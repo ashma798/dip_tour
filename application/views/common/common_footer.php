@@ -40,7 +40,7 @@
 
                             <h6 ><u style="color:white; ">POPULAR LINKS</u></h6>
                             <ul class="list-unstyled" style="margin-top: 30px; margin-left: 0">
-                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Blog</a></li>
+                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="<?php echo base_url(); ?>Blog">Blog</a></li>
                                 <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">FAQ</a></li>
                                 <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Terms & Conditons</a></li>
 
