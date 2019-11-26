@@ -112,7 +112,7 @@ h3{
   max-width: 100%;
   padding: 0.5em 0.6em;
   margin-bottom: 0.5em;
-}.</style>
+}.</style><h2><?php echo $this->session->flashdata('item'); ?></h2> 
                        <form action="<?php echo base_url('/Dashboard/addAboutUs'); ?>" method="post">
                        <textarea class="summernote" rows="8" cols="100"  name="about_us" placeholder="Edit diptour footer info....."><?php echo $about_us;?>
 </textarea>

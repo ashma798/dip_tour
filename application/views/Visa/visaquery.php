@@ -1130,13 +1130,14 @@ button:hover {
 </div>
   <div class="form-inline">
     <div class="form-group">
-      <p>
+      
         <button type="submit"> Submit </button>
-      </p>
-      </br>
-      <p>
+     &nbsp;
+     &nbsp;
+     &nbsp;
+     &nbsp;    
         <button type="reset"> Reset </button>
-      </p>
+      
     </div>
   </div>
   <!--<p>

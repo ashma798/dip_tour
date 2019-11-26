@@ -262,9 +262,14 @@
                                                 <label for="sel1" style="font-size: 11px;">Vehicle Type</label>
                                                 <select class="form-control" id="sel1" style="margin-top: -10px;height: 31px;"  name="vechical_type">
                                                     <option>Select</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
+                                                    <option value = "Hatchback">Hatchback</option>
+                                                    <option value = "Sedan">Sedan</option>
+                                                    <option value = "MPV">MPV</option>
+                                                    <option value = "SUV">SUV</option>
+                                                    <option value = "Crossover">Crossover</option>
+                                                    <option value = "Volvo">Volvo</option>
+                                                    <option value = "Coupe">Coupe</option>
+                                                    <option value = "Convertible">Convertible</option>
                                                 </select>
 
 
@@ -278,8 +283,8 @@
                                                 <label class="label-form-card" for="validationCustom01">Class</label>
                                                 <select class="form-control form-control-sm" name="vehicle_class">
                                                     <option>Select</option>
-                                                    <option>First Class</option>
-                                                    <option>Business Class</option>
+                                                    <option value="First Class">First Class</option>
+                                                    <option value="Business Class">Business Class</option>
                                                 </select>
                                             </div>
                                             <div class="col-md-1">
@@ -289,6 +294,10 @@
                                                 <label class="label-form-card" for="validationCustom01">Transmission Type</label>
                                                 <select class="form-control form-control-sm" name="vehicle_transmission_type">
                                                     <option>Select</option>
+                                                    <option value="Automatic Transmission">Automatic Transmission</option>
+                                                    <option value="Manual Transmission">Manual Transmission</option>
+                                                    <option value="Automated Manual Transmission">Automated Manual Transmission</option>
+                                                    <option value="Continuously Variable Transmission">Continuously Variable Transmission</option>
                                                 </select>
                                             </div>
                                             <div class="col-md-1">
@@ -298,6 +307,8 @@
                                                 <label class="label-form-card" for="validationCustom01">Has Air Condition</label>
                                                 <select class="form-control form-control-sm" name="vehicle_air_conditioning">
                                                     <option>Select</option>
+                                                     <option value="Yes">Yes</option>
+                                                     <option value="No">No</option>
                                                 </select>
                                             </div>
                                             <div class="col-md-1">
@@ -307,6 +318,8 @@
                                                 <label class="label-form-card" for="validationCustom01">Mileage Charge Type</label>
                                                 <select class="form-control form-control-sm" name="vehicle_charge_type">
                                                     <option>Select</option>
+                                                    <option value="Yes">Yes</option>
+                                                     <option value="No">No</option>
                                                 </select>
                                             </div>
 

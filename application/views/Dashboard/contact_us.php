@@ -112,7 +112,7 @@ h3{
  */
 .submit::-moz-focus-inner { 
     border: 0;
-}</style>          
+}</style>          <h2><?php echo $this->session->flashdata('item'); ?></h2> 
                     <div class="col-md-12">
                         <div class="row">
                             <div class="col-md-2"></div>

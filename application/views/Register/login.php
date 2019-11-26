@@ -103,6 +103,8 @@ a.btn_full_outline {
                                     <a href="#" class="forgotPwd" style="float: right; ">Forgot Password?</a></p>
                               </div> 
                               <button type="submit" class=" btn btn_full col-lg-12" style="background-color: orange; " >Sign in</button>
+                              <br/><br/>
+                              <a href="<?php echo base_url(); ?>Register" class="btn_full_outline">Register</a>
                         
                                 
                            </form>                      </div>

@@ -14,7 +14,7 @@
                                         <ul class="tabs nav-flex-icons" style="padding: 0px">
                                             <li><a href="javascript:void(0)" onclick="setTrip('One-Way');">One-Way</a></li>
                                             <li><a href="javascript:void(0)" onclick="setTrip('Round-Trip');">Round-Trip</a></li>
-                                            <li><a href="javascript:void(0)" onclick="setTrip('Multi-City');">Multi-City</a></li>
+                                            <!-- li><a href="javascript:void(0)" onclick="setTrip('Multi-City');">Multi-City</a></li-->
                                         </ul>
                                         <div style="display:none">
                                             <input type="hidden" name="flight_search_type" id="trip_type" value="One-Way">
@@ -152,10 +152,10 @@
                                                     </div>
                                                 </div>
                                             </div> <!-- / tabs_item -->
-                                            <div class="tabs_item">
+                                            <!--div class="tabs_item">
                                                 <h4>Tab03</h4>
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, excepturi, minima, corporis deserunt quia quae sit officiis labore inventore autem a delectus consequuntur voluptatem modi eligendi similique sed nam vitae.</p>
-                                            </div> <!-- / tabs_item -->
+                                            </div> / tabs_item -->
                                         </div> <!-- / tab_content -->
                                     </div> <!-- / tab -->
                                     <hr>

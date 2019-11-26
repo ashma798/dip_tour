@@ -116,13 +116,14 @@
     margin-top: 5px;
 }
 .dash-col-black{
-    background-color: #2c343b;
+    background-color: #28a745 !important;
     padding: 12px 12px 12px 25px;
     color: #fff;
     font-size:14px;
+    font-weight: 500px;
 }
 .dash-col-blackone{
-    background-color: #383f45
+    background-color: #28a745 ;
 }
 @font-face {
     src: url(../../font/Font/Aller_Rg.ttf);
@@ -169,7 +170,7 @@
 }
 .custombtn  {
 
-    background-color:#383f45;
+    background-color:#28a745 ;
     border: none;
     color: white;
     font-size: 13px;
@@ -205,7 +206,7 @@
     list-style-type:none;
 }
 .linkhover:hover, .active1 {
-    background-color:#383f45 !important;
+    background-color:#28a745 !important;
 }
 .profile-date {
     background-image: url(../../images/date-img.png);

@@ -1,0 +1,179 @@
+	html, body  {
+	width:100% !important;
+	overflow-x:hidden;
+	background-color:#ffffff!important;
+	}
+	.has-search .input1{
+	padding-left: 40px;
+	}
+.has-search .form-control,.inputwidth .form-control {
+   font-size: 13px;
+	height:52px;
+}
+.has-search .quantity__input {
+    font-size: 13px;
+    height: 38px;
+}
+.inputwidth .form-control::placeholder {
+
+  font-size: 12px;
+font-weight:bold;
+}
+.card-body {
+padding-bottom: 0px;	
+	
+}
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2rem;
+    height: 2.4rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: black;
+	padding-left:15px;
+	padding-top: 12px;
+}
+ .form-control-feedback1{
+ position: absolute;
+    left: 162px;
+    top: 35px;
+    color: black;
+	font-size:12px;
+	z-index: 31;
+	}	
+	.menubox  {
+	
+	top:-28px !important;left:-4px !important;
+	
+	}
+	.iconpos  {
+	position: relative;
+    bottom: 36px;
+    left: 163px;
+    font-size: 20px;
+	color:black;
+	}
+	
+.ratings label,.ratnum  {
+font-size: 12px !important;
+color:#2183b0 !important;
+display:inline-flex;
+}
+
+.lefttopdiv {
+background-color:#28a745 !important;
+padding:10px;
+color:#ffffff;
+font-size: 12px;
+border-radius:5px;
+font-weight:bold;
+}
+.leftbotdiv  {
+background-color:#ffffff;
+height:auto;
+border-radius:5px;
+border:1px solid #b6b4b8; 
+}
+
+.rightbotdiv  {
+background-color:#ffffff;
+padding:2px;
+color:black;
+font-size: 14px;
+font-weight:bold;
+border-radius:5px;
+border: 1px solid #b6b4b8;
+height:auto;
+
+}
+.rightclosediv  {
+background-color:#d5e7f2;
+padding:5px;
+color:black;
+font-size: 14px;
+font-weight:bold;
+height:30px;
+border: none;
+}
+
+.infodiv  {
+background-color:#ffffff;
+padding:10px;
+color:#black;
+font-size: 14px;
+font-weight:bold;
+border-radius:5px;
+border: 1px solid #b6b4b8;
+height:90px;
+
+
+
+}
+.liststyle, .liststyle1  {
+	list-style-type:none;
+}
+
+.liststyle li, .liststyle1 li  {
+	display:inline;
+}
+.liststyle li a {
+	font-size:10px;
+	color:#0ca0b0;
+}
+.liststyle1 li a {
+	font-size:14px;
+	color:#0ca0b0;
+}
+
+.roomsimg {
+    background-image: url(images/downarrow.png);
+    background-repeat: no-repeat;
+    background-position: 96% center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    background-color: #FFF !important;
+    outline: none;
+    padding: 5px 0px 5px 12px !important;
+    background-size: 15px 15px;
+    color: #222222;
+    z-index: 31;
+	height: 38px;
+	cursor:pointer;
+}
+.ui-widget-header {
+
+background:#2183b0 !important;
+}
+.ui-state-default {
+background:#2183b0 !important;
+}
+.sortbtn {
+padding: .54rem 2.14rem !important;
+border-radius:3px !important;
+border:1px solid #b6b4b8;
+text-transform: none;
+font-weight:bold;
+}
+.sortbtn:hover, .active {
+background-color:#f7eb9e !important;
+}
+@media screen and (max-width: 990px) and (min-width: 320px) {
+	html, body  {
+	width:100% !important;
+	overflow-x:hidden;
+	
+	}
+	.rowheight, .row1div {
+	height:auto !important;
+	}
+	.borrgt {
+	border-right:none !important;
+	}
+	
+	
+}
+		

@@ -1,0 +1,124 @@
+.vl {
+    border-left: 2px solid #2e2943;
+    height: 50px;
+    margin-left: 12px;
+}
+@media (min-width: 1200px)
+{
+    .container-adjust {
+        max-width: 1303px;
+    }
+}
+.back-color{
+    background-color: #eeeeee;
+   
+}
+.font-sm-one{
+    font-size: 14px;
+}
+.font-sm-two{
+    font-size: 18px;
+}
+.font-sm-three{
+    font-size: 13px;
+}
+.font-sm-four{
+    font-size: 12px;
+}
+.font-sm-five{
+    font-size: 14px;
+}
+.back-color-body{
+    background-color: #eeeeee;
+}
+.card-body-space {
+    padding: 0px 0px 0px 0px;
+}
+
+@media (min-width: 768px)
+{
+    .col-md-3-re {
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+        padding-right: 0px;
+    }
+}
+@media (min-width: 768px)
+{
+    .col-md-5-re {
+        -ms-flex: 0 0 55%;
+        flex: 0 0 55%;
+        max-width: 55%;
+        padding-right: 0px;
+    }
+}
+@media (min-width: 768px)
+{
+    .col-md-4-re {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding-right: 0px;
+    }
+}
+.header-he{
+    height: 50px;
+}
+.font-card{
+    padding: 15px 0px 5px 0px;
+}
+.bg-danger-red{
+    background-color: #f34f4f;
+    color: white;
+}
+.pad-card{
+    padding: 56px 35px;
+}
+.btn-primary-one{
+    background-color:#e6e7e9;
+}
+.padding-row-card{
+    padding-top: 15px;
+}
+.label-form-card {
+    display: inline-block;
+    margin-bottom: .1rem;
+}
+.font-color {
+    background-color: #f34f4f!important;
+}
+.hr-style {
+    margin-top: -3px!important;
+    margin-bottom: 4px!important;
+    border-top: 1px solid #f34f4f!important;
+}
+.page-font {
+    margin-top: 0em !important;
+    margin-bottom: 0rem !important;
+}
+.card-body-car{
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto; 
+    padding: 0rem;
+}
+.card-new-gap{
+    margin-top: 10px;
+}
+@font-face{
+    font-family: "Aller";
+    src: url("font/Font/Aller.ttf");
+}
+.card-inner-color{
+    background-color: #e4e4e4;
+    
+}
+.card-inner-setting{
+   font-size: 13px;
+   margin-bottom: 2px;
+}
+.card-second-setting
+{
+    font-size: 18px;
+}
+

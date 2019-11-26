@@ -38,6 +38,7 @@ class Flight extends CI_Controller {
 	}
 
 	public function add(){
+            try{
 		$data = $this->input->post();
         /*Array ( [flight_search_type] => One-Way [origin] => [destination] => [departure_date] => 11/16/2019 [adult_count] => 5 [child_count] => 3 [infant_count] => 1 [class] => Economy [airline] => Select Airline [return_date] => 11/10/2019 [non_stop_only] => [search_time] => ) */
                 $insertData =  array();
@@ -91,7 +92,13 @@ class Flight extends CI_Controller {
                 $this->session->set_flashdata('item', $message);
                 redirect(base_url('Flight'));
 	
-	}
+	    }catch(Exception $e){
+                $message = "<span style='background-color:red;'>Something went wrong... Please contact us on +234 8122820856, +234 8170592433{24/7,WHATSAPP} or mail us at info@diptourltd.com</span>";
+                
+                $this->session->set_flashdata('item', $message);
+                redirect(base_url('Flight'));
+            }
+        }
 
 
 }

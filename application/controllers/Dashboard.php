@@ -66,19 +66,25 @@ class Dashboard extends CI_Controller {
 	}
 
 	public function addPartnerLogo(){
-		$data = $this->input->post();
-		$pathToFile = $this->uploadImageFileToPath($_FILES, 'partners_logo', 'file_name');
-		$inputData = array();
-		$inputData['first_name'] = $data['first_name'];
-		$inputData['last_name'] = $data['last_name'];
-		$inputData['file_path'] = $pathToFile;
-		$this->load->model('Partnerdetails');
-		if($pathToFile !== 0){
-			$partnerLogo = $this->Partnerdetails->insertData($inputData);
-			$message = "Partner data saved successfully";
-			$this->session->set_flashdata('item', $message);
-			redirect(base_url('Dashboard/partnersDetails'));
-		}
+		try{
+			$data = $this->input->post();
+			$pathToFile = $this->uploadImageFileToPath($_FILES, 'partners_logo', 'file_name');
+			$inputData = array();
+			$inputData['first_name'] = $data['first_name'];
+			$inputData['last_name'] = $data['last_name'];
+			$inputData['file_path'] = $pathToFile;
+			$this->load->model('Partnerdetails');
+			if($pathToFile !== 0){
+				$partnerLogo = $this->Partnerdetails->insertData($inputData);
+				$message = "<span style='background-color:green;'>Partner data saved successfully</span>";
+				$this->session->set_flashdata('item', $message);
+				redirect(base_url('Dashboard/partnersDetails'));
+			}
+		}catch(Exception $e){
+                $message = "<span style='background-color:red;'>Something went wrong... Try again</span>";
+                $this->session->set_flashdata('item', $message);
+                redirect(base_url('Dashboard/partnersDetails'));
+         }
 	}
 
 
@@ -94,17 +100,23 @@ class Dashboard extends CI_Controller {
 
 
 	public function addBanner(){
-		$inputData['banner1'] = $this->uploadImageFileToPath($_FILES, 'banner', 'banner_1');
-		$inputData['banner2'] = $this->uploadImageFileToPath($_FILES, 'banner', 'banner_2');
-		$inputData['banner3'] = $this->uploadImageFileToPath($_FILES, 'banner', 'banner_3');
+		try{
+			$inputData['banner1'] = $this->uploadImageFileToPath($_FILES, 'banner', 'banner_1');
+			$inputData['banner2'] = $this->uploadImageFileToPath($_FILES, 'banner', 'banner_2');
+			$inputData['banner3'] = $this->uploadImageFileToPath($_FILES, 'banner', 'banner_3');
 
-		$this->load->model('Banners');
-		if($inputData['banner1'] != 0 && $inputData['banner2'] != 0 && $inputData['banner3'] != 0){
-			$partnerLogo = $this->Banners->insertData($inputData);
-			$message = "Banner data saved successfully";
-			$this->session->set_flashdata('item', $message);
-			redirect(base_url('Dashboard/banners'));
-		}
+			$this->load->model('Banners');
+			if($inputData['banner1'] != 0 && $inputData['banner2'] != 0 && $inputData['banner3'] != 0){
+				$partnerLogo = $this->Banners->insertData($inputData);
+				$message = "<span style='background-color:green;'>Banner data saved successfully</span>";
+				$this->session->set_flashdata('item', $message);
+				redirect(base_url('Dashboard/banners'));
+			}
+		}catch(Exception $e){
+                $message = "<span style='background-color:red;'>Something went wrong... Try again</span>";
+                $this->session->set_flashdata('item', $message);
+                redirect(base_url('Dashboard/banners'));
+         }
 	}
 
 
@@ -122,12 +134,18 @@ class Dashboard extends CI_Controller {
 
 
 	public function addfooterInfo(){
-		$data = $this->input->post();
-		$this->load->model('Footerinfo');
-        $tripdetails = $this->Footerinfo->update($data);
-        $message = "Footer info saved";
-        $this->session->set_flashdata('item', $message);
-        redirect(base_url('Dashboard/footerInfo'));
+		try{
+			$data = $this->input->post();
+			$this->load->model('Footerinfo');
+	        $tripdetails = $this->Footerinfo->update($data);
+	        $message = "<span style='background-color:green;'>Footer info saved</span>";
+	        $this->session->set_flashdata('item', $message);
+	        redirect(base_url('Dashboard/footerInfo'));
+	    }catch(Exception $e){
+                $message = "<span style='background-color:red;'>Something went wrong... Try again</span>";
+                $this->session->set_flashdata('item', $message);
+                redirect(base_url('Dashboard/footerInfo'));
+         }
 	}
 
 
@@ -144,12 +162,18 @@ class Dashboard extends CI_Controller {
 
 
 	public function addContactInfo(){
-		$data = $this->input->post();
-		$this->load->model('Contactinfo');
-        $tripdetails = $this->Contactinfo->insertData($data);
-        $message = "Contact Info saved";
-        $this->session->set_flashdata('item', $message);
-        redirect(base_url('Dashboard/contactUs'));
+		try{
+			$data = $this->input->post();
+			$this->load->model('Contactinfo');
+	        $tripdetails = $this->Contactinfo->insertData($data);
+	        $message = "<span style='background-color:green;'>Contact Info saved</span>";
+	        $this->session->set_flashdata('item', $message);
+	        redirect(base_url('Dashboard/contactUs'));
+	    }catch(Exception $e){
+                $message = "<span style='background-color:red;'>Something went wrong... Try again</span>";
+                $this->session->set_flashdata('item', $message);
+                redirect(base_url('Dashboard/contactUs'));
+         }
 	}
 
 
@@ -164,13 +188,19 @@ class Dashboard extends CI_Controller {
 	}
 
 	public function addAboutUs(){
-		$data = $this->input->post();
-        $this->load->model('Aboutus');
-        $inserData['about_us'] = htmlentities($data['about_us']);
-        $this->Aboutus->update($inserData);
-        $message = "About us Info saved";
-        $this->session->set_flashdata('item', $message);
-		redirect(base_url('Dashboard/editAboutUs'));
+		try{
+			$data = $this->input->post();
+	        $this->load->model('Aboutus');
+	        $inserData['about_us'] = htmlentities($data['about_us']);
+	        $this->Aboutus->update($inserData);
+	        $message = "<span style='background-color:green;'>About us Info saved</span>";
+	        $this->session->set_flashdata('item', $message);
+			redirect(base_url('Dashboard/editAboutUs'));
+		}catch(Exception $e){
+                $message = "<span style='background-color:red;'>Something went wrong... Try again</span>";
+                $this->session->set_flashdata('item', $message);
+                redirect(base_url('Dashboard/editAboutUs'));
+         }
 	}
 
 	// our network
@@ -186,13 +216,19 @@ class Dashboard extends CI_Controller {
 	}
 
 	public function addServices(){
-		$data = $this->input->post();
-        $this->load->model('Services');
-        $inserData['services'] = htmlentities($data['services']);
-        $this->Services->update($inserData);
-        $message = "Services Info saved";
-        $this->session->set_flashdata('item', $message);
-		redirect(base_url('Dashboard/editServices'));
+		try{
+			$data = $this->input->post();
+	        $this->load->model('Services');
+	        $inserData['services'] = htmlentities($data['services']);
+	        $this->Services->update($inserData);
+	        $message = "<span style='background-color:green;'>Services Info saved</span>";
+	        $this->session->set_flashdata('item', $message);
+			redirect(base_url('Dashboard/editServices'));
+		}catch(Exception $e){
+                $message = "<span style='background-color:red;'>Something went wrong... Try again</span>";
+                $this->session->set_flashdata('item', $message);
+                redirect(base_url('Dashboard/editServices'));
+         }
 	}
 
 
@@ -207,13 +243,19 @@ class Dashboard extends CI_Controller {
 	}
 
 	public function addPrivacyPolicy(){
-		$data = $this->input->post();
-        $this->load->model('Privacypolicy');
-        $inserData['privacy_policy'] = htmlentities($data['privacy_policy']);
-        $this->Privacypolicy->update($inserData);
-        $message = "Services Info saved";
-        $this->session->set_flashdata('item', $message);
-		redirect(base_url('Dashboard/editPrivacyPolicy'));
+		try{
+			$data = $this->input->post();
+	        $this->load->model('Privacypolicy');
+	        $inserData['privacy_policy'] = htmlentities($data['privacy_policy']);
+	        $this->Privacypolicy->update($inserData);
+	        $message = "<span style='background-color:green;'>Privacy policy Info saved</span>";
+	        $this->session->set_flashdata('item', $message);
+			redirect(base_url('Dashboard/editPrivacyPolicy'));
+		}catch(Exception $e){
+                $message = "<span style='background-color:red;'>Something went wrong... Try again</span>";
+                $this->session->set_flashdata('item', $message);
+                redirect(base_url('Dashboard/editPrivacyPolicy'));
+        }
 	}
 
 	public function editOurNetwork(){
@@ -227,13 +269,19 @@ class Dashboard extends CI_Controller {
 	}
 
 	public function addOurNetwork(){
-		$data = $this->input->post();
-        $this->load->model('Ournetwork');
-        $inserData['our_network'] = htmlentities($data['our_network']);
-        $this->Ournetwork->update($inserData);
-        $message = "Our Network Info saved";
-        $this->session->set_flashdata('item', $message);
-		redirect(base_url('Dashboard/editOurNetwork'));
+		try{
+			$data = $this->input->post();
+	        $this->load->model('Ournetwork');
+	        $inserData['our_network'] = htmlentities($data['our_network']);
+	        $this->Ournetwork->update($inserData);
+	        $message = "<span style='background-color:green;'>Our Network Info saved</span>";
+	        $this->session->set_flashdata('item', $message);
+			redirect(base_url('Dashboard/editOurNetwork'));
+		}catch(Exception $e){
+                $message = "<span style='background-color:red;'>Something went wrong... Try again</span>";
+                $this->session->set_flashdata('item', $message);
+                redirect(base_url('Dashboard/editOurNetwork'));
+        }
 	}
 
 

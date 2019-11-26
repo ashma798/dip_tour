@@ -40,14 +40,20 @@ class Visa extends CI_Controller {
 	}
 
 	public function add(){
-		$data = $this->input->post();
-		$this->load->model('Visaquery');
-		$data['user_email'] = $_SESSION['feusername'];
-        $data['user_id'] = $_SESSION['feuser_id'];
-        $tripdetails = $this->Visaquery->insertData($data);
-        $message = "Our executives will connect with you over you query";
-        $this->session->set_flashdata('item', $message);
-        redirect(base_url('Visa/visaquery'));
+		try{
+			$data = $this->input->post();
+			$this->load->model('Visaquery');
+			$data['user_email'] = $_SESSION['feusername'];
+	        $data['user_id'] = $_SESSION['feuser_id'];
+	        $tripdetails = $this->Visaquery->insertData($data);
+	        $message = "Our executives will connect with you over you query";
+	        $this->session->set_flashdata('item', $message);
+	        redirect(base_url('Visa/visaquery'));
+	    }catch(Exception $e){
+	    	 $message = "<span style='background-color:red;'>Something went wrong... Please contact us on +234 8122820856, +234 8170592433{24/7,WHATSAPP} or mail us at info@diptourltd.com</span>";
+                $this->session->set_flashdata('item', $message);
+                redirect(base_url('Visa/visaquery'));
+	    }
 	}
 }
 ?>

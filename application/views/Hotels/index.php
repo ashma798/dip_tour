@@ -26,8 +26,8 @@
                                                 <div class="row">
                                             <div class="col-md-5 col-12 padding-row-card font-sm-three">
                                                
-                                                <input type="text" class="form-control font-sm-four" id="validationCustom01" placeholder="Select Destination" name="destination"
-                                                       required>
+                                                <input type="text" class="form-control font-sm-four inputautocomplete" id="validationCustom01" placeholder="Select Destination" name="destination"
+                                                       required >
                                             </div>
                                             
                                             <span  class="ordiv">
@@ -38,7 +38,7 @@
                                             <div class="col-md-5 col-12 padding-row-card font-sm-three">
                                                
                                                 <input type="text" class="form-control font-sm-four" id="validationCustom01" placeholder="Enter Hotel Name" name="hotel_name"
-                                                       required>
+                                                       >
                                             </div>
                                      </div></div>
                                      <div  class="col-lg-12">
@@ -128,7 +128,7 @@
 
                             <div class="row">
                                 <div class="col-lg-12 col-12"><a href="hotellist.html"></a>
-                                    <button class="btn float-right" style="background-color: #28a745; color: #ffffff; width: 340px; font-size: 15px;"><b>SEARCH HOTEL</b></button>
+                                    <button class="btn float-right" id="search_hotel" style="background-color: #28a745; color: #ffffff; width: 340px; font-size: 15px;"><b>SEARCH HOTEL</b></button>
                                 </div>
                             </div>
                             </form>
@@ -140,6 +140,11 @@
             <br><br><br>
             <!-- SCRIPTS -->
             <script>
+                var availableTags = <?php echo json_encode($airport); ?>;
+                //console.log(availableTags);
+                $( ".inputautocomplete" ).autocomplete({
+                        source: availableTags
+                    }); 
                 $(function () {
                     $("#datepick").datepicker();
                     $("#datepick1").datepicker();
@@ -710,5 +715,7 @@
 
                                 window.sr = ScrollReveal({reset: true});
 
-                                sr.reveal('.company-stuff', {duration: 700});</script>
+                                sr.reveal('.company-stuff', {duration: 700});
+
+            </script>
         </section>
