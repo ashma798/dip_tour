@@ -161,7 +161,7 @@
                                 VISAS</a>                          
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <?php if(isset($_SESSION['feusername'])){?>
-                                <a class="dropdown-item" href="<?php echo base_url();?>Visa">Search</a>
+                                <a class="dropdown-item" href="<?php echo base_url();?>Visa/visa_search">Search</a>
                                 <?php } else{ ?>
                              <a class="dropdown-item" href="<?php echo base_url();?>Register/login">Search</a>
                         <?php } ?>

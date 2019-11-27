@@ -182,7 +182,7 @@
                                 VISAS</a>                          
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <?php if(isset($_SESSION['feusername'])){?>
-                                <a class="dropdown-item" href="<?php echo base_url();?>Visa">Search</a>
+                                <a class="dropdown-item" href="<?php echo base_url();?>Visa/visa_search">Search</a>
                                 <?php } else{ ?>
                              <a class="dropdown-item" href="<?php echo base_url();?>Register/login">Search</a>
                         <?php } ?>
@@ -331,7 +331,17 @@
                         <div class="card-body ">
 
                             <img src="./images/card4.jpg">
-                            <p class="card-text"> Explore other cultures & values of different environments along the pathway of career development. – Connect to take advantage of Standby Medical Tourism Facilitators, to coordinate a seamless medical trip for prospective patients.Â  – Engage with our Sport Tourism Facilitators as an Observer, Host or Participant.</p>
+                            <p class="card-text"> 
+                                <ul>
+                                        <li>
+                                    Study Abroad Today at your preferred academic institutions for skills improvement along the pathway of career development. <a href="https://www.diptourltd.com/educational-tourism/">BOOK NOW </a>
+                                    </li>
+                                    <li> Lets facilitate your medical trip to your preferred medical centre globally. Package are inclusive of admission into preferred hospitals + visa consultation + trip coordination. <a href="https://www.diptourltd.com/medical-tourism/">BOOK NOW </a>
+                                    </li>
+                                    <li>
+                                    Become a Host, Participant or Observer through our sport tourism facilitator at any sporting event. <a href="https://www.diptourltd.com/sport-tourism/">BOOK NOW </a>
+                                    </li>
+                                   </ul></p>
                             <a href="#" class="btn btn-success">BOOK NOW</a>
                         </div>
                     </div><!--/.card-->

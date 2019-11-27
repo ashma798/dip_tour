@@ -26,6 +26,7 @@ class Visa extends CI_Controller {
 		$data['footer_info'] = json_decode(json_encode($this->Footerinfo->get()), true);
 		$this->load->view('common/common_header',$data);
 		$this->load->view('Visa/index');
+		$this->load->view('common/common_mid_section',$data);
 		$this->load->view('common/common_footer',$data);
 	}
 
@@ -36,6 +37,7 @@ class Visa extends CI_Controller {
 		$data['footer_info'] = json_decode(json_encode($this->Footerinfo->get()), true);
 		$this->load->view('common/common_header',$data);
 		$this->load->view('Visa/visaquery');
+		$this->load->view('common/common_mid_section',$data);
 		$this->load->view('common/common_footer',$data);
 	}
 
@@ -54,6 +56,18 @@ class Visa extends CI_Controller {
                 $this->session->set_flashdata('item', $message);
                 redirect(base_url('Visa/visaquery'));
 	    }
+	}
+
+	public function visa_search(){
+		$this->load->model('Contactinfo');
+		$this->load->model('Footerinfo');
+		$data['contact_info'] = json_decode(json_encode($this->Contactinfo->get()), true);
+		$data['footer_info'] = json_decode(json_encode($this->Footerinfo->get()), true);
+		$this->load->view('common/common_header',$data);
+		$this->load->view('Visa/visa_search');
+		$this->load->view('common/common_mid_section',$data);
+		$this->load->view('common/common_footer',$data);
+
 	}
 }
 ?>

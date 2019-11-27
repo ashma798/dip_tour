@@ -33,7 +33,8 @@ class Flight extends CI_Controller {
                 $data['contact_info'] = json_decode(json_encode($this->Contactinfo->get()), true);
                 $data['footer_info'] = json_decode(json_encode($this->Footerinfo->get()), true);
                 $this->load->view('common/common_header',$data);
-		$this->load->view('Flight/index',$data);
+		        $this->load->view('Flight/index',$data);
+                $this->load->view('common/common_mid_section',$data);
                 $this->load->view('common/common_footer',$data);
 	}
 
