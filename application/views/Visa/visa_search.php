@@ -1,53 +1,4 @@
-         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-        <link rel="stylesheet" href="<?php echo base_url();?>css/jquery-ui.css">
-        <!--<link href="<?php echo base_url();?>css/style.css" rel="stylesheet">-->
-        <!--Start of Zendesk Chat Script-->
-
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
-        <link href="<?php echo base_url();?>visa_css/loader_ripple.css" rel="stylesheet" type="text/css" />
-
-        <link type="text/css" rel="stylesheet" id="arrowchat_css" media="all" href="/chat/external.php?type=css" charset="utf-8" />
-        <script type="text/javascript" src="<?php echo base_url();?>visa_js/jquery.min.js"></script>
-        <script type="text/javascript" src="<?php echo base_url();?>js/jquery-ui.js"></script>
-
-        <!-- Modal -->
-        <link href="<?php echo base_url();?>visa_css/custombox.min.css" rel="stylesheet">
-
-        <!-- Sweet Alert css -->
-        <link href="<?php echo base_url();?>visa_css/sweet-alert.css" rel="stylesheet" type="text/css" />
-
-        <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url();?>visa_css/core.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url();?>visa_css/components.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url();?>visa_css/icons.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url();?>visa_css/pages.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url();?>visa_css/menu.css" rel="stylesheet" type="text/css" />
-
-        <link rel="stylesheet" href="<?php echo base_url();?>visa_css/animate.min.css">
-
-        <link href="<?php echo base_url();?>visa_css/responsive.css" rel="stylesheet" type="text/css" />
-
-        <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-        <link href="<?php echo base_url();?>css/newstyle.css" rel="stylesheet">
-        <script src="<?php echo base_url();?>visa_js/modernizr.min.js"></script>
- <script src="<?php echo base_url();?>visa_js/jquery.min.js"></script>
-        <script>
-            jQuery(window).load(function () {
-                jQuery(".vapo_loader").fadeOut("slow");
-            })
-        </script>
-        <style>
+<style>
             .vapo_loader {
                 position: fixed;
                 left: 0px;
@@ -698,9 +649,6 @@
 
 
 
-
-
-                </div>
                 <!-- end row -->
 
                 <!-- Begin Ads -->
@@ -855,7 +803,7 @@
                 </script>
 
 
-                <script src="form_js/visainformation.js?refresh=2"></script>
+                <script src="<?php echo base_url();?>form_js/visainformation.js"></script>
 
                 <!-- Footer -->
 
@@ -885,7 +833,7 @@
 
 
 
-        <script src="<?php echo base_url();?>visa_js/bootstrap.min.js"></script>
+        <!-- script src="<?php echo base_url();?>visa_js/bootstrap.min.js"></script -->
         <script src="<?php echo base_url();?>visa_js/detect.js"></script>
         <script src="<?php echo base_url();?>visa_js/fastclick.js"></script>
 
@@ -927,7 +875,7 @@
         <script src="<?php echo base_url();?>visa_js/jquery.counterup.min.js"></script>
 
         <!-- XEditable Plugin -->
-        <script src="<?php echo base_url();?>visa_js/moment/moment.js"></script>
+        <script src="<?php echo base_url();?>visa_js/moment.js"></script>
         <script type="text/javascript" src="<?php echo base_url();?>visa_js/bootstrap-editable.min.js"></script>
 
         <!-- App js -->
