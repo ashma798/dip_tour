@@ -282,6 +282,14 @@
                        <a class="nav-link " href="javascript:;"> <i class="fa fa-th-large"></i> <span class="title">Package Management</span> <span class="arrow"></span> </a>
                          
                     </li>
+                    <li >
+                       <a class="nav-link " href="<?php echo base_url('Dashboard/TravelSimData');?>"> <i class="fa fa-th-large"></i> <span class="title">Travel Sim Card</span> <span class="arrow"></span> </a>
+                         
+                    </li>
+                    <li >
+                       <a class="nav-link " href="<?php echo base_url('Dashboard/TravelInsuranceData');?>"> <i class="fa fa-th-large"></i> <span class="title">Travel Insurance</span> <span class="arrow"></span> </a>
+                         
+                    </li>
                    
                         </ul>
                     </li>

@@ -31,7 +31,7 @@
 
                                 <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="<?php echo base_url();?>OurPrivacyPolicy">Privacy Policy</a></li>
                                 <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="<?php echo base_url();?>Network">Our Network</a></li>
-                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Contact</a></li>
+                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="https://www.diptourltd.com/contact-us">Contact</a></li>
                                 </ul>
                             </div>
                         </div>

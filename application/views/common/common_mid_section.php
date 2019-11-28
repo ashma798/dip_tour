@@ -41,7 +41,7 @@
 
                                 <img src="<?php echo base_url();?>images/card2.jpg" width="100%">
                                 <p class="card-text" style="padding-bottom: 25px;">Get your Local and International Flight Tickets seamlessly with best price guarantee on flight deals, promotional fares with easy ticket upgrade and real time flight change.</p>
-                                <a href="#" class="btn btn-success" style="margin-top: 95px;">GET LATEST UPDATES</a>
+                                <a href="<?php echo base_url('flight');?>" class="btn btn-success" style="margin-top: 95px;">GET LATEST UPDATES</a>
                             </div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
 
                                 <img src="<?php echo base_url();?>images/card_1.jpg" width="100%">
                                 <p class="card-text"  style="padding-bottom: 3px;">Travel the world anytime having your own mobile number with you to connect with family, friends & Business associates. Sim Card possess $10 air time credit, UK & US telephone numbers. </p>
-                                <a href="#" class="btn btn-success" style="margin-top: 115px;">READ MORE</a>
+                                <a href="<?php echo base_url('TravelSimCard');?>" class="btn btn-success" style="margin-top: 115px;">READ MORE</a>
                             </div>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                                     </li>
                                    </ul>
                                 </p>
-                                <a href="#" class="btn btn-success">BOOK NOW</a>
+                                <!--a href="#" class="btn btn-success">BOOK NOW</a-->
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@
 
                                 <img src="<?php echo base_url();?>images/card6.jpg" width="100%">
                                 <p class="card-text"  style="padding-bottom:45px;">In minutes, get your Travel Insurance which guarantee covers for emergency medical expenses abroad, travel delays, evacuation & repatriation, loss or delayed baggage, passport theft, free escort of beneficiary + many more.</p>
-                                <a href="#" class="btn btn-success">CONTACT US</a>
+                                <a href="<?php echo base_url('TravelInsurance');?>" class="btn btn-success">CONTACT US</a>
                             </div>
                         </div>
                     </div>

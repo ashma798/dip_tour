@@ -293,4 +293,25 @@ class Dashboard extends CI_Controller {
 		$data['data'] = json_decode(json_encode($getDataForVisaQuery), true);
 		$this->load->view('template',$data);
 	}
+
+
+
+	public function TravelInsuranceData(){
+		$this->load->model('Travelinsurancequery');
+		$getDataForVisaQuery = $this->Travelinsurancequery->get();
+		$data['v'] = 'Dashboard/Travelinsurance';
+		$data['viewName'] = 'Travel Insurance';
+		$data['data'] = json_decode(json_encode($getDataForVisaQuery), true);
+		$this->load->view('template',$data);
+	}
+
+
+	public function TravelSimData(){
+		$this->load->model('Travelsimquery');
+		$getDataForVisaQuery = $this->Travelsimquery->get();
+		$data['v'] = 'Dashboard/Travelsim';
+		$data['viewName'] = 'Travel Sim';
+		$data['data'] = json_decode(json_encode($getDataForVisaQuery), true);
+		$this->load->view('template',$data);
+	}
 }

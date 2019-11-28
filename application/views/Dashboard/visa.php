@@ -6,7 +6,7 @@
                     <div class="col-lg-12">
                         <h2>Visa</h2>
                         <ol class="breadcrumb">
-                            <li> <a href="<?php echo base_url('Dashboard');?>">Visa</a> </li>
+                            <li> <a href="<?php echo base_url('Dashboard');?>">Dashboard</a> </li>
                             <li class="active"> <a href="#"><strong>Visa</strong></a> </li>
                         </ol>
                     </div>

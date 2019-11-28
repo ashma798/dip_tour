@@ -64,7 +64,7 @@
 				<div class="row align-items-center justify-content-md-center h-p100" data-overlay-light="9">
 					<div class="col-lg-5 col-md-6 col-12">
 						<div class="p-40 text-center content-bottom">
-							<img src="./images/logo.png" class="rounded-circle1 b-2 p-10 border-dark" alt="" style=" width: 50%;"/>
+							<img src="<?php echo base_url();?>images/logo.png" class="rounded-circle1 b-2 p-10 border-dark" alt="" style=" width: 50%;"/>
 							<div class="text-center">
 							  <p class="mt-20">Login With</p>
 							  <p class="gap-items-2 mb-0">

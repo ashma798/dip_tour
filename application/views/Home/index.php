@@ -307,7 +307,7 @@
 
                             <img src="./images/card2.jpg">
                             <p class="card-text" style="padding-bottom: 25px;">Get your Local and International Flight Tickets seamlessly with best price guarantee on flight deals, promotional fares with easy ticket upgrade and real time flight change.</p>
-                            <a href="#" class="btn btn-success" style="margin-top:  115px;">GET LATEST UPDATES</a>
+                            <a href="<?php echo base_url('flight');?>" class="btn btn-success" style="margin-top:  115px;">GET LATEST UPDATES</a>
                         </div>
                     </div><!--/.card-->
                 </div>
@@ -318,7 +318,7 @@
 
                             <img src="./images/card_1.jpg">
                             <p class="card-text"  style="padding-bottom: 3px;">Travel the world anytime having your own mobile number with you to connect with family, friends & Business associates. Sim Card possess $10 air time credit, UK & US telephone numbers. </p>
-                            <a href="#" class="btn btn-success" style="margin-top: 110px;">READ MORE</a>
+                            <a href="<?php echo base_url('TravelSimCard');?>" class="btn btn-success" style="margin-top: 110px;">READ MORE</a>
                         </div>
                     </div><!--/.card-->
                 </div>
@@ -342,7 +342,7 @@
                                     Become a Host, Participant or Observer through our sport tourism facilitator at any sporting event. <a href="https://www.diptourltd.com/sport-tourism/">BOOK NOW </a>
                                     </li>
                                    </ul></p>
-                            <a href="#" class="btn btn-success">BOOK NOW</a>
+                            <!--a href="#" class="btn btn-success">BOOK NOW</a-->
                         </div>
                     </div><!--/.card-->
                 </div>
@@ -364,7 +364,7 @@
 
                             <img src="./images/card6.jpg">
                             <p class="card-text"  style="padding-bottom:45px;">In minutes, get your Travel Insurance which guarantee covers for emergency medical expenses abroad, travel delays, evacuation & repatriation, loss or delayed baggage, passport theft, free escort of beneficiary + many more.</p>
-                            <a href="#" class="btn btn-success">CONTACT US</a>
+                            <a href="<?php echo base_url('TravelInsurance');?>" class="btn btn-success">CONTACT US</a>
                         </div>
                     </div><!--/.card-->
                 </div>
@@ -917,7 +917,7 @@
 
                                 <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="<?php echo base_url();?>OurPrivacyPolicy">Privacy Policy</a></li>
                                 <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="<?php echo base_url();?>Network">Our Network</a></li>
-                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="#">Contact</a></li>
+                                <li><i class="fa fa-caret-right" style="margin-right: 10px;"></i><a href="https://www.diptourltd.com/contact-us">Contact</a></li>
 
                             </ul>
                         </div>
