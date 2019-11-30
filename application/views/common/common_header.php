@@ -30,8 +30,81 @@
         <link href="<?php echo base_url();?>css/style.css" rel="stylesheet">
         <link href="<?php echo base_url();?>css/flightex.css" rel="stylesheet">
         <link href="<?php echo base_url();?>css/newstyle.css" rel="stylesheet">
+        <link href="<?php echo base_url();?>/css/rearrange.css" rel="stylesheet">
+        <link href="<?php echo base_url();?>/css/neww.css" rel="stylesheet">
         <link href="<?php echo base_url();?>css/flight-style.css" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo base_url();?>css/jquery-ui.css">
+          <style>
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 35%;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 400px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
     </head>
 
     <body>
@@ -128,23 +201,23 @@
                         </li>                      
                         <li class="nav-item">
                         <?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url()?>Hotels" style="color: black;">HOTELS <span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="<?php echo base_url();?>hotels" style="color: black;">HOTELS <span style="padding-left: 20px;">|</span></a>
                         <?php } else{ ?>
-                             <a class="nav-link" style="color: black;" href="<?php echo base_url();?>Register/login">HOTELS<span style="padding-left: 20px;">|</span></a>
+                             <div class="nav-link" style="color: black;" onclick="openForm();">HOTELS<span style="padding-left: 20px;">|</span></div>
                         <?php } ?>
                         </li>                    
                         <li class="nav-item">
                             <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>
                             <?php } else{ ?>
-                              <a class="nav-link" style="color: black;" href="<?php echo base_url();?>Register/login">FLIGHTS <span style="padding-left: 20px;">|</span></a>
+                              <div class="nav-link" style="color: black;" onclick="openForm();">FLIGHTS <span style="padding-left: 20px;">|</span></div>
                         <?php } ?>
                         </li>                        
                         <li class="nav-item">
                             <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>car-rental" style="color: black;">CAR RENTALS <span style="padding-left: 20px;">|</span></a>
                             <?php } else{ ?>
-                             <a class="nav-link" style="color: black;" href="<?php echo base_url();?>Register/login">CAR RENTALS<span style="padding-left: 20px;">|</span></a>
+                             <div class="nav-link" style="color: black;" onclick="openForm();">CAR RENTALS<span style="padding-left: 20px;">|</span></div>
                         <?php } ?>
                         </li>                   
                         <li class="nav-item dropdown">
@@ -163,12 +236,12 @@
                                 <?php if(isset($_SESSION['feusername'])){?>
                                 <a class="dropdown-item" href="<?php echo base_url();?>Visa/visa_search">Search</a>
                                 <?php } else{ ?>
-                             <a class="dropdown-item" href="<?php echo base_url();?>Register/login">Search</a>
+                             <div class="dropdown-item" onclick="openForm();">Search</div>
                         <?php } ?>
                          <?php if(isset($_SESSION['feusername'])){?>
                                 <a class="dropdown-item" href="<?php echo base_url();?>Visa/visaquery">Visa Booking</a>
                          <?php } else{ ?>
-                             <a class="dropdown-item" href="<?php echo base_url();?>Register/login">Visa Booking</a>
+                             <div class="dropdown-item" onclick="openForm();">Visa Booking</div>
                         <?php } ?>                              
                             </div>                              
                         </li>
@@ -181,10 +254,46 @@
                            </p>
                            </li>
                     <?php }else{?>
-                    <a href="<?php echo base_url();?>Register/login" class="btn " role="button" style=" margin-left:40px; margin-right:0px; background-color: black; color:white;"><i class="fa fa-lock xs-nav"></i>LOGIN</a>
+                    <div class="btn " role="button" style=" margin-left:40px; margin-right:0px; background-color: black; color:white;" onclick="openForm();"><i class="fa fa-lock xs-nav"></i>LOGIN</div>
                     <a href="<?php echo base_url(); ?>Register" class="btn " role="button" style=" margin-left:20px; margin-right:30px; background-color: green; color:white;"><i class="fa fa-user xs-naav"></i>REGISTER</a>
                 <?php }?>
                 </ul>
             </nav>
         </section>
- 
+ <section>
+    
+
+    <div class="form-popup" id="myForm">
+   <form action="<?php echo base_url();?>Register/login" id="user_login_form" autocomplete="off" onsubmit="return validate_user_login()" method="post" accept-charset="utf-8">
+    <h1>Login</h1>
+
+    <label for="email">Enter Your Registered Email Address</label>
+    <input type="text" name="username" placeholder="Enter Your Registered Email Address" name="email" required>
+
+    <label for="psw">Password</label>
+    <input type="password" name="password" placeholder="Enter Password" name="psw" required>
+    
+    <div class="form-group">
+<p class=""><input type="checkbox" name="remember" value="accept" checked="checked"  />
+ Remember me 
+ <a href="#" class="forgotPwd" style="float: right; ">Forgot Password?</a></p>
+ </div> 
+    <button type="submit" class="btn" style="background-color: orange; color: black;"><h5>Sign In</h5></button>
+    <a href="<?php echo base_url(); ?>Register" class="btn" style="background-color: #fff; color: black; border: 1px solid orange;">REGISTER</a>
+    
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+</section>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
