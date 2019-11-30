@@ -30,8 +30,6 @@
         <link href="<?php echo base_url();?>css/style.css" rel="stylesheet">
         <link href="<?php echo base_url();?>css/flightex.css" rel="stylesheet">
         <link href="<?php echo base_url();?>css/newstyle.css" rel="stylesheet">
-        <link href="<?php echo base_url();?>/css/rearrange.css" rel="stylesheet">
-        <link href="<?php echo base_url();?>/css/neww.css" rel="stylesheet">
         <link href="<?php echo base_url();?>css/flight-style.css" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo base_url();?>css/jquery-ui.css">
           <style>
