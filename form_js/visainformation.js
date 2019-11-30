@@ -12,7 +12,7 @@ $(function($){
         $('.advance_visainformation').slideDown('slow');
     });
 
-    $('.search_visa_information').click(function(){
+   /* $('.search_visa_information').click(function(){
         var visacountry = $('#vc_rightbar_checklist_visacountry').attr('data-value');
         var vc_rightbar_checklist_nationality = $('#vc_rightbar_checklist_nationality').attr('data-value');
         var resident = $('#vc_rightbar_checklist_residentcountry').attr('data-value');
@@ -34,9 +34,9 @@ $(function($){
         var nationality = $('#vc_rightbar_checklist_nationality').attr('data-value');
         var residentcountry = $('#vc_rightbar_checklist_residentcountry').attr('data-value');
         var visacategoryid = $('#visacategoryid').attr('data-value');
-
+        var postUrl = '<?php echo base_url()?>' + 'visa/getDataByAjax';
         var csrf_token = $('#csrf_token').val();
-        $.post("form_php/visainformation.php", {visacountry:visacountry,nationality:nationality,residentcountry:residentcountry,visacategoryid:visacategoryid,csrf_token:csrf_token,operation:'VisaChecklist'}, function(result) {
+        $.post("postUrl", {visacountry:visacountry,nationality:nationality,residentcountry:residentcountry,visacategoryid:visacategoryid,csrf_token:csrf_token,operation:'VisaChecklist'}, function(result) {
            if (result.status == 'success'){
                $('.vc-loader-overlay').hide('slow');
                if (result.nochecklist == 'Yes'){
@@ -70,5 +70,5 @@ $(function($){
 
         }, 'json');
 
-    }
+    }*/
 });
