@@ -395,7 +395,7 @@ function closeForm() {
         </div>
     </section>
     <section> 
-        <div class="container-fluid" style="padding-left: 100px;padding-right:100px;">
+        <div class="container">
             <h3 class="text-center my-3">TOP TRAVEL PRODUCTS</h3>
             <div class="row">
                 <div class="col-md-4">
@@ -403,7 +403,7 @@ function closeForm() {
                         <h5 class="card-header bg-success text-white" style="text-align: center;">--INBOUND TRAVEL PROCESS--</h5>
                         <div class="card-body ">
 
-                            <img src="./images/card1.jpg">
+                            <img src="./images/card1.jpg" style="width: 100%;">
                             <p class="card-text">Have the best of experience with seamless Nigerian-Inbound (Domestic) Travel Process - all in one package with inclusion on Nigerian Visa Facilitation / Visa Extension, Meet & Greet Services, Airport Transfers / Ground Transportation, Local Flight Schedules between Nigerian Cities, Hotel Accommodation, Nigerian Attractions & Tour Activities with Dip Tour certified and experience travel experts.</p>
                             <a href="#" class="btn btn-success">CONTACT US</a>
                         </div>
@@ -414,7 +414,7 @@ function closeForm() {
                         <h5 class="card-header bg-success text-white" style="text-align: center;">---TRAVEL DEALS---</h5>
                         <div class="card-body ">
 
-                            <img src="./images/card2.jpg">
+                            <img src="./images/card2.jpg" style="width: 100%;">
                             <p class="card-text" style="padding-bottom: 25px;">Get your Local and International Flight Tickets seamlessly with best price guarantee on flight deals, promotional fares with easy ticket upgrade and real time flight change.</p>
                             <a href="<?php echo base_url('flight');?>" class="btn btn-success" style="margin-top:  115px;">GET LATEST UPDATES</a>
                         </div>
@@ -425,7 +425,7 @@ function closeForm() {
                         <h5 class="card-header bg-success text-white" style="text-align: center;">---TRAVEL SIM CARD---</h5>
                         <div class="card-body ">
 
-                            <img src="./images/card_1.jpg">
+                            <img src="./images/card_1.jpg" style="width: 100%;">
                             <p class="card-text"  style="padding-bottom: 3px;">Travel the world anytime having your own mobile number with you to connect with family, friends & Business associates. Sim Card possess $10 air time credit, UK & US telephone numbers. </p>
                             <a href="<?php echo base_url('TravelSimCard');?>" class="btn btn-success" style="margin-top: 110px;">READ MORE</a>
                         </div>
@@ -439,7 +439,7 @@ function closeForm() {
                         <h5 class="card-header bg-success text-white" style="text-align: center;">--EDUCATIONAL, MEDICAL & SPORT TOURISM--</h5>
                         <div class="card-body ">
 
-                            <img src="./images/card4.jpg">
+                            <img src="./images/card4.jpg" style="width: 100%;">
                             <p class="card-text"> 
                                 <ul>
                                         <li>
@@ -460,7 +460,7 @@ function closeForm() {
                         <h5 class="card-header bg-success text-white" style="text-align: center; padding-bottom: 35px;">---TOUR PACKAGES---</h5>
                         <div class="card-body ">
 
-                            <img src="./images/card5.jpg">
+                            <img src="./images/card5.jpg" style="width: 100%;">
                             <p class="card-text"   style="padding-bottom: 0px;">Get the best Ready or Custom Made Tour Package to your Preferred Destination at any given season inclusive of Flight + Hotel + Visa + Attractions/Activities + Ground Transportation + Dubai (UAE) Package + Many More suitable for Solo, Business and Group Travelers. </p>
                             <a href="#" class="btn btn-success" style="margin-top: 25px;">BOOK NOW</a>
                         </div>
@@ -471,7 +471,7 @@ function closeForm() {
                         <h5 class="card-header bg-success text-white" style="text-align: center; padding-bottom: 35px;">--TRAVEL & HEALTH INSURANCE--</h5>
                         <div class="card-body ">
 
-                            <img src="./images/card6.jpg">
+                            <img src="./images/card6.jpg" style="width: 100%;">
                             <p class="card-text"  style="padding-bottom:45px;">In minutes, get your Travel Insurance which guarantee covers for emergency medical expenses abroad, travel delays, evacuation & repatriation, loss or delayed baggage, passport theft, free escort of beneficiary + many more.</p>
                             <a href="<?php echo base_url('TravelInsurance');?>" class="btn btn-success">CONTACT US</a>
                         </div>
@@ -490,7 +490,7 @@ function closeForm() {
         </div>
     </section>
 
-    <section style="padding-left: 40px;padding-right: 40px;">
+    <section>
         <div class="container" >
             <div class="card-columns" >
 
