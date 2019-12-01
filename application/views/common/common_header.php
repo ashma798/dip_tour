@@ -262,7 +262,7 @@
     
 
     <div class="form-popup" id="myForm">
-   <form action="<?php echo base_url();?>Register/login" id="user_login_form" autocomplete="off" onsubmit="return validate_user_login()" method="post" accept-charset="utf-8">
+   <form action="<?php echo base_url();?>Register/login" id="user_login_form" autocomplete="off" onsubmit="return validate_user_login()" method="post" accept-charset="utf-8" class="form-container">
     <h1>Login</h1>
 
     <label for="email">Enter Your Registered Email Address</label>
