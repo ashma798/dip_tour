@@ -405,7 +405,7 @@ function closeForm() {
 
                             <img src="./images/card1.jpg" style="width: 100%;">
                             <p class="card-text">Have the best of experience with seamless Nigerian-Inbound (Domestic) Travel Process - all in one package with inclusion on Nigerian Visa Facilitation / Visa Extension, Meet & Greet Services, Airport Transfers / Ground Transportation, Local Flight Schedules between Nigerian Cities, Hotel Accommodation, Nigerian Attractions & Tour Activities with Dip Tour certified and experience travel experts.</p>
-                            <a href="#" class="btn btn-success">CONTACT US</a>
+                            <a href="https://www.diptourltd.com/contact-us" class="btn btn-success">CONTACT US</a>
                         </div>
                     </div>
                 </div>
@@ -427,7 +427,11 @@ function closeForm() {
 
                             <img src="./images/card_1.jpg" style="width: 100%;">
                             <p class="card-text"  style="padding-bottom: 3px;">Travel the world anytime having your own mobile number with you to connect with family, friends & Business associates. Sim Card possess $10 air time credit, UK & US telephone numbers. </p>
-                            <a href="<?php echo base_url('TravelSimCard');?>" class="btn btn-success" style="margin-top: 110px;">READ MORE</a>
+                            <?php if(isset($_SESSION['feusername'])){?>
+                                <a class="btn btn-success" href="<?php echo base_url('TravelSimCard');?>" style="margin-top: 110px;">READ MORE</a>
+                            <?php } else{ ?>
+                                <div class="btn btn-success" onclick="openForm();">Visa Booking</div>
+                            <?php } ?>     
                         </div>
                     </div><!--/.card-->
                 </div>
@@ -473,7 +477,11 @@ function closeForm() {
 
                             <img src="./images/card6.jpg" style="width: 100%;">
                             <p class="card-text"  style="padding-bottom:45px;">In minutes, get your Travel Insurance which guarantee covers for emergency medical expenses abroad, travel delays, evacuation & repatriation, loss or delayed baggage, passport theft, free escort of beneficiary + many more.</p>
-                            <a href="<?php echo base_url('TravelInsurance');?>" class="btn btn-success">CONTACT US</a>
+                            <?php if(isset($_SESSION['feusername'])){?>
+                                <a class="btn btn-success" href="<?php echo base_url('TravelInsurance');?>" style="margin-top: 110px;">CONTACT US</a>
+                            <?php } else{ ?>
+                                <div class="btn btn-success" onclick="openForm();">Visa Booking</div>
+                            <?php } ?> 
                         </div>
                     </div><!--/.card-->
                 </div>
