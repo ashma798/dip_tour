@@ -9,7 +9,7 @@
                                 <hr>
                                 <h2><?php echo $this->session->flashdata('item'); ?></h2> 
                                 <form action="<?php echo base_url()?>Hotels/add" method="post">
-                                <div class="checkboxes">
+                                <!--div class="checkboxes">
                                 <label class="pl-4">CATEGORY</label>
                                <label for="x"><input class="check" type="checkbox" id="x" name="category_1"/> <span>2</span></label>
                               <label for="y"><input class="check" type="checkbox" id="y" name="category_2"/> <span>3</span></label>
@@ -17,7 +17,7 @@
                                <label for="y"><input class="check" type="checkbox" id="y" name="category_4"/> <span>5</span></label>
                                <label for="z"><input  class="all" type="checkbox" id="z" name="category_5"/> <span>All</span></label>
                                
-                               </div>
+                               </div-->
                                 <div class="tab_content mt-4">
 
                                     <div class="tabs_item">

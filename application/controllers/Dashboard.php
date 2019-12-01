@@ -76,7 +76,7 @@ class Dashboard extends CI_Controller {
 			$this->load->model('Partnerdetails');
 			if($pathToFile !== 0){
 				$partnerLogo = $this->Partnerdetails->insertData($inputData);
-				$message = "<span style='background-color:green;'>Partner data saved successfully</span>";
+				$message = "<span style='background-color:green;color:white;'>Partner data saved successfully</span>";
 				$this->session->set_flashdata('item', $message);
 				redirect(base_url('Dashboard/partnersDetails'));
 			}
@@ -108,7 +108,7 @@ class Dashboard extends CI_Controller {
 			$this->load->model('Banners');
 			if($inputData['banner1'] != 0 && $inputData['banner2'] != 0 && $inputData['banner3'] != 0){
 				$partnerLogo = $this->Banners->insertData($inputData);
-				$message = "<span style='background-color:green;'>Banner data saved successfully</span>";
+				$message = "<span style='background-color:green;color:white;'>Banner data saved successfully</span>";
 				$this->session->set_flashdata('item', $message);
 				redirect(base_url('Dashboard/banners'));
 			}
@@ -138,7 +138,7 @@ class Dashboard extends CI_Controller {
 			$data = $this->input->post();
 			$this->load->model('Footerinfo');
 	        $tripdetails = $this->Footerinfo->update($data);
-	        $message = "<span style='background-color:green;'>Footer info saved</span>";
+	        $message = "<span style='background-color:green;color:white;'>Footer info saved</span>";
 	        $this->session->set_flashdata('item', $message);
 	        redirect(base_url('Dashboard/footerInfo'));
 	    }catch(Exception $e){
@@ -166,7 +166,7 @@ class Dashboard extends CI_Controller {
 			$data = $this->input->post();
 			$this->load->model('Contactinfo');
 	        $tripdetails = $this->Contactinfo->insertData($data);
-	        $message = "<span style='background-color:green;'>Contact Info saved</span>";
+	        $message = "<span style='background-color:green;color:white;'>Contact Info saved</span>";
 	        $this->session->set_flashdata('item', $message);
 	        redirect(base_url('Dashboard/contactUs'));
 	    }catch(Exception $e){
@@ -193,7 +193,7 @@ class Dashboard extends CI_Controller {
 	        $this->load->model('Aboutus');
 	        $inserData['about_us'] = htmlentities($data['about_us']);
 	        $this->Aboutus->update($inserData);
-	        $message = "<span style='background-color:green;'>About us Info saved</span>";
+	        $message = "<span style='background-color:green;color:white;'>About us Info saved</span>";
 	        $this->session->set_flashdata('item', $message);
 			redirect(base_url('Dashboard/editAboutUs'));
 		}catch(Exception $e){
@@ -221,7 +221,7 @@ class Dashboard extends CI_Controller {
 	        $this->load->model('Services');
 	        $inserData['services'] = htmlentities($data['services']);
 	        $this->Services->update($inserData);
-	        $message = "<span style='background-color:green;'>Services Info saved</span>";
+	        $message = "<span style='background-color:green;color:white;'>Services Info saved</span>";
 	        $this->session->set_flashdata('item', $message);
 			redirect(base_url('Dashboard/editServices'));
 		}catch(Exception $e){
@@ -248,7 +248,7 @@ class Dashboard extends CI_Controller {
 	        $this->load->model('Privacypolicy');
 	        $inserData['privacy_policy'] = htmlentities($data['privacy_policy']);
 	        $this->Privacypolicy->update($inserData);
-	        $message = "<span style='background-color:green;'>Privacy policy Info saved</span>";
+	        $message = "<span style='background-color:green;color:white;'>Privacy policy Info saved</span>";
 	        $this->session->set_flashdata('item', $message);
 			redirect(base_url('Dashboard/editPrivacyPolicy'));
 		}catch(Exception $e){
@@ -274,7 +274,7 @@ class Dashboard extends CI_Controller {
 	        $this->load->model('Ournetwork');
 	        $inserData['our_network'] = htmlentities($data['our_network']);
 	        $this->Ournetwork->update($inserData);
-	        $message = "<span style='background-color:green;'>Our Network Info saved</span>";
+	        $message = "<span style='background-color:green;color:white;'>Our Network Info saved</span>";
 	        $this->session->set_flashdata('item', $message);
 			redirect(base_url('Dashboard/editOurNetwork'));
 		}catch(Exception $e){
