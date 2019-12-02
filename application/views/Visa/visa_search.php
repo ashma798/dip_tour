@@ -1,3 +1,9 @@
+                       <link href="<?php echo base_url();?>visa_css/select2.css" rel="stylesheet" type="text/css">
+                <link href="<?php echo base_url();?>visa_css/select2-bootstrap.css" rel="stylesheet" type="text/css">
+                <link href="<?php echo base_url();?>visa_css/bootstrap-datepicker.min.css" rel="stylesheet">
+
+                <!-- X-editable css -->
+                <link type="text/css" href="<?php echo base_url();?>visa_css/bootstrap-editable.css" rel="stylesheet">
         <link href="<?php echo base_url();?>visa_css/loader_ripple.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url();?>visa_css/custombox.min.css" rel="stylesheet">
         <link href="<?php echo base_url();?>visa_css/sweet-alert.css" rel="stylesheet" type="text/css" />
@@ -14,12 +20,7 @@
             <div class="container" >
 
 
-                <link href="<?php echo base_url();?>visa_css/select2.css" rel="stylesheet" type="text/css">
-                <link href="<?php echo base_url();?>visa_css/select2-bootstrap.css" rel="stylesheet" type="text/css">
-                <link href="<?php echo base_url();?>visa_css/bootstrap-datepicker.min.css" rel="stylesheet">
 
-                <!-- X-editable css -->
-                <link type="text/css" href="<?php echo base_url();?>visa_css/bootstrap-editable.css" rel="stylesheet">
 
 
                 <style>
@@ -88,8 +89,8 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="vqguide2">Nationality</div>
-                                    <div class="vqguide vqguide2">
-                                        <select id="nationality" class="editable editable-click dropdown-toggle"  style="color: rgb(152, 166, 173);">
+                                    <div class="vqguide">
+                                        <select id="nationality" class="editable editable-click"  style="color: rgb(152, 166, 173);width: 100%;border:none;">
                                         <option>Select Country</option> 
                                         <?php foreach($nationality as $v){?>
                                             <option value="<?php echo $v['nationality'];?>"><?php echo $v['nationality'];?> </option>
@@ -100,8 +101,8 @@
 
                             <div class="col-md-3">
                                 <div class="vqguide2">Destination</div>
-                                <div class="vqguide vqguide2">
-                                    <select id="destination" class="editable editable-click dropdown-toggle"  style="color: rgb(152, 166, 173);">
+                                <div class="vqguide">
+                                    <select id="destination" class="editable editable-click"  style="color: rgb(152, 166, 173);width: 100%;border:none;" required>
                                     <option>Select Country</option>
                                     <?php foreach($destination as $v){?>
                                             <option value="<?php echo $v['destination'];?>"><?php echo $v['destination'];?> </option>
@@ -112,8 +113,8 @@
 
                             <div class="col-md-3">
                                 <div class="vqguide2">Country of Resident</div>
-                                 <div class="vqguide vqguide2">
-                                    <select id="country_of_resident" class="editable editable-click dropdown-toggle"  style="color: rgb(152, 166, 173);" required>                                        
+                                 <div class="vqguide">
+                                    <select id="country_of_resident" class="editable editable-click"  style="color: rgb(152, 166, 173);width: 100%;border:none;" required>                                        
                                         <option>Select Country</option> 
                                         <?php foreach($country_of_resident as $v){?>
                                             <option value="<?php echo $v['country_of_resident'];?>"><?php echo $v['country_of_resident'];?> </option>
@@ -124,8 +125,8 @@
 
                             <div class="col-md-3">
                                 <div class="vqguide2">Purpose of Travel</div>
-                                <div class="vqguide vqguide2">
-                                    <select id="purpose_of_travel" class="editable editable-click dropdown-toggle"  style="color: rgb(152, 166, 173);" required>
+                                <div class="vqguide">
+                                    <select id="purpose_of_travel" cclass="editable editable-click"  style="color: rgb(152, 166, 173);width: 100%;border:none;" required>
                                         <option>Select Visa Category</option> 
                                         <?php foreach($purpose_of_travel as $v){?>
                                             <option value="<?php echo $v['purpose_of_travel'];?>"><?php echo $v['purpose_of_travel'];?> </option>

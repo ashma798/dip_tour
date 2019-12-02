@@ -23,7 +23,7 @@
         <script src="<?php echo base_url();?>js/jquery-ui.js"></script>
 
 
-        <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet">
+        <!--link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet"-->
         <!-- Material Design Bootstrap -->
 
 
