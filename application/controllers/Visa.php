@@ -71,7 +71,7 @@ class Visa extends CI_Controller {
 		$data['purpose_of_travel'] = json_decode(json_encode($this->Visasearchinformation->getPurposeOfTravelList()),true);
 		$this->load->view('common/common_header',$data);
 		$this->load->view('Visa/visa_search');
-		$this->load->view('common/common_mid_section',$data);
+		//$this->load->view('common/common_mid_section',$data);
 		$this->load->view('common/common_footer',$data);
 
 	}

@@ -24,11 +24,13 @@
 
 
                 <style>
+                    html,body { width:100% !important ;overflow-x:hidden !important;}
                     .mySlides {display:none;}
                 </style>
 
 
                 <style>
+
                     .overflowcontent{
                         overflow-x : hidden;
                         overflow-y : auto;
