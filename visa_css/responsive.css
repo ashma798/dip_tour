@@ -4,6 +4,14 @@ Author: CoderThemes
 Email: coderthemes@gmail.com
 File: Responsive
 */
+@media screen and (max-width: 990px) and (min-width: 280px) {
+  html,body {
+  width:100%;
+  height:auto;
+  overflow-x:hidden;
+}
+}
+
 @media only screen and (max-width: 6000px) and (min-width: 700px) {
   .wrapper.right-bar-enabled .right-bar {
     right: 0;
