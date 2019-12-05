@@ -290,7 +290,10 @@
                        <a class="nav-link " href="<?php echo base_url('Dashboard/TravelInsuranceData');?>"> <i class="fa fa-th-large"></i> <span class="title">Travel Insurance</span> <span class="arrow"></span> </a>
                          
                     </li>
-                   
+                   <li >
+                       <a class="nav-link " href="<?php echo base_url('Dashboard/ListTourPackages');?>"> <i class="fa fa-th-large"></i> <span class="title">Tour Packages</span> <span class="arrow"></span> </a>
+                         
+                    </li>
                         </ul>
                     </li>
                    

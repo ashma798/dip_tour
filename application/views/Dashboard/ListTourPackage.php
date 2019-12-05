@@ -7,7 +7,7 @@
                         <h2>Dashboard <small>Control panel</small></h2>
                         <ol class="breadcrumb">
                             <li> <a href="index.html">Home</a> </li>
-                            <li class="active"><a href="<?php echo base_url('Dashboard');?>"> <strong>Dashboard</strong> </a></li>
+                            <li class="active"><a href="dash1.html"> <strong>Dashboard</strong> </a></li>
                         </ol>
                     </div>
                 </div>
@@ -17,11 +17,10 @@
 
                     <div class="row">
                         <!-- begin col-3 -->
-                       <h3> CMS &nbsp;   Our Partner
+                       <h3> Tour Packages
  
 </h3>
-<section class="contact-wrap"> <style type="text/css">
-  //import font from google
+<section class="contact-wrap"> <style type="text/css">//import font from google
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900);
 
 //import compass
@@ -151,20 +150,43 @@ h3{
 
 </style><h2><?php echo $this->session->flashdata('item'); ?></h2> 
   <form class="contact-form" enctype="multipart/form-data" action="<?php echo base_url();?>Dashboard/addTourPackage" method="post">
-    <div class="col-sm-4">
+    <div class="row">
+    <div class="col-sm-6">
       <div class="input-block">
-        <label for="">First Name</label>
-        <input type="text" class="form-control" name="first_name">
+        <label for="">Title</label>
+        <input type="text" class="form-control" name="title">
       </div>
     </div>
-    <div class="col-sm-4">
+  </div>
+  <br/><br/><br/>
+  <div class="row">
+    <div class="col-sm-3">
       <div class="input-block">
-        <label for="">Last Name</label>
-        <input type="text" class="form-control" name="last_name">
+        <label for="">Duration</label>
+        <input type="text" class="form-control" name="duration">
       </div>
     </div>
-    
-  
+     <div class="col-sm-3">
+      <div class="input-block">
+        <label for="">No. of Reviews</label>
+        <input type="text" class="form-control" name="no_of_reviews">
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="input-block">
+        <label for="">Rating</label>
+        <input type="text" class="form-control" name="rating">
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="input-block">
+        <label for="">Cost per head</label>
+        <input type="text" class="form-control" name="cost_per_head">
+      </div>
+    </div>
+    </div>
+
+  <div class="row">
     <div class="col-sm-12">
      <div class="input-block"> 
       <style type="text/css">
@@ -195,21 +217,25 @@ h3{
     <!--label for="file--input" class="button">UPLOAD PARTNER LOGO</label -->
 </div>
 </div>
+</div>
 <br/>
 <br/>
 <br/>
+  <div class="row">
+
     <div class="col-sm-4">
       <div class="input-block">
         <label for="">Upload Image</label>
 
-          <input type="file" id="fileinput" class="form-control" name ="file_name">
+          <input type="file" id="fileinput" class="form-control" name ="tour_image">
       <!--button class="square-button" style="margin-top: 30px; padding-bottom: 20px; padding-top: 20px;">Note: Partner Logo Image Size:</button-->
       </div>
     </div>
 
     <div class="col-sm-12">
-      <button class="button" type="submit" style="margin-top: 30px; padding-right: 20px; padding-left: 20px;">Update</button>
+      <button class="button" type="submit" style="margin-top: 30px; padding-right: 20px; padding-left: 20px;">Save</button>
     </div>
+  </div>
   </form>
 </section>
 

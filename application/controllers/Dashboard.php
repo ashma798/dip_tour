@@ -314,4 +314,32 @@ class Dashboard extends CI_Controller {
 		$data['data'] = json_decode(json_encode($getDataForVisaQuery), true);
 		$this->load->view('template',$data);
 	}
+
+	public function ListTourPackages(){
+		//$this->load->model('TourPackage');
+		//$getListOfTourPackages = $this->TourPackage->get();
+		$data['v'] = 'Dashboard/ListTourPackage';
+		$data['viewName'] = 'Tour Packages';
+		//$data['listTours'] = json_decode(json_encode($getListOfTourPackages), true);
+		$this->load->view('template', $data);
+	}
+
+	public function addTourPackage(){
+		//try{
+			$data =  $this->input->post();
+			$data['tour_image'] = $this->uploadImageFileToPath($_FILES, 'tour_images', 'tour_image');
+			$this->load->model('TourPackage');
+			$this->TourPackage->insert($data);
+	        $message = "<span style='background-color:green;color:white;'>Tour Package saved</span>";
+	        $this->session->set_flashdata('item', $message);
+			redirect(base_url('Dashboard/ListTourPackages'));
+
+		//}catch(Exception $e){
+          /*      $message = "<span style='background-color:red;'>Something went wrong... Try again</span>";
+                $this->session->set_flashdata('item', $message);
+                redirect(base_url('Dashboard/ListTourPackages'));
+        }*/
+	}
+
+
 }
