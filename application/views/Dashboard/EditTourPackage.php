@@ -1,4 +1,5 @@
 <!-- Start page content wrapper -->
+
         <div class="page-content-wrapper animated fadeInRight">
             <div class="page-content">
              
@@ -17,7 +18,7 @@
 
                     <div class="row">
                         <!-- begin col-3 -->
-                       <h3> Tour Packages
+                       <h3> Edit Tour Packages
  
 </h3>
 <section class="contact-wrap"> <style type="text/css">//import font from google
@@ -149,12 +150,13 @@ h3{
 
 
 </style><h2><?php echo $this->session->flashdata('item'); ?></h2> 
-  <form class="contact-form" enctype="multipart/form-data" action="<?php echo base_url();?>Dashboard/addTourPackage" method="post">
+  <form class="contact-form" enctype="multipart/form-data" action="<?php echo base_url();?>Dashboard/saveTourPackage" method="post">
     <div class="row">
     <div class="col-sm-6">
       <div class="input-block">
         <label for="">Title</label>
-        <input type="text" class="form-control" name="title">
+        <input type="text" class="form-control" name="title" value="<?php echo $data['title'];?>">
+        <input type="hidden" class="form-control" name="id" value="<?php echo $data['id'];?>">
       </div>
     </div>
   </div>
@@ -163,25 +165,25 @@ h3{
     <div class="col-sm-3">
       <div class="input-block">
         <label for="">Duration</label>
-        <input type="text" class="form-control" name="duration">
+        <input type="text" class="form-control" name="duration" value="<?php echo $data['duration']; ?>">
       </div>
     </div>
      <div class="col-sm-3">
       <div class="input-block">
         <label for="">No. of Reviews</label>
-        <input type="text" class="form-control" name="no_of_reviews">
+        <input type="text" class="form-control" name="no_of_reviews" value="<?php echo $data['no_of_reviews']; ?>">
       </div>
     </div>
     <div class="col-sm-3">
       <div class="input-block">
         <label for="">Rating</label>
-        <input type="text" class="form-control" name="rating">
+        <input type="text" class="form-control" name="rating" value="<?php echo $data['rating']; ?>" >
       </div>
     </div>
     <div class="col-sm-3">
       <div class="input-block">
         <label for="">Cost per head</label>
-        <input type="text" class="form-control" name="cost_per_head">
+        <input type="text" class="form-control" name="cost_per_head" value="<?php echo $data['cost_per_head'] ;?>">
       </div>
     </div>
     </div>
@@ -224,6 +226,12 @@ h3{
   <div class="row">
 
     <div class="col-sm-4">
+        <img src="<?php echo base_url().$data['tour_image'];?>" />
+    </div>
+  </div>
+  <br /> <br />
+  <div class="row">
+    <div class="col-sm-4">
       <div class="input-block">
         <label for="">Upload Image</label>
 
@@ -232,9 +240,25 @@ h3{
       </div>
     </div>
   </div>
-
-  <div class="row">
-
+  <br/>
+  <br/>
+<div class="row">
+    <div class="col-sm-4">
+      <div clas="input-block"> 
+        <label for="">Status</label>
+        <?php 
+        $setActive = '';
+        $setInactive = '';
+        if($data['status'] == 1){
+          $setActive =  'checked';
+        }elseif($data['status'] == 0){
+          $setInactive = 'checked';
+        }
+        ?>
+        <input type="radio" name="status" value="1" <?php echo $setActive; ?> >Active
+        <input type="radio" name="status" value="0" <?php echo $setInactive; ?> >Inactive
+      </div>
+    </div>
     <div class="col-sm-4">
       <button class="button" type="submit" style="margin-top: 30px; padding-right: 20px; padding-left: 20px;">Save</button>
     </div>
@@ -242,92 +266,9 @@ h3{
   </form>
 </section>
 
-<!-- follow me template -->
-<hr>
-<section>
-  <div class="row">
-    <h2>Tour Packages List</h2>
-    <br>
-    <?php $table_headers = array_keys(max($data)); ?>
-    <div class="container-fluid" >
-     <div class="col-lg-12">
-      <table id="tour_packages" class="table table-striped table-bordered nowrap" cellspacing="0" width="100%">
-        <thead>
-            <tr>
-                <?php 
-                foreach($table_headers as $k=>$headername){
-                    if($k == 0){
-                        echo '<th>Sr No.</th>';
-                                          }
-                    else{
-                        echo '<th>'.trim(ucwords(str_replace('_',' ',$headername))).'</th>';
-                    }
-                }?>
-               <th>
-                Action
-               </th>
-            </tr>
-        </thead>
-        <tbody>
-               <?php if (empty($data)) { ?>
-                  <tr>
-                      <td style="color: red;" colspan = "<?php echo count($table_headers); ?>">No Data present</td>
-                  </tr>
-              <?php } else { 
-                  foreach ($data as $k => $v) {
-                    ?>
-                    <tr> 
-                    <?php  foreach($table_headers as $headername){
-                              if($headername == 'status'){
-                                if($v[$headername] == 1 ){
-                                  echo '<td>Active</td>';
-                                }
-                                else{
-                                  echo '<td>Inactive</td>'; 
-                                }
-                              }else if($headername == 'tour_image'){
-                                echo '<td>'.str_replace('/','',str_replace('tour_images','',str_replace('tmp','',$v[$headername]))).'</td>';
-                              }else{
-                                echo '<td>'.$v[$headername].'</td>';
-                              }
-                      }
-                      echo '<td>
-                          <a href="'.base_url('Dashboard/editTourPackages').'/'.$v['id'].'">
-                          <button type="button" class="btn btn-danger">Update</button></a>
-                      </td>
-                      </tr>';
-                      ?>                                        
-                  <?php } ?>
-
-                  </tr> 
-              <?php } ?>            
-
-        </tbody>
-      </table>
-     </div>
-   </div>
-  </div>
-</section>
-
-                   
-                   
-
-                   
                     </div>
                    
                     <!-- End Widgets -->
 
                 </div>
                 <!-- /wrapper-content -->
-<script type="text/javascript">$(document).ready(function() {
-    var table = $('#tour_packages').DataTable( {       
-        scrollX:        true,
-        scrollCollapse: true,
-        autoWidth:         true,  
-         paging:         true,       
-        columnDefs: [
-        { "width": "150px", "targets": [0,1] },       
-        { "width": "40px", "targets": [4] }
-      ]
-    } );
-} );</script>

@@ -29,6 +29,8 @@ class Hotels extends CI_Controller {
         $data['airport'] = $returnAirport;
 		$this->load->model('Contactinfo');
 		$this->load->model('Footerinfo');
+		$this->load->model('TourPackage');
+		$data['tour_packages'] =  json_decode(json_encode($this->TourPackage->getActive()), true);
 		$data['contact_info'] = json_decode(json_encode($this->Contactinfo->get()), true);
 		$data['footer_info'] = json_decode(json_encode($this->Footerinfo->get()), true);
 		$this->load->view('common/common_header',$data);

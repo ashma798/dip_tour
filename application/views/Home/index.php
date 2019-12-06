@@ -499,164 +499,69 @@ function closeForm() {
     </section>
 
     <section>
-        <div class="container" >
-            <div class="card-columns" >
-
+        <?php foreach($tour_packages as $k => $v){ 
+            if($k == 0 OR  ($k % 3 == 0)){
+            ?>
+            <div class="container" >
+                <div class="card-columns" >
+            <?php                
+                }
+            ?>
                 <div class="card" style="width:300px;">
-                    <img src="./images/par1.jpg">
-                    <div class="off_div">2N / 3D</div>
+                    <img src="<?php echo base_url().$v['tour_image']; ?>">
+                    <div class="off_div"><?php echo $v['duration']; ?></div>
                     <div class="card-block">
-                        <h6 class="card-title">Ultimate Louvre: Skip-the-Line Guided Tour</h6>
+                        <h6 class="card-title"><?php echo $v['title'];?></h6>
 
                         <div class="container-fluid">
                             <div class="row ">
                                 <div class="col-md-6">
-                                    <i class="fa fa-star" aria-hidden="true" style="color:orange;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:orange;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:orange;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:#D3D3D3;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:#D3D3D3;"></i>
-                                    <p class="card-text" style="margin-left:0; margin-top:5px;">18266 Reviews</p>                                 
+                                    <i class="fa fa-star" aria-hidden="true" 
+                                    style="<?php if($v['rating'] >=1 ){
+                                        echo 'color:orange;';
+                                    }else{
+                                        echo 'color:#D3D3D3;';
+                                    }?> "></i>
+                                    <i class="fa fa-star" aria-hidden="true" style="<?php if($v['rating'] >=2 ){
+                                        echo 'color:orange;';
+                                    }else{
+                                        echo 'color:#D3D3D3;';
+                                    }?> "></i>
+                                    <i class="fa fa-star" aria-hidden="true" style="<?php if($v['rating'] >=3){
+                                        echo 'color:orange;';
+                                    }else{
+                                        echo 'color:#D3D3D3;';
+                                    }?> "></i>
+                                    <i class="fa fa-star" aria-hidden="true" style="<?php if($v['rating'] >=4 ){
+                                        echo 'color:orange;';
+                                    }else{
+                                        echo 'color:#D3D3D3;';
+                                    }?> "></i>
+                                    <i class="fa fa-star" aria-hidden="true" style="<?php if($v['rating'] >=5){
+                                        echo 'color:orange;';
+                                    }else{
+                                        echo 'color:#D3D3D3;';
+                                    }?> "></i>
+                                    <p class="card-text" style="margin-left:0; margin-top:5px;"><?php echo $v['no_of_reviews'];?> Reviews</p>                                 
                                 </div>
                                 <div class="col-md-6" >
                                     <small class="text-muted" style="float: right;">From </small><br/>
-                                    <span style="float: right;">₹&nbsp; 5,154</span>
+                                    <span style="float: right;">₹&nbsp; <?php echo $v['cost_per_head'];?></span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div><!--end of card-->
 
-                <div class="card" style="width:300px;">
-                    <img  src="./images/par2.jpg">
-                    <div class="off_div">2N / 3D</div>
-                    <div class="card-block">
-                        <h6 class="card-title">This almost brought the Internet to its knees</h6>
-
-                        <div class="container-fluid">
-                            <div class="row ">
-                                <div class="col-md-6">
-                                    <i class="fa fa-star" aria-hidden="true" style="color:orange;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:orange;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:orange;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:#D3D3D3;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:#D3D3D3;"></i>
-                                    <p class="card-text" style="margin-left:0; margin-top:5px;">18266 Reviews</p>                                 
-                                </div>
-                                <div class="col-md-6" >
-                                    <small class="text-muted" style="float: right;">From </small><br/>
-                                    <span style="float: right;">₹&nbsp; 5,154</span>
-                                </div>
-                            </div>
-                        </div>
+                <?php 
+                    if($k == 2 OR  $k == 5 OR $k == 8 OR $k == 11){
+                    ?>
                     </div>
-                </div><!--end of card-->
-
-                <div class="card" style="width:300px;">
-                    <img  src="./images/par3.jpg">
-                    <div class="off_div">2N / 3D</div>
-                    <div class="card-block">
-                        <h6 class="card-title">This almost brought the Internet to its knees</h6>
-
-                        <div class="container-fluid">
-                            <div class="row ">
-                                <div class="col-md-6">
-                                    <i class="fa fa-star" aria-hidden="true" style="color:orange;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:orange;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:orange;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:#D3D3D3;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:#D3D3D3;"></i>
-                                    <p class="card-text" style="margin-left:0; margin-top:5px;">18266 Reviews</p>                                 
-                                </div>
-                                <div class="col-md-6" >
-                                    <small class="text-muted" style="float: right;">From </small><br/>
-                                    <span style="float: right;">₹&nbsp; 5,154</span>
-                                </div>
-                            </div>
                         </div>
-                    </div>
-                </div><!--end of card--> 
-            </div>
-        </div>
-        <div class="container" >
-            <div class="card-columns" >
-
-                <div class="card" style="width:300px;">
-                    <img src="./images/par1.jpg">
-                    <div class="off_div">2N / 3D</div>
-                    <div class="card-block">
-                        <h6 class="card-title">Ultimate Louvre: Skip-the-Line Guided Tour</h6>
-
-                        <div class="container-fluid">
-                            <div class="row ">
-                                <div class="col-md-6">
-                                    <i class="fa fa-star" aria-hidden="true" style="color:orange;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:orange;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:orange;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:#D3D3D3;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:#D3D3D3;"></i>
-                                    <p class="card-text" style="margin-left:0; margin-top:5px;">18266 Reviews</p>                                 
-                                </div>
-                                <div class="col-md-6" >
-                                    <small class="text-muted" style="float: right;">From </small><br/>
-                                    <span style="float: right;">₹&nbsp; 5,154</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--end of card-->
-
-                <div class="card" style="width:300px;">
-                    <img  src="./images/par2.jpg">
-                    <div class="off_div">2N / 3D</div>
-                    <div class="card-block">
-                        <h6 class="card-title">This almost brought the Internet to its knees</h6>
-
-                        <div class="container-fluid">
-                            <div class="row ">
-                                <div class="col-md-6">
-                                    <i class="fa fa-star" aria-hidden="true" style="color:orange;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:orange;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:orange;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:#D3D3D3;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:#D3D3D3;"></i>
-                                    <p class="card-text" style="margin-left:0; margin-top:5px;">18266 Reviews</p>                                 
-                                </div>
-                                <div class="col-md-6" >
-                                    <small class="text-muted" style="float: right;">From </small><br/>
-                                    <span style="float: right;">₹&nbsp; 5,154</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--end of card-->
-
-                <div class="card" style="width:300px;">
-                    <img  src="./images/par3.jpg">
-                    <div class="off_div">2N / 3D</div>
-                    <div class="card-block">
-                        <h6 class="card-title">This almost brought the Internet to its knees</h6>
-
-                        <div class="container-fluid">
-                            <div class="row ">
-                                <div class="col-md-6">
-                                    <i class="fa fa-star" aria-hidden="true" style="color:orange;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:orange;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:orange;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:#D3D3D3;"></i>
-                                    <i class="fa fa-star" aria-hidden="true" style="color:#D3D3D3;"></i>
-                                    <p class="card-text" style="margin-left:0; margin-top:5px;">18266 Reviews</p>                                 
-                                </div>
-                                <div class="col-md-6" >
-                                    <small class="text-muted" style="float: right;">From </small><br/>
-                                    <span style="float: right;">₹&nbsp; 5,154</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--end of card--> 
-            </div>
-        </div>
+                    <?php                
+                        }
+                    }
+                    ?>
 
     </section>
     <section>

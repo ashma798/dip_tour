@@ -316,16 +316,16 @@ class Dashboard extends CI_Controller {
 	}
 
 	public function ListTourPackages(){
-		//$this->load->model('TourPackage');
-		//$getListOfTourPackages = $this->TourPackage->get();
+		$this->load->model('TourPackage');
+		$getListOfTourPackages = $this->TourPackage->get();
 		$data['v'] = 'Dashboard/ListTourPackage';
 		$data['viewName'] = 'Tour Packages';
-		//$data['listTours'] = json_decode(json_encode($getListOfTourPackages), true);
+		$data['data'] = json_decode(json_encode($getListOfTourPackages), true);
 		$this->load->view('template', $data);
 	}
 
 	public function addTourPackage(){
-		//try{
+		try{
 			$data =  $this->input->post();
 			$data['tour_image'] = $this->uploadImageFileToPath($_FILES, 'tour_images', 'tour_image');
 			$this->load->model('TourPackage');
@@ -333,12 +333,45 @@ class Dashboard extends CI_Controller {
 	        $message = "<span style='background-color:green;color:white;'>Tour Package saved</span>";
 	        $this->session->set_flashdata('item', $message);
 			redirect(base_url('Dashboard/ListTourPackages'));
-
-		//}catch(Exception $e){
-          /*      $message = "<span style='background-color:red;'>Something went wrong... Try again</span>";
+		}
+		catch(Exception $e){
+                $message = "<span style='background-color:red;'>Something went wrong... Try again</span>";
                 $this->session->set_flashdata('item', $message);
                 redirect(base_url('Dashboard/ListTourPackages'));
-        }*/
+        }
+	}
+
+	public function editTourPackages($edit_id){
+		$data['v'] = 'Dashboard/EditTourPackage';
+		$data['viewName'] = 'Edit Tour Packages';
+		$this->load->model('TourPackage');
+		$getDataForId = $this->TourPackage->getDataForId($edit_id);
+		$data['data'] = json_decode(json_encode($getDataForId), true)[0];
+		$this->load->view('template', $data);
+	}
+
+	public function saveTourPackage(){
+		try{
+			$this->load->model('TourPackage');
+			$data = $this->input->post();
+			$edit_id = $data['id'];
+			if(!empty($_FILES['tour_image']['name'])){
+				$data['tour_image'] = $this->uploadImageFileToPath($_FILES, 'tour_images', 'tour_image');
+			}else{
+				$getDataForId = $this->TourPackage->getDataForId($edit_id);
+				$data['tour_image'] = json_decode(json_encode($getDataForId), true)[0]['tour_image'];
+			}
+			$this->TourPackage->edit($data);
+			$message = "<span style='background-color:green;color:white;'>Tour Package saved</span>";
+	        $this->session->set_flashdata('item', $message);
+			redirect(base_url('Dashboard/ListTourPackages'));
+
+		}catch(Exception $e){
+                $message = "<span style='background-color:red;'>Something went wrong... Try again</span>";
+                $this->session->set_flashdata('item', $message);
+                redirect(base_url('Dashboard/ListTourPackages'));
+        }
+
 	}
 
 

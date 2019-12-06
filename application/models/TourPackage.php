@@ -62,6 +62,39 @@ class TourPackage extends CI_Model{
 	 */
 
 	public function get(){
+		//$this->dip->where('status','1');
+		$query = $this->dip->get($this->getTableName());
+		$result = array();
+		foreach ($query->result() as $row)
+		{
+		        $result[] = $row;
+		}
+		return $result; 
+
+	}
+
+	public function getDataForId($id){
+		$this->dip->where('id' , $id);
+		$query = $this->dip->get($this->getTableName());
+		$result = $query->result();
+		return $result; 
+	}
+
+	public function edit($data){
+		//print_r($data); exit;
+		$this->dip->where('id',$data['id']);
+		$update['title'] = $data['title'];
+		$update['duration'] = $data['duration'];
+		$update['no_of_reviews'] = $data['no_of_reviews'];
+		$update['rating'] = $data['rating'];
+		$update['cost_per_head'] = $data['cost_per_head'];
+		$update['tour_image'] = $data['tour_image'];
+		$update['status'] = $data['status'];
+		//print_r($update); exit;
+		$this->dip->update($this->getTableName(), $update);
+	}
+
+	public function getActive(){
 		$this->dip->where('status','1');
 		$query = $this->dip->get($this->getTableName());
 		$result = array();
