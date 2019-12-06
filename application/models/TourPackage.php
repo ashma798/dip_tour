@@ -36,6 +36,10 @@ class TourPackage extends CI_Model{
 		return "tour_package";
 	}
 
+	public function getSecondaryTableName()
+	{
+		return "tour_enquiry";
+	}
 	/**
 	 * @description get user data according username
 	 * @param String $username
@@ -106,4 +110,7 @@ class TourPackage extends CI_Model{
 
 	}
 
+	public function addTourPackages($data){
+		return $this->dip->insert($this->getSecondaryTableName(), $data);
+	}
 }

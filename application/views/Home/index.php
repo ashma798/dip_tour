@@ -466,7 +466,7 @@ function closeForm() {
 
                             <img src="./images/card5.jpg" style="width: 100%;">
                             <p class="card-text"   style="padding-bottom: 0px;">Get the best Ready or Custom Made Tour Package to your Preferred Destination at any given season inclusive of Flight + Hotel + Visa + Attractions/Activities + Ground Transportation + Dubai (UAE) Package + Many More suitable for Solo, Business and Group Travelers. </p>
-                            <a href="#" class="btn btn-success" style="margin-top: 25px;">BOOK NOW</a>
+                            <a href="<?php echo base_url();?>TourPackageEnquiry" class="btn btn-success" style="margin-top: 25px;">BOOK NOW</a>
                         </div>
                     </div><!--/.card-->
                 </div>
