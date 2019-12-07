@@ -55,6 +55,15 @@ class Dashboard extends CI_Controller {
 		$this->load->view('template',$data);
 	}
 
+	public function dubaiUaeVisa(){
+		$this->load->model('Visaquery');
+		$getDataForVisaQuery = $this->Visaquery->getDubaiUAE();
+		$data['v'] = 'Dashboard/dubaiUaeVisa';
+		$data['viewName'] = 'Dubai UAE Visa Queries';
+		$data['data'] = json_decode(json_encode($getDataForVisaQuery), true);
+		$this->load->view('template',$data);
+	}
+
 	public function partnersDetails(){
 		//$this->load->model('Partnerdetails');
 

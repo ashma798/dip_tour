@@ -240,7 +240,8 @@
                                 <a class="dropdown-item" href="<?php echo base_url();?>Visa/visaquery">Visa Booking</a>
                          <?php } else{ ?>
                              <div class="dropdown-item" onclick="openForm();">Visa Booking</div>
-                        <?php } ?>                              
+                        <?php } ?>    
+                        <a class="dropdown-item" href="<?php echo base_url();?>Visa/DubaiUAE">Dubai - UAE</a>                          
                             </div>                              
                         </li>
                     </ul>

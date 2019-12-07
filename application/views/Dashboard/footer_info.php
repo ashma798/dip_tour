@@ -1,5 +1,5 @@
 <!-- Start Widgets -->
-
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.css" rel="stylesheet">
                     <div class="row">
                         <!-- begin col-3 -->
                        <h3> CMS Footer Diptour Info
@@ -114,7 +114,7 @@ h3{
   margin-bottom: 0.5em;
 }.</style><h2><?php echo $this->session->flashdata('item'); ?></h2> 
                        <form action="<?php echo base_url('/Dashboard/addfooterInfo'); ?>" method="post">
-                       <textarea rows="8" cols="100"  name="footer_text" placeholder="Edit diptour footer info.....">
+                       <textarea rows="8" cols="100" name="footer_text" placeholder="Edit diptour footer info....." class="summernote">
                         <?php echo $footer_info; ?>
 </textarea>
     
@@ -152,3 +152,11 @@ h3{
 
                 </div>
                 <!-- /wrapper-content -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.js"></script> 
+<script type="text/javascript">
+  $('.summernote').summernote({
+    placeholder: 'write here...',
+    tabsize: 2,
+    height: 150
+});
+</script>

@@ -247,29 +247,33 @@
                         </ul>
                     </li>
                      <li >
-                       <a class="nav-link " href="<?php echo base_url('Dashboard/transfer');?>"> <i class="fa fa-th-large"></i> <span class="title">Transfer</span> <span class="arrow"></span> </a>
+                       <a class="nav-link " href="<?php echo base_url('Dashboard/transfer');?>"> <i class="fa fa-th-large"></i> <span class="title">Transfer</span> <span class=""></span> </a>
                          
                     </li>
                    
-                    <li >
+                    <!--li >
                        <a class="nav-link " href="javascript:;"> <i class="fa fa-th-large"></i> <span class="title">Booking List</span> <span class="arrow"></span> </a>
                          
-                    </li>
+                    </li-->
                    
                    <li >
-                       <a class="nav-link " href="<?php echo base_url('Dashboard/hotel')?>"> <i class="fa fa-th-large"></i> <span class="title">Hotel</span> <i class="fa fa-chevron-right" aria-hidden="true"></i> </a>
+                       <a class="nav-link " href="<?php echo base_url('Dashboard/hotel')?>"> <i class="fa fa-th-large"></i> <span class="title">Hotel</span> <i class="" aria-hidden="true"></i> </a>
                          
                     </li>
                     <li >
-                       <a class="nav-link " href="<?php echo base_url('Dashboard/visa');?>"> <i class="fa fa-th-large"></i> <span class="title">Visa</span> <i class="fa fa-chevron-right" aria-hidden="true"></i> </a>
+                       <a class="nav-link " href="<?php echo base_url('Dashboard/visa');?>"> <i class="fa fa-th-large"></i> <span class="title">Visa</span> <i class="" aria-hidden="true"></i> </a>
                          
                     </li>
                     <li >
-                       <a class="nav-link " href="<?php echo base_url('Dashboard/flights');?>"> <i class="fa fa-th-large"></i> <span class="title">Flight</span> <i class="fa fa-chevron-right" aria-hidden="true"></i> </a>
+                       <a class="nav-link " href="<?php echo base_url('Dashboard/dubaiUaeVisa');?>"> <i class="fa fa-th-large"></i> <span class="title">Dubai UAE Visa</span> <i class="" aria-hidden="true"></i> </a>
+                         
+                    </li>
+                    <li >
+                       <a class="nav-link " href="<?php echo base_url('Dashboard/flights');?>"> <i class="fa fa-th-large"></i> <span class="title">Flight</span> <i class="" aria-hidden="true"></i> </a>
                          
                     </li>
                     
-                    <li >
+                    <!--li >
                        <a class="nav-link " href="javascript:;"> <i class="fa fa-th-large"></i> <span class="title">Report</span> <span class="arrow"></span> </a>
                          
                     </li>
@@ -281,17 +285,17 @@
                     <li >
                        <a class="nav-link " href="javascript:;"> <i class="fa fa-th-large"></i> <span class="title">Package Management</span> <span class="arrow"></span> </a>
                          
-                    </li>
+                    </li -->
                     <li >
-                       <a class="nav-link " href="<?php echo base_url('Dashboard/TravelSimData');?>"> <i class="fa fa-th-large"></i> <span class="title">Travel Sim Card</span> <span class="arrow"></span> </a>
+                       <a class="nav-link " href="<?php echo base_url('Dashboard/TravelSimData');?>"> <i class="fa fa-th-large"></i> <span class="title">Travel Sim Card</span> <span class=""></span> </a>
                          
                     </li>
                     <li >
-                       <a class="nav-link " href="<?php echo base_url('Dashboard/TravelInsuranceData');?>"> <i class="fa fa-th-large"></i> <span class="title">Travel Insurance</span> <span class="arrow"></span> </a>
+                       <a class="nav-link " href="<?php echo base_url('Dashboard/TravelInsuranceData');?>"> <i class="fa fa-th-large"></i> <span class="title">Travel Insurance</span> <span class=""></span> </a>
                          
                     </li>
                    <li >
-                       <a class="nav-link " href="<?php echo base_url('Dashboard/ListTourPackages');?>"> <i class="fa fa-th-large"></i> <span class="title">Tour Packages</span> <span class="arrow"></span> </a>
+                       <a class="nav-link " href="<?php echo base_url('Dashboard/ListTourPackages');?>"> <i class="fa fa-th-large"></i> <span class="title">Tour Packages</span> <span class=""></span> </a>
                          
                     </li>
                         </ul>

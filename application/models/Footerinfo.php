@@ -75,7 +75,8 @@ class Footerinfo extends CI_Model{
 
 	public function update($data){
 		$this->dip->where('id', '1');
-		$this->dip->update($this->getTableName(),$data);
+		$save['footer_text'] = htmlentities($data['footer_text']);
+		$this->dip->update($this->getTableName(),$save);
 	}
 
 }
