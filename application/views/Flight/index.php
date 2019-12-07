@@ -167,7 +167,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <button class="btn btn-primary float-right searchbtnflight" type="submit">SEARCH FLIGHT</button>
+                                            <button style="margin:auto -43px;" class="btn btn-primary float-right searchbtnflight" type="submit">SEARCH FLIGHT</button>
                                         </div>
                                     </div>
                                 </form>

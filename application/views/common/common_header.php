@@ -49,13 +49,17 @@
 }
 
 /* The popup form - hidden by default */
+
 .form-popup {
   display: none;
   position: fixed;
   bottom: 0;
-  right: 35%;
+  align-items: center;
   border: 3px solid #f1f1f1;
   z-index: 9;
+  width: 100%;
+  padding-top: 0 auto;
+  align-content: center;
 
 }
 
@@ -259,7 +263,7 @@
                 </ul>
             </nav>
         </section>
- <section>
+ <section style="margin: 0 auto;">
     
 
     <div class="form-popup" id="myForm">
