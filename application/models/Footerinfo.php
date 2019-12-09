@@ -68,7 +68,7 @@ class Footerinfo extends CI_Model{
 		$this->dip->where('id', '1');
 		$query = $this->dip->get($this->getTableName());
 		$result = $query->result();
-		return $result[0]->footer_text; 
+		return html_entity_decode($result[0]->footer_text); 
 
 	}
 
