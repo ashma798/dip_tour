@@ -248,16 +248,16 @@
                              <a class="nav-link" href="#"style="color: black;" onclick="openForm();">CAR RENTALS<span style="padding-left: 20px;">|</span></a>
                         <?php } ?>
                         </li>                   
-                        <!--li class="nav-item dropdown">
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
                                 TOUR PACKAGES
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Asia</a>
-                                <a class="dropdown-item" href="#">Africa</a>
-                                <a class="dropdown-item" href="#">Europe</a>
+                                <a class="dropdown-item" href="<?php echo base_url();?>TourPackageEnquiry">Asia</a>
+                                <a class="dropdown-item" href="<?php echo base_url();?>TourPackageEnquiry">Africa</a>
+                                <a class="dropdown-item" href="<?php echo base_url();?>TourPackageEnquiry">Europe</a>
                             </div>
-                        </li-->
+                        </li>
                         <li class="nav-item  dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
                                 VISAS</a>                          
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
