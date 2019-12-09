@@ -30,7 +30,7 @@
                                                        required >
                                             </div>
                                             
-                                            <span  class="ordiv">
+                                            <span  class="ordiv" style="margin-left:15px;">
                                             OR
                                             </span>
                                             
@@ -55,7 +55,7 @@
                                                             </div>
                                                         </div>
 
-                                            </div>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </div>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                                              <div class="col-md-5 col-12 padding-row-card font-sm-three">
                                                 <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold; margin-left: 20px;" >CHECK OUT DATE</label>
@@ -84,7 +84,7 @@
                                     </div>
                                         <div class="col-12 user-details pl-0 pr-0">
                                         <div id="divRoom1" class="form-row user_data">
-                                          <div class="col-md-2  col-3 roomdiv">
+                                          <div class="col-md-2  col-3 roomdiv" style="margin-left:10px;">
                                             ROOM 1
                                             </div>
                                           

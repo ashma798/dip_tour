@@ -75,7 +75,7 @@ background:#2d2d2d;}</style>       <h6>Passport Photo upload:</h6>
                           </div>
                           <div class="col-md-6 form-group">
                              <label>Mobile Number</label>
-                             <input type="text" name="cell_phone" value="" id="cell_phone" pattern=".{6,12}" title="6 to 12 Characters" class="form-control mobile" required="required" autocomplete="off" placeholder="Enter Your Cell Phone" minlength="6" maxlength="12"  />
+                             <input type="number" name="cell_phone" value="" id="cell_phone" pattern=".{6,12}" title="6 to 12 Characters" class="form-control mobile" required="required" autocomplete="off" placeholder="Enter Your Cell Phone" minlength="6" maxlength="12"  />
                           </div></div>
  <div class="row">                          <div class="col-md-12 error_message" id="email_error_message"></div>
                               
@@ -86,7 +86,7 @@ background:#2d2d2d;}</style>       <h6>Passport Photo upload:</h6>
                           </div>
                           <div class="col-md-6 form-group">
                              <label>Address</label>
-                             <input type="text" name="address" value="" onkeypress="googleAddressWithAutoFill(this.id)" id="address" pattern=".{0,128}" title="0 to 128 Characters" class="form-control" required="required" placeholder="Address" autocomplete="off" minlength="0" maxlength="128" min="0" max="128"  />
+                             <input type="text" name="address" value="" id="address" pattern=".{0,128}" title="0 to 128 Characters" class="form-control" required="required" placeholder="Address" autocomplete="off" minlength="0" maxlength="128" min="0" max="128"  />
                              <!-- Hidden Variable as per the Google address Information - Auto Fill Functionality -->
                              <input type="hidden" name="city" value="" id="city" pattern=".{2,24}" title="2 to 24 Characters" class="form-control capitalize" required="required" autocomplete="off" placeholder="Enter Your Last Name" minlength="2" maxlength="24"  />
                              <input type="hidden" name="state" value="" id="state" pattern=".{2,24}" title="2 to 24 Characters" class="form-control capitalize" required="required" autocomplete="off" placeholder="Enter Your Last Name" minlength="2" maxlength="24"  />
@@ -97,8 +97,21 @@ background:#2d2d2d;}</style>       <h6>Passport Photo upload:</h6>
                       
                           <div class="col-md-12 error_message" id="company_error_message"></div>
                          <div class="row">
-                                <div class="col-md-3 form-group"> <script type="text/javascript">var password = document.getElementById("password")
-  , confirm_password = document.getElementById("confirm_password");
+                                <div class="col-md-3 form-group"> 
+
+<label for="exampleInputPassword1">Password</label>
+<input type="password" placeholder="Password" id="password" name="password" required></div>
+<div class="col-md-3 form-group"> 
+  <label for="exampleInputPassword1">Confirm Password</label>
+        <input type="password" placeholder="Confirm Password" id="confirm_password" required>
+
+        
+    </div>
+    
+                                <div class="col-md-6 form-group"><div class="row" style="padding-top: 30px"><form method="post" id="subForm">
+<script type="text/javascript">
+  var password = document.getElementById("password");
+  var confirm_password = document.getElementById("confirm_password");
 
 function validatePassword(){
   if(password.value != confirm_password.value) {
@@ -109,14 +122,9 @@ function validatePassword(){
 }
 
 password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;</script>  <label for="exampleInputPassword1">Password</label><input type="password" placeholder="Password" id="password" name="password" required></div>
-<div class="col-md-3 form-group"> <label for="exampleInputPassword1">Confirm Password</label>
-        <input type="password" placeholder="Confirm Password" id="confirm_password" required>
+confirm_password.onkeyup = validatePassword;</script>  
 
-        
-    </div>
-    
-                                <div class="col-md-6 form-group"><div class="row" style="padding-top: 30px"><form method="post" id="subForm"><script type="text/javascript">$(function(){
+<script type="text/javascript">$(function(){
   $('#subForm').ebcaptcha();
 });
 
@@ -127,7 +135,7 @@ confirm_password.onkeyup = validatePassword;</script>  <label for="exampleInputP
         var element = this; 
         var input = this.find('#ebcaptchainput'); 
         var label = this.find('#ebcaptchatext'); 
-                $(element).find('button[type=submit]').attr('disabled','disabled'); 
+        $("#submit_form").attr('disabled','disabled'); 
 
         var randomNr1 = 0; 
         var randomNr2 = 0;
@@ -138,18 +146,18 @@ confirm_password.onkeyup = validatePassword;</script>  <label for="exampleInputP
         randomNr2 = Math.floor(Math.random()*10);
         totalNr = randomNr1 + randomNr2;
         var texti = "What is "+randomNr1+" + "+randomNr2;
-        $(label).text(texti);
+        $('#ebcaptchatext').html(texti);
         
     
-        $(input).keyup(function(){
+        $("#ebcaptchainput").keyup(function(){
 
             var nr = $(this).val();
             if(nr==totalNr)
             {
-                $(element).find('button[type=submit]').removeAttr('disabled');              
+                 $("#submit_form").removeAttr('disabled');              
             }
             else{
-                $(element).find('button[type=submit]').attr('disabled','disabled');
+                 $("#submit_form").attr('disabled','disabled');
             }
             
         });
@@ -158,7 +166,7 @@ confirm_password.onkeyup = validatePassword;</script>  <label for="exampleInputP
         {
             if(e.which==13)
             {
-                if((element).find('button[type=submit]').is(':disabled')==true)
+                if($("#submit_form").is(':disabled')==true)
                 {
                     e.preventDefault();
                     return false;
@@ -167,12 +175,18 @@ confirm_password.onkeyup = validatePassword;</script>  <label for="exampleInputP
 
         });
 
+        $(document).click(function(e){
+          if($("submit_form").is(":disabled") ==  true){
+             alert("Please enter correct value on captcha");
+                 $("#ebcaptchainput").focus();
+          }
+        });
     };
 
 })(jQuery);</script>
 
-  <label id="ebcaptchatext">What is 4+7</label>
-  <input type="text" class="textbox" id="ebcaptchainput" style="margin-left: 20px;" />
+  <label id="ebcaptchatext" style="margin-left:21%">What is 4+7</label>
+  <input type="number" class="textbox" id="ebcaptchainput" style="margin-left: 20px;" />
   <!--button type="submit">Submit</button-->
 
                         </div>    </div>
@@ -188,7 +202,7 @@ confirm_password.onkeyup = validatePassword;</script>  <label for="exampleInputP
                           </div>
                           
                           <div class="col-lg-6 form-group pull-right">
-                            <button type="submit" class="btn-success" style="background-color: green;opacity: 0.7;" >Create an account</button>
+                            <button type="submit" id="submit_form" class="btn-success" style="background-color: green;opacity: 0.7;" >Create an account</button>
                           </div>
                       </div>
                   </div>

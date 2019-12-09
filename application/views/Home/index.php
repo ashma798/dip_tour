@@ -231,24 +231,24 @@
                         <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>hotels" style="color: black;">HOTELS <span style="padding-left: 20px;">|</span></a>
                         <?php } else{ ?>
-                             <div class="nav-link" style="color: black;" onclick="openForm();">HOTELS<span style="padding-left: 20px;">|</span></div>
+                             <a class="nav-link" href="#"style="color: black;" onclick="openForm();">HOTELS<span style="padding-left: 20px;">|</span></a>
                         <?php } ?>
                         </li>                    
                         <li class="nav-item">
                             <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>
                             <?php } else{ ?>
-                              <div class="nav-link" style="color: black;" onclick="openForm();">FLIGHTS <span style="padding-left: 20px;">|</span></div>
+                              <a class="nav-link" href="#"style="color: black;" onclick="openForm();">FLIGHTS <span style="padding-left: 20px;">|</span></a>
                         <?php } ?>
                         </li>                        
                         <li class="nav-item">
                             <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>car-rental" style="color: black;">CAR RENTALS <span style="padding-left: 20px;">|</span></a>
                             <?php } else{ ?>
-                             <div class="nav-link" style="color: black;" onclick="openForm();">CAR RENTALS<span style="padding-left: 20px;">|</span></div>
+                             <a class="nav-link" href="#"style="color: black;" onclick="openForm();">CAR RENTALS<span style="padding-left: 20px;">|</span></a>
                         <?php } ?>
                         </li>                   
-                        <li class="nav-item dropdown">
+                        <!--li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
                                 TOUR PACKAGES
                             </a>
@@ -257,19 +257,19 @@
                                 <a class="dropdown-item" href="#">Africa</a>
                                 <a class="dropdown-item" href="#">Europe</a>
                             </div>
-                        </li>
+                        </li-->
                         <li class="nav-item  dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
                                 VISAS</a>                          
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <?php if(isset($_SESSION['feusername'])){?>
                                 <a class="dropdown-item" href="<?php echo base_url();?>Visa/visa_search">Search</a>
                                 <?php } else{ ?>
-                             <div class="dropdown-item" onclick="openForm();">Search</div>
+                             <a class="dropdown-item" href="#"onclick="openForm();">Search</a>
                         <?php } ?>
                          <?php if(isset($_SESSION['feusername'])){?>
                                 <a class="dropdown-item" href="<?php echo base_url();?>Visa/visaquery">Visa Booking</a>
                          <?php } else{ ?>
-                             <div class="dropdown-item" onclick="openForm();">Visa Booking</div>
+                             <a class="dropdown-item" href="#"onclick="openForm();">Visa Booking</a>
                         <?php } ?>  
                                 <a class="dropdown-item" href="<?php echo base_url();?>Visa/DubaiUAE">Dubai - UAE</a>                             
                             </div>                              
