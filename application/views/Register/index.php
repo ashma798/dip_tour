@@ -176,7 +176,7 @@ confirm_password.onkeyup = validatePassword;</script>
         });
 
         $(document).click(function(e){
-          if($("submit_form").is(":disabled") ==  true){
+          if($("#submit_form").is(":disabled") ==  true){
              alert("Please enter correct value on captcha");
                  $("#ebcaptchainput").focus();
           }

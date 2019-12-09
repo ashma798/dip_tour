@@ -212,7 +212,7 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom04">Phone</label>
-                            <input type="text" class="form-control" id="validationCustom04" name="phone" placeholder="Enter Phone Number" required>
+                            <input type="number" class="form-control" id="validationCustom04" name="phone" placeholder="Enter Phone Number" required>
                             <div class="invalid-feedback">
                                 Please provide a valid Phone Number.
                             </div>
@@ -231,7 +231,7 @@
                             <span class=" plus button">
                                 +
                             </span>
-                            <input class="text-center" type="text" name="adult_qty" id="qty" maxlength="8" style="width: 30%"/>
+                            <input class="text-center" type="number" name="adult_qty" id="qty" maxlength="8" style="width: 30%" required/>
                             <span class="min button">
                                 -
                             </span>
@@ -244,7 +244,7 @@
                             <span class=" plus button">
                                 +
                             </span>
-                            <input class="text-center" type="text" name="child_qty" id="qty1" maxlength="8" style="width: 30%"/>
+                            <input class="text-center" type="number" name="child_qty" id="qty1" maxlength="8" style="width: 30%"/>
                             <span class="min button">
                                 -
                             </span>
@@ -256,7 +256,7 @@
                             <span class=" plus button">
                                 +
                             </span>
-                            <input class="text-center" type="text" name="infant_qty" id="qty3" maxlength="8" style="width: 30%"/>
+                            <input class="text-center" type="number" name="infant_qty" id="qty3" maxlength="8" style="width: 30%"/>
                             <span class="min button">
                                 -
                             </span>

@@ -49,7 +49,7 @@
 
                                                  <div class="input-group date" >
                                             
-                                             <input type="text" id="datepick" class="form-control font-sm-four profile-date" value="SUNDAY 22 SEP'2019"  ng-required="true" placeholder="mm/dd/yyyy" name="check_in_date">
+                                             <input type="text" id="datepick" class="form-control font-sm-four profile-date" value="SUNDAY 22 SEP'2019"  ng-required="true" placeholder="mm/dd/yyyy" name="check_in_date" required>
                                                      <div class="input-group-addon">
                                                                 <span class="glyphicon glyphicon-th"></span>
                                                             </div>
@@ -62,7 +62,7 @@
 
 
                                                  <div class="input-group date" >
-                                             <input type="text" id="datepick1" class="form-control font-sm-four profile-date" value="SUNDAY 22 SEP'2019"  ng-required="true" placeholder="mm/dd/yyyy"  name="check_out_date">
+                                             <input type="text" id="datepick1" class="form-control font-sm-four profile-date" value="SUNDAY 22 SEP'2019"  ng-required="true" placeholder="mm/dd/yyyy"  name="check_out_date" required>
                                                             <div class="input-group-addon">
                                                                 <span class="glyphicon glyphicon-th"></span>
                                                             </div>
@@ -77,7 +77,7 @@
                                             <div class="col-md-5 col-12 padding-row-card font-sm-three" >
                                                 <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold;">ROOMS</label>
 
-                                                <input type="text" class="form-control font-sm-four" id="select_room" placeholder="1 Room 2 Person" name="no_of_rooms"
+                                                <input type="number" class="form-control font-sm-four" id="select_room" placeholder="No of rooms" name="no_of_rooms"
                                                        required>
                                                        </div>
                                         </div>
@@ -85,7 +85,7 @@
                                         <div class="col-12 user-details pl-0 pr-0">
                                         <div id="divRoom1" class="form-row user_data">
                                           <div class="col-md-2  col-3 roomdiv" style="margin-left:10px;">
-                                            ROOM 1
+                                            NUMBER OF GUESTS
                                             </div>
                                           
                                             <div class="col-md-2 col-4 padding-row-card font-sm-three ">
@@ -96,7 +96,7 @@
                                                 <div class="quantity">
                                                     
                                                      <input id="room1AdultMinus" class="quantity__minus adult_minus" type="button" value="-" style="color:#ffffff;">
-                                                    <input  type="text" class="form-control quantity__input adult_input" value="2" data-val="true" data-val-number="The field NoOfAdults must be a number." data-val-required="The NoOfAdults field is required." id="room1Adult" name="no_of_adults">
+                                                    <input  type="number" class="form-control quantity__input adult_input" value="2" data-val="true" data-val-number="The field NoOfAdults must be a number." data-val-required="The NoOfAdults field is required." id="room1Adult" name="no_of_adults" required>
                                                     
                                                     <input id="room1AdultPlus" class="quantity__plus adult_plus" type="button" value="+" style="color:#ffffff;">
                                                 </div>
@@ -108,7 +108,7 @@
                                                 <label class="label-form-card" for="validationCustom01">Children(2-11 Yrs)</label>
                                                 <div class="quantity">
                                                     <input id="room1ChildMinus" class="quantity__minus children_minus" type="button" value="-" style="color:#ffffff;">
-                                                    <input  type="text" class="form-control quantity__input children_input" data-val="true" data-val-number="The field NoOfChildren must be a number." data-val-required="The NoOfChildren field is required." id="room1Child" name="no_of_children" type="text" value="0">
+                                                    <input  type="number" class="form-control quantity__input children_input" data-val="true" data-val-number="The field NoOfChildren must be a number." data-val-required="The NoOfChildren field is required." id="room1Child" name="no_of_children" type="text" value="0">
                                                    <input id="room1ChildPlus" class="quantity__plus children_plus" type="button" value="+" style="color:#ffffff;">
                                                 </div>
                                             </div>

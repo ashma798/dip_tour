@@ -799,39 +799,39 @@ button:hover {
   <p>
     <label>
      Full Name<span style="color:red;">*</span><br>
-    <input type="text" placeholder="Full Name" name="full_name" value="">
+    <input type="text" placeholder="Full Name" name="full_name" value="" required>
     </label>
   </p>
   <p>
     <label>
       Date of birth<span style="color:red;">*</span><br>
-    <input type="date" name="dob" placeholder="">
+    <input type="date" name="dob" placeholder="" required>
     </label>
   </p>
   <p>
     <label>
       No. of travelers<span style="color:red;">*</span><br>
-    <input type="number" placeholder="No. of travelers" name="no_of_travellers">
+    <input type="number" placeholder="No. of travelers" name="no_of_travellers" required>
     </label>
   </p>
 
    <p>
     <label>
       Address<br>
-    <input type="text" placeholder="Address" name="address">
+    <input type="text" placeholder="Address" name="address" required>
     </label>
   </p>
    <p>
     <label>
       Tel<span style="color:red;">*</span><br>
-    <input type="number" placeholder="Tel" name="telephone">
+    <input type="number" placeholder="Tel" name="telephone" required>
 
     </label>
   </p>
   <p>
     <label>
       Email <i class="fa fa-envelope fa-sm fa-fw" aria-hidden="true"></i><br>
-    <input type="email" placeholder="something@email.com" name="email">
+    <input type="email" placeholder="something@email.com" name="email" required>
 
     </label>
   </p>
@@ -839,15 +839,15 @@ button:hover {
 <p>
     <label>
       Marital Status<span style="color:red;">*</span> <br>
-    <input type="text" placeholder="Marital Status" name="marital_status">
+    <input type="text" placeholder="Marital Status" name="marital_status" required>
 
     </label>
   </p>
 
    <p>
     <label>
-      No. of child(s)<span style="color:red;">*</span> <br>
-    <input type="text" placeholder="No. of child(s)" name="no_of_child">
+      No. of child(s)<span style="color:red;"></span> <br>
+    <input type="number" placeholder="No. of child(s)" name="no_of_child">
 
     </label>
   </p>
@@ -855,7 +855,7 @@ button:hover {
     <p>
     <label>
       Countries visited since last 5yrs<span style="color:red;">*</span> <br>
-    <input type="text" placeholder="countries visited" name="countries_visited_since_last_5yrs">
+    <input type="text" placeholder="countries visited" name="countries_visited_since_last_5yrs" required>
 
     </label>
   </p>
@@ -863,7 +863,7 @@ button:hover {
    <p>
     <label>
       Are you employed<span style="color:red;">*</span> <br>
-    <select name="are_you_employed">
+    <select name="are_you_employed" required>
       <option value="" disabled selected>Select...</option>
        <option value = "IT Professional"> IT Professional</option>
       <option value ="Businessman"> Businessman</option>
@@ -876,7 +876,7 @@ button:hover {
     <p>
     <label>
       Profession <br>
-    <input type="text" placeholder="Profession" name="profession">
+    <input type="text" placeholder="Profession" name="profession" required>
 
     </label>
   </p>
@@ -887,7 +887,7 @@ button:hover {
     <label>
       Range of monthly income<span style="color:red;">*</span> <br>
     
-<select name="range_of_monthly_income">
+<select name="range_of_monthly_income" required>
       <option value="" disabled selected>Select...</option>
        <option value="5000-10,000"> 5000-10,000</option>
       <option value="10,000-15,000"> 10,000-15,000</option>
@@ -927,7 +927,7 @@ button:hover {
   <p>
     <label>
     Estimated Monthly Inflow<br>
-    <input type="text" placeholder="Estimated Monthly Inflow" name="estimated_monthly_inflow">
+    <input type="text" placeholder="Estimated Monthly Inflow" name="estimated_monthly_inflow" required>
     </label>
   </p>
   
@@ -981,14 +981,14 @@ button:hover {
    <p>
     <label>
       Duration of Stay <span style="color:red;">*</span> <br>
-    <input type="text" placeholder=" duration"  name="duration_of_stay">
+    <input type="number" placeholder=" number of days"  name="duration_of_stay">
     </label>
   </p>
 
    <p>
     <label>
       No. of Person(s)Travelling with You<br>
-    <input type="text" placeholder="no. of person(s)"  name="no_of_persons_travelling_with_you">
+    <input type="number" placeholder="no. of person(s)"  name="no_of_persons_travelling_with_you">
     </label>
   </p>
 
