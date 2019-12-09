@@ -552,11 +552,14 @@ input[type=checkbox]:checked + label:before {
            
 
             <ul>
-                <li><i class="fa fa-road"></i> 44 Main Street</li>
-                <li><i class="fa fa-phone"></i> (555) 555-5555</li>
-                <li><i class="fa fa-envelope"></i> test@diptour.com</li>
-            </ul>
-        </div>
+                <li><i class="fa fa-road"></i> Suite 7, Block 1, Bar Beach Towers, Bishop Oluwole                 
+                Street Victoria Island, Lagos (LandMark: Eko Atlantic)</li>
+                <li><i class="fa fa-phone"></i> +234 8122820856</li>
+                <li><i class="fa fa-phone"></i> +234 8170592433</li>
+                <li><i class="fa fa-envelope"></i> info@diptourltd.com</li>
+              </ul>
+
+                        </div>
 
 
          <div class="container"> <link   rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"> <style type="text/css">form > div {
