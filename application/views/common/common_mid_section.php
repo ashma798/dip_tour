@@ -134,7 +134,7 @@
             <?php                
                 }
             ?>
-                <div class="card" style="width:300px;">
+                <a href="<?php echo  base_url();?>/TourPackageEnquiry" ><div class="card" style="width:300px;">
                     <img src="<?php echo base_url().$v['tour_image']; ?>">
                     <div class="off_div"><?php echo $v['duration']; ?></div>
                     <div class="card-block">
@@ -178,7 +178,7 @@
                             </div>
                         </div>
                     </div>
-                </div><!--end of card-->
+                </div></a><!--end of card-->
 
                 <?php 
                     if($k == 2 OR  $k == 5 OR $k == 8 OR $k == 11){
