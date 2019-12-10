@@ -231,21 +231,21 @@
                         <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>hotels" style="color: black;">HOTELS <span style="padding-left: 20px;">|</span></a>
                         <?php } else{ ?>
-                             <a class="nav-link" href="#"style="color: black;" onclick="openForm();">HOTELS<span style="padding-left: 20px;">|</span></a>
+                             <a class="nav-link" style="color: black;" href="<?php echo base_url(); ?>Register/login">HOTELS<span style="padding-left: 20px;">|</span></a>
                         <?php } ?>
                         </li>                    
                         <li class="nav-item">
                             <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#"style="color: black;" onclick="openForm();">FLIGHTS <span style="padding-left: 20px;">|</span></a>
+                              <a class="nav-link" style="color: black;" href="<?php echo base_url(); ?>Register/login">FLIGHTS <span style="padding-left: 20px;">|</span></a>
                         <?php } ?>
                         </li>                        
                         <li class="nav-item">
                             <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>car-rental" style="color: black;">CAR RENTALS <span style="padding-left: 20px;">|</span></a>
                             <?php } else{ ?>
-                             <a class="nav-link" href="#"style="color: black;" onclick="openForm();">CAR RENTALS<span style="padding-left: 20px;">|</span></a>
+                             <a class="nav-link" style="color: black;" href="<?php echo base_url(); ?>Register/login">CAR RENTALS<span style="padding-left: 20px;">|</span></a>
                         <?php } ?>
                         </li>                   
                         <li class="nav-item dropdown">
@@ -264,12 +264,12 @@
                                 <?php if(isset($_SESSION['feusername'])){?>
                                 <a class="dropdown-item" href="<?php echo base_url();?>Visa/visa_search">Search</a>
                                 <?php } else{ ?>
-                             <a class="dropdown-item" href="#" onclick="openForm();">Search</a>
+                             <a class="dropdown-item" href="<?php echo base_url(); ?>Register/login">Search</a>
                         <?php } ?>
                          <?php if(isset($_SESSION['feusername'])){?>
                                 <a class="dropdown-item" href="<?php echo base_url();?>Visa/visaquery">Visa Booking</a>
                          <?php } else{ ?>
-                             <a class="dropdown-item" href="#"onclick="openForm();">Visa Booking</a>
+                             <a class="dropdown-item" href="<?php echo base_url(); ?>Register/login">Visa Booking</a>
                         <?php } ?>  
                                 <a class="dropdown-item" href="<?php echo base_url();?>Visa/DubaiUAE">Dubai - UAE</a>                             
                             </div>                              
@@ -283,7 +283,7 @@
                            </p>
                            </li>
                     <?php }else{?>
-                    <div class="btn " role="button" style=" margin-left:40px; margin-right:0px; background-color: black; color:white;" onclick="openForm();"><i class="fa fa-lock xs-nav"></i>LOGIN</div>
+                    <a class="btn " role="button" style=" margin-left:40px; margin-right:0px; background-color: black; color:white;"  href="<?php echo base_url(); ?>Register/login"><i class="fa fa-lock xs-nav"></i>LOGIN</a>
                     <a href="<?php echo base_url(); ?>Register" class="btn " role="button" style=" margin-left:20px; margin-right:30px; background-color: green; color:white;"><i class="fa fa-user xs-naav"></i>REGISTER</a>
                 <?php }?>
                 </ul>
@@ -585,17 +585,17 @@ function closeForm() {
                                 <li> <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Dubai</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Flights to Dubai</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Dubai</a>
                         <?php } ?></li>                                     
                                 <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Abu Dhabi</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Flights to Abu Dhabi</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Abu Dhabi</a>
                         <?php } ?></li>
                                 <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to New Delhi</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Flights to New Delhi</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to New Delhi</a>
                         <?php } ?></li>
 
 
@@ -607,22 +607,22 @@ function closeForm() {
                                 <li> <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Atlanta</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Flights to Atlanta</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Atlanta</a>
                         <?php } ?></li>                                     
                                 <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Toronto</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Flights to Toronto</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Toronto</a>
                         <?php } ?></li>
                                 <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Houston</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Flights to Houston</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Houston</a>
                         <?php } ?> </li> 
                         <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to New York</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Flights to New York</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to New York</a>
                         <?php } ?> </li> 
 
                             </ul>
@@ -634,22 +634,22 @@ function closeForm() {
                                 <li> <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Accra</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Flights to Accra</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Accra</a>
                         <?php } ?></li>                                     
                                 <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Nairobi</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Flights to Nairobi</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Nairobi</a>
                         <?php } ?></li>
                                 <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Cape Town</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Flights to Cape Town</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Cape Town</a>
                         <?php } ?> </li> 
                         <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Johannesburg</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Flights to Johannesburg</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Johannesburg</a>
                         <?php } ?> </li>             
                             </ul>
                         </div>
@@ -659,22 +659,22 @@ function closeForm() {
                                 <li> <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to London</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Flights to London</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to London</a>
                         <?php } ?></li>                                     
                                 <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Istanbul</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Flights to Istanbul</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Istanbul</a>
                         <?php } ?></li>
                                 <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Frankfurt</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Flights to Frankfurt</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Frankfurt</a>
                         <?php } ?> </li> 
                         <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Paris</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Flights to Paris</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Paris</a>
                         <?php } ?> </li>                                                                               
                             </ul>
                         </div>
@@ -694,17 +694,17 @@ function closeForm() {
                                 <li> <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Dubai</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Hotels in Dubai</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Dubai</a>
                         <?php } ?></li>                                     
                                 <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Abu Dhabi</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Hotels in Abu Dhabi</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Abu Dhabi</a>
                         <?php } ?></li>
                                 <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in New Delhi</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Hotels in New Delhi</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in New Delhi</a>
                         <?php } ?></li>
 
 
@@ -716,22 +716,22 @@ function closeForm() {
                                 <li> <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Atlanta</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Hotels in Atlanta</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Atlanta</a>
                         <?php } ?></li>                                     
                                 <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Toronto</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Hotels in Toronto</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Toronto</a>
                         <?php } ?></li>
                                 <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Houston</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Hotels in Houston</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Houston</a>
                         <?php } ?> </li> 
                         <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in New York</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Hotels in New York</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in New York</a>
                         <?php } ?> </li> 
 
                             </ul>
@@ -743,22 +743,22 @@ function closeForm() {
                               <li> <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Accra</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Hotels in Accra</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Accra</a>
                         <?php } ?></li>                                     
                                 <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Nairobi</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Hotels in Nairobi</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Nairobi</a>
                         <?php } ?></li>
                                 <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Cape Town</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Hotels in Cape Town</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Cape Town</a>
                         <?php } ?> </li> 
                         <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Johannesburg</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Hotels in Johannesburg</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Johannesburg</a>
                         <?php } ?> </li>                  
                             </ul>
                         </div>
@@ -768,22 +768,22 @@ function closeForm() {
                                                                 <li> <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in London</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Hotels in London</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in London</a>
                         <?php } ?></li>                                     
                                 <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Istanbul</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Hotels in Istanbul</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Istanbul</a>
                         <?php } ?></li>
                                 <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Frankfurt</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Hotels in Frankfurt</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Frankfurt</a>
                         <?php } ?> </li> 
                         <li><?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Paris</a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" onclick="openForm();">Hotels in Paris</a>
+                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Paris</a>
                         <?php } ?> </li>  
                             </ul>
                         </div>

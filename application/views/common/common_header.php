@@ -205,21 +205,21 @@
                         <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>hotels" style="color: black;">HOTELS <span style="padding-left: 20px;">|</span></a>
                         <?php } else{ ?>
-                             <a class="nav-link" href="#" style="color: black;" onclick="openForm();">HOTELS<span style="padding-left: 20px;">|</span></a>
+                             <a class="nav-link" style="color: black;"  href="<?php echo base_url(); ?>Register/login">HOTELS<span style="padding-left: 20px;">|</span></a>
                         <?php } ?>
                         </li>                    
                         <li class="nav-item">
                             <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>
                             <?php } else{ ?>
-                              <a class="nav-link" href="#" style="color: black;" onclick="openForm();">FLIGHTS <span style="padding-left: 20px;">|</span></a>
+                              <a class="nav-link" style="color: black;"  href="<?php echo base_url(); ?>Register/login">FLIGHTS <span style="padding-left: 20px;">|</span></a>
                         <?php } ?>
                         </li>                        
                         <li class="nav-item">
                             <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>car-rental" style="color: black;">CAR RENTALS <span style="padding-left: 20px;">|</span></a>
                             <?php } else{ ?>
-                             <a class="nav-link"  href="#" style="color: black;" onclick="openForm();">CAR RENTALS<span style="padding-left: 20px;">|</span></a>
+                             <a class="nav-link" style="color: black;"  href="<?php echo base_url(); ?>Register/login">CAR RENTALS<span style="padding-left: 20px;">|</span></a>
                         <?php } ?>
                         </li>                   
                         <li class="nav-item dropdown">
@@ -238,12 +238,12 @@
                                 <?php if(isset($_SESSION['feusername'])){?>
                                 <a class="dropdown-item" href="<?php echo base_url();?>Visa/visa_search">Search</a>
                                 <?php } else{ ?>
-                             <a class="dropdown-item" href="#" onclick="openForm();">Search</a>
+                             <a class="dropdown-item" href="<?php echo base_url(); ?>Register/login">Search</a>
                         <?php } ?>
                          <?php if(isset($_SESSION['feusername'])){?>
                                 <a class="dropdown-item" href="<?php echo base_url();?>Visa/visaquery">Visa Booking</a>
                          <?php } else{ ?>
-                             <a class="dropdown-item" href="#" onclick="openForm();">Visa Booking</a>
+                             <a class="dropdown-item" href="<?php echo base_url(); ?>Register/login">Visa Booking</a>
                         <?php } ?>    
                         <a class="dropdown-item" href="<?php echo base_url();?>Visa/DubaiUAE">Dubai - UAE</a>                          
                             </div>                              
@@ -257,7 +257,7 @@
                            </p>
                            </li>
                     <?php }else{?>
-                    <div class="btn " role="button" style=" margin-left:40px; margin-right:0px; background-color: black; color:white;" onclick="openForm();"><i class="fa fa-lock xs-nav"></i>LOGIN</div>
+                    <a class="btn " role="button" style=" margin-left:40px; margin-right:0px; background-color: black; color:white;" href="<?php echo base_url(); ?>Register/login"><i class="fa fa-lock xs-nav"></i>LOGIN</a>
                     <a href="<?php echo base_url(); ?>Register" class="btn " role="button" style=" margin-left:20px; margin-right:30px; background-color: green; color:white;"><i class="fa fa-user xs-naav"></i>REGISTER</a>
                 <?php }?>
                 </ul>
