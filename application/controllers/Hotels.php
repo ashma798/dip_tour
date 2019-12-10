@@ -24,7 +24,7 @@ class Hotels extends CI_Controller {
 		$airports = $this->Airport->getAirportData();
         $returnAirport = array();
         foreach($airports as $v){
-        	$returnAirport[] = $v->airport_name.', '.$v->airport_code;
+        	$returnAirport[] = $v->city_name.', '.$v->airport_name.', '.$v->airport_code;
         }
         $data['airport'] = $returnAirport;
 		$this->load->model('Contactinfo');
