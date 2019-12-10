@@ -128,6 +128,8 @@ confirm_password.onkeyup = validatePassword;</script>
   $('#subForm').ebcaptcha();
 });
 
+       
+
 (function($){
 
     jQuery.fn.ebcaptcha = function(options){
@@ -135,16 +137,15 @@ confirm_password.onkeyup = validatePassword;</script>
         var element = this; 
         var input = this.find('#ebcaptchainput'); 
         var label = this.find('#ebcaptchatext'); 
-        $("#submit_form").attr('disabled','disabled'); 
+        //$("#submit_form").attr('disabled','disabled'); 
 
         var randomNr1 = 0; 
         var randomNr2 = 0;
         var totalNr = 0;
-
-
-        randomNr1 = Math.floor(Math.random()*10);
+         randomNr1 = Math.floor(Math.random()*10);
         randomNr2 = Math.floor(Math.random()*10);
         totalNr = randomNr1 + randomNr2;
+        
         var texti = "What is "+randomNr1+" + "+randomNr2;
         $('#ebcaptchatext').html(texti);
         
@@ -157,6 +158,9 @@ confirm_password.onkeyup = validatePassword;</script>
                  $("#submit_form").removeAttr('disabled');              
             }
             else{
+
+                 alert("Please enter correct value on captcha");
+                 $("#ebcaptchainput").focus();
                  $("#submit_form").attr('disabled','disabled');
             }
             
@@ -175,15 +179,11 @@ confirm_password.onkeyup = validatePassword;</script>
 
         });
 
-        $(document).click(function(e){
-          if($("#submit_form").is(":disabled") ==  true){
-             alert("Please enter correct value on captcha");
-                 $("#ebcaptchainput").focus();
-          }
-        });
+
     };
 
-})(jQuery);</script>
+})(jQuery);
+</script>
 
   <label id="ebcaptchatext" style="margin-left:21%">What is 4+7</label>
   <input type="number" class="textbox" id="ebcaptchainput" style="margin-left: 20px;" />
