@@ -33,7 +33,16 @@
         <link href="<?php echo base_url();?>css/flight-style.css" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo base_url();?>css/jquery-ui.css">
           <style>
-
+html,body {
+	margin: 0;
+	padding:0px;
+	height:auto;
+width:100%;
+overflow-x:hidden;	
+}
+.currency-amount {
+	width:75px;
+}
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
   background-color: #555;
@@ -106,6 +115,128 @@
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+@media screen and (max-width: 400px) and (min-width: 300px) {
+	.nav-desk-two  {
+    
+    flex-wrap: nowrap !important;
+	}
+	.nav-desk-two  li{
+    
+    padding: 0 0.3em !important;
+	}
+	.input-group {
+		flex-wrap:nowrap;
+	}
+	
+}
+@media screen and (max-width: 575px) and (min-width: 300px) {
+	html,body {
+	width:100%;
+	height:auto;
+	overflow-x:hidden;
+}
+.currency-amount {
+	width:75px !important;
+}
+.nav-desk {
+	font-size:14px;
+}
+.nav-desk-two  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -1px;
+}
+.nav-desk-two li {
+    flex-grow: 1;
+    flex-basis: auto;
+    margin: .25em 0;
+    padding: 0 0.5em;
+    text-align: center;
+	font-size: 14px;
+   
+}
+.navbar-collapse {
+	position: absolute;
+    background-color: green;
+    z-index: 100;
+    width: 93%;
+    height: auto;
+    top: 97px;
+	}
+	.navbar-collapse ul li a {
+		color:#fff !important;
+	}
+.fontsize
+{
+	font-size:14px;
+	padding-left:14px;
+	margin-top:0px !important;
+}
+.nav-img {
+	padding-top:0px !important;
+}
+.navbar-ch {
+	flex-wrap:nowrap;
+}
+.marrgt {
+	margin-right:0px !important;
+}
+.padlft0 {
+	padding-left:15px !important;
+}
+.dnone1 {
+	display:none !important;
+}
+.dnone {
+	display:none !important;
+}
+}
+
+@media screen and (max-width: 1196px) and (min-width: 576px) {
+	
+	.nav-desk {
+	font-size:14px !important;
+}
+.currency-amount {
+	width:75px !important;
+}
+.mlauto {
+margin-left:auto;
+}	
+.dnone2 {
+	display:none !important;
+}
+.dnone1 {
+	display:none !important;
+}
+	.nav-desk-two  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -1px;
+}
+.navbar-toggler {
+	display:block !important;
+}
+	.padlft0 {
+	padding-left:15px !important;
+}
+.navbar-collapse {
+	display:block !important;
+	position: absolute;
+    background-color: green;
+    z-index: 100;
+    width: 93%;
+    height: auto;
+    top: 97px;
+	}
+	.navbar-collapse ul li a {
+		color:#fff !important;
+	}
+}
 </style>
     </head>
 
@@ -120,7 +251,7 @@
                             <form class="form-inline" style="height: 50%;">
                                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                                     <div class="input-group-addon currency-symbol" style="margin-right: 5px; margin-top:5px; color:white;">₦</div>
-                                    <input type="text" class="form-control currency-amount" id="inlineFormInputGroup" placeholder="0.00" size="8">
+                                    <input type="text" class="form-control currency-amount" id="inlineFormInputGroup" placeholder="0.00" size="5">
                                     <div class="input-group-addon currency-addon" >
                                         <select class="currency-selector" style="color: white; background-color: black; margin-top: 10px; ">
                                             <option  class="opt" data-symbol="₦" data-placeholder="0.00" selected >NGN </option>
@@ -156,7 +287,7 @@
                                 </select>
                             </div>
                         </li>
-                        <li class="nav-item"><a class="nav-link"  href="" style="color: white;">|</a></li>
+                        <li class="nav-item dnone"><a class="nav-link"  href="" style="color: white;">|</a></li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" style="color:white;"><i class="fa fa-facebook"></i> </a>
                         </li>
@@ -176,11 +307,11 @@
 
         <div class="topnav">
             <div class="row">
-                <div class="col-lg-4 col-6 ">
+                <div class="col-lg-4 col-12 col-sm-5">
                     <a href="<?php echo base_url(); ?>"><img class="nav-img" src="<?php echo base_url();?>images/logo.png" alt=""/></a>
                 </div>
-                <div class="offset-lg-5 col-lg-3 col-6">
-                    <ul style="list-style-type: none; margin-top: 30px; font-weight: bold;">
+                <div class="offset-lg-5 col-lg-3 col-12 offset-sm-2 col-sm-5">
+                    <ul class="fontsize" style="list-style-type: none; margin-top: 30px; font-weight: bold;">
                         <li>Contact Us</li>
                         <li><?php  echo $contact_info[0]['phone_no_1']; ?></li>
                         <li><?php  echo $contact_info[0]['phone_no_2']; ?>{24/7,WHATSAPP}</li>
@@ -197,30 +328,24 @@
                 </button>
                 <div class="navbar-collapse collapse" id="navbarCustom">
                     <span class="rounded-bottom"></span>
-                    <ul class="navbar-nav" style=" padding-left: 60px;">
+                    <ul class="navbar-nav dnone2" style=" padding-left: 60px;">
                         <li class="nav-item active">
-                            <a class="nav-link" href="<?php echo base_url();?>" style="color: black;">HOME<span style="padding-left: 20px;">|</span></a>
+                            <a class="nav-link" href="<?php echo base_url();?>" style="color: black;">HOME<span class="dnone1" style="padding-left: 20px;">|</span></a>
                         </li>                      
                         <li class="nav-item">
-                        <?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>hotels" style="color: black;">HOTELS <span style="padding-left: 20px;">|</span></a>
-                        <?php } else{ ?>
-                             <a class="nav-link" style="color: black;"  href="<?php echo base_url(); ?>Register/login">HOTELS<span style="padding-left: 20px;">|</span></a>
-                        <?php } ?>
+                        
+                            <a class="nav-link" href="<?php echo base_url();?>hotels" style="color: black;">HOTELS <span class="dnone1" style="padding-left: 20px;">|</span></a>
+                       
                         </li>                    
                         <li class="nav-item">
-                            <?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>flight" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>
-                            <?php } else{ ?>
-                              <a class="nav-link" style="color: black;"  href="<?php echo base_url(); ?>Register/login">FLIGHTS <span style="padding-left: 20px;">|</span></a>
-                        <?php } ?>
+                          
+                            <a class="nav-link" href="<?php echo base_url();?>flight" style="color: black;">FLIGHTS<span  class="dnone1" style="padding-left: 20px;">|</span></a>
+                            
                         </li>                        
                         <li class="nav-item">
-                            <?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>car-rental" style="color: black;">CAR RENTALS <span style="padding-left: 20px;">|</span></a>
-                            <?php } else{ ?>
-                             <a class="nav-link" style="color: black;"  href="<?php echo base_url(); ?>Register/login">CAR RENTALS<span style="padding-left: 20px;">|</span></a>
-                        <?php } ?>
+                          
+                            <a class="nav-link" href="<?php echo base_url();?>car-rental" style="color: black;">CAR RENTALS <span class="dnone1" style="padding-left: 20px;">|</span></a>
+                            
                         </li>                   
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
@@ -235,22 +360,15 @@
                         <li class="nav-item  dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
                                 VISAS</a>                          
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <?php if(isset($_SESSION['feusername'])){?>
+                                
                                 <a class="dropdown-item" href="<?php echo base_url();?>Visa/visa_search">Search</a>
-                                <?php } else{ ?>
-                             <a class="dropdown-item" href="<?php echo base_url(); ?>Register/login">Search</a>
-                        <?php } ?>
-                         <?php if(isset($_SESSION['feusername'])){?>
-                                <a class="dropdown-item" href="<?php echo base_url();?>Visa/visaquery">Visa Booking</a>
-                         <?php } else{ ?>
-                             <a class="dropdown-item" href="<?php echo base_url(); ?>Register/login">Visa Booking</a>
-                        <?php } ?>    
+                                <a class="dropdown-item" href="<?php echo base_url();?>Visa/visaquery">Visa Booking</a>  
                         <a class="dropdown-item" href="<?php echo base_url();?>Visa/DubaiUAE">Dubai - UAE</a>                          
                             </div>                              
                         </li>
                     </ul>
                 </div>
-                <ul class="navbar-nav nav-flex-icons">
+                <!--ul class="navbar-nav nav-flex-icons mlauto">
                     <?php if(isset($_SESSION['feusername'])){?>
                            <li> Welcome, <?php echo $_SESSION['fename']; ?>
                            <p> <a href="<?php echo base_url();?>Register/logout"> Logout </a>
@@ -258,12 +376,12 @@
                            </li>
                     <?php }else{?>
                     <a class="btn " role="button" style=" margin-left:40px; margin-right:0px; background-color: black; color:white;" href="<?php echo base_url(); ?>Register/login"><i class="fa fa-lock xs-nav"></i>LOGIN</a>
-                    <a href="<?php echo base_url(); ?>Register" class="btn " role="button" style=" margin-left:20px; margin-right:30px; background-color: green; color:white;"><i class="fa fa-user xs-naav"></i>REGISTER</a>
+                    <a href="<?php echo base_url(); ?>Register" class="btn marrgt" role="button" style=" margin-left:20px; margin-right:30px; background-color: green; color:white;"><i class="fa fa-user xs-naav"></i>REGISTER</a>
                 <?php }?>
-                </ul>
+                </ul-->
             </nav>
         </section>
- <section style="margin: 0 auto;">
+ <!--section style="margin: 0 auto;">
     
 
     <div class="form-popup" id="myForm">
@@ -289,7 +407,7 @@
 </div>
 
 
-</section>
+</section-->
 
 <script>
 function openForm() {

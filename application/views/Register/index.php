@@ -1,3 +1,6 @@
+
+
+
 <section id="" class=""><style type="text/css">#hero {
     position: relative;
     background-size: cover;
@@ -8,10 +11,10 @@
     z-index: 99;
     text-align: center;
     text-transform: uppercase
-}</style> <div class="container" style="margin-top: 20px; border:5px solid green; padding-left: 150px;">
+}</style> <div class="container padlft0" style="margin-top: 20px; border:5px solid green; padding-left: 150px;">
            
               <div class="row">
-                 <div class="col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-8">
+                 <div class="col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-8 col-12">
                     <div id="">
                         <h2><?php echo $this->session->flashdata('item'); ?></h2> 
                      <br/>

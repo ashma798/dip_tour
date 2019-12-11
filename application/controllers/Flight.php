@@ -86,17 +86,19 @@ class Flight extends CI_Controller {
                 }else{
                 	$insertData['search_time']= '0';
                 }
-                $insertData['user_email'] = $_SESSION['feusername'];
-                $insertData['user_id'] = $_SESSION['feuser_id'];
-
+               // $insertData['user_email'] = $_SESSION['feusername'];
+               // $insertData['user_id'] = $_SESSION['feuser_id'];
+                $insertData['full_name'] = $data['full_name'];
+                $insertData['phone'] = $data['phone'];
+                $insertData['email'] = $data['email'];
                 $this->load->model('Flightsearch');
                 $tripdetails = $this->Flightsearch->insertData($insertData);
-                $message = "Our executives will connect with you over you query";
+                $message = "<span style='background-color:#28a745; color:white;'>Our executives will connect with you over you query</span>";
                 $this->session->set_flashdata('item', $message);
                 redirect(base_url('Flight'));
 	
 	    }catch(Exception $e){
-                $message = "<span style='background-color:red;'>Something went wrong... Please contact us on +234 8122820856, +234 8170592433{24/7,WHATSAPP} or mail us at info@diptourltd.com</span>";
+                $message = "<span style='background-color:red; color:white;'>Something went wrong... Please contact us on +234 8122820856, +234 8170592433{24/7,WHATSAPP} or mail us at info@diptourltd.com</span>";
                 
                 $this->session->set_flashdata('item', $message);
                 redirect(base_url('Flight'));

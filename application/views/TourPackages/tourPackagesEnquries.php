@@ -173,7 +173,7 @@
                 </div>
                 <div class="card-body">
                     <div class="text-center">
-                        <img src="<?php echo base_url();?>img/smartphone.png"><label style="font-size: 30px;color: #796868;">+91-854757***</label>
+                        <img src="<?php echo base_url();?>img/smartphone.png"><label style="font-size: 30px;color: #796868;"><?php  echo $contact_info[0]['phone_no_1']; ?></label>
                         <div class="cont_or">
                             <span>OR</span>
                         </div>

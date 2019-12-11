@@ -158,7 +158,24 @@
                                             </div> / tabs_item -->
                                         </div> <!-- / tab_content -->
                                     </div> <!-- / tab -->
+                                    <br/>
                                     <hr>
+                                    <br/>
+                            <div class="row">
+                                <div class="col-4">
+                                    <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold;">Full Name</label>
+                                    <input type="text" class="form-control font-sm-four" id="full_name" placeholder="Full Name" name="full_name" required>
+                                </div>
+                                <div class="col-4">
+                                    <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold;">Email</label>
+                                    <input type="email" class="form-control font-sm-four" id="email" placeholder="Email" name="email" required>
+                                </div>
+                                <div class="col-4">
+                                    <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold;">Phone</label>
+                                    <input type="number" class="form-control font-sm-four" id="phone" placeholder="phone" name="phone" required>
+                                </div>
+                            </div>
+                            <br/>
                                     <div class="checkbox">
                                         <label><input type="checkbox" name="non_stop_only" value="">&nbsp;Show Direct Flights Only</label>
                                     </div>

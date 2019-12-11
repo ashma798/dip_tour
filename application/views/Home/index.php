@@ -228,25 +228,18 @@
                             <a class="nav-link" href="<?php echo base_url();?>" style="color: black;">HOME<span style="padding-left: 20px;">|</span></a>
                         </li>                      
                         <li class="nav-item">
-                        <?php if(isset($_SESSION['feusername'])){?>
+                    
                             <a class="nav-link" href="<?php echo base_url();?>hotels" style="color: black;">HOTELS <span style="padding-left: 20px;">|</span></a>
-                        <?php } else{ ?>
-                             <a class="nav-link" style="color: black;" href="<?php echo base_url(); ?>Register/login">HOTELS<span style="padding-left: 20px;">|</span></a>
-                        <?php } ?>
+                       
                         </li>                    
                         <li class="nav-item">
-                            <?php if(isset($_SESSION['feusername'])){?>
                             <a class="nav-link" href="<?php echo base_url();?>flight" style="color: black;">FLIGHTS<span style="padding-left: 20px;">|</span></a>
-                            <?php } else{ ?>
-                              <a class="nav-link" style="color: black;" href="<?php echo base_url(); ?>Register/login">FLIGHTS <span style="padding-left: 20px;">|</span></a>
-                        <?php } ?>
+                            
                         </li>                        
                         <li class="nav-item">
-                            <?php if(isset($_SESSION['feusername'])){?>
+                            
                             <a class="nav-link" href="<?php echo base_url();?>car-rental" style="color: black;">CAR RENTALS <span style="padding-left: 20px;">|</span></a>
-                            <?php } else{ ?>
-                             <a class="nav-link" style="color: black;" href="<?php echo base_url(); ?>Register/login">CAR RENTALS<span style="padding-left: 20px;">|</span></a>
-                        <?php } ?>
+                           
                         </li>                   
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
@@ -261,22 +254,17 @@
                         <li class="nav-item  dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
                                 VISAS</a>                          
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <?php if(isset($_SESSION['feusername'])){?>
+                                
                                 <a class="dropdown-item" href="<?php echo base_url();?>Visa/visa_search">Search</a>
-                                <?php } else{ ?>
-                             <a class="dropdown-item" href="<?php echo base_url(); ?>Register/login">Search</a>
-                        <?php } ?>
-                         <?php if(isset($_SESSION['feusername'])){?>
+                                
                                 <a class="dropdown-item" href="<?php echo base_url();?>Visa/visaquery">Visa Booking</a>
-                         <?php } else{ ?>
-                             <a class="dropdown-item" href="<?php echo base_url(); ?>Register/login">Visa Booking</a>
-                        <?php } ?>  
+ 
                                 <a class="dropdown-item" href="<?php echo base_url();?>Visa/DubaiUAE">Dubai - UAE</a>                             
                             </div>                              
                         </li>
                     </ul>
                 </div>
-                <ul class="navbar-nav nav-flex-icons">
+                <!--ul class="navbar-nav nav-flex-icons">
                     <?php if(isset($_SESSION['feusername'])){?>
                            <li> Welcome, <?php echo $_SESSION['fename']; ?>
                            <p> <a href="<?php echo base_url();?>Register/logout"> Logout </a>
@@ -286,7 +274,7 @@
                     <a class="btn " role="button" style=" margin-left:40px; margin-right:0px; background-color: black; color:white;"  href="<?php echo base_url(); ?>Register/login"><i class="fa fa-lock xs-nav"></i>LOGIN</a>
                     <a href="<?php echo base_url(); ?>Register" class="btn " role="button" style=" margin-left:20px; margin-right:30px; background-color: green; color:white;"><i class="fa fa-user xs-naav"></i>REGISTER</a>
                 <?php }?>
-                </ul>
+                </ul-->
             </nav>
         </section>
 
@@ -421,11 +409,9 @@ function closeForm() {
 
                                 <img src="<?php echo base_url();?>images/card2.jpg" width="100%">
                                 <p class="card-text" style="padding-bottom: 25px;">Get your Local and International Flight Tickets seamlessly with best price guarantee on flight deals, promotional fares with easy ticket upgrade and real time flight change.</p>
-                                <?php if(isset($_SESSION['feusername'])){?>
+                                
                                  <a href="<?php echo base_url('flight');?>" class="btn btn-success" style="margin-top: 95px;">GET LATEST UPDATES</a>
-                         <?php } else{ ?>
-                             <a class="btn btn-success" style="margin-top: 95px;" href="<?php echo base_url(); ?>Register/login">GET LATEST UPDATES</a>
-                        <?php } ?>
+                        
                                
                             </div>
                         </div>
@@ -437,11 +423,9 @@ function closeForm() {
 
                                 <img src="<?php echo base_url();?>images/card_1.jpg" width="100%">
                                 <p class="card-text"  style="padding-bottom: 3px;">Travel the world anytime having your own mobile number with you to connect with family, friends & Business associates. Sim Card possess $10 air time credit, UK & US telephone numbers. </p>
-                                <?php if(isset($_SESSION['feusername'])){?>
+                                
                                 <a class="btn btn-success" href="<?php echo base_url('TravelSimCard');?>" style="margin-top: 110px;">READ MORE</a>
-                            <?php } else{ ?>
-                                <a class="btn btn-success" href="<?php echo base_url(); ?>Register/login" style="margin-top: 110px;">READ MORE</a>
-                            <?php } ?> 
+                            
                             </div>
                         </div>
                     </div>
@@ -488,11 +472,9 @@ function closeForm() {
 
                                 <img src="<?php echo base_url();?>images/card6.jpg" width="100%">
                                 <p class="card-text"  style="padding-bottom:45px;">In minutes, get your Travel Insurance which guarantee covers for emergency medical expenses abroad, travel delays, evacuation & repatriation, loss or delayed baggage, passport theft, free escort of beneficiary + many more.</p>
-                                <?php if(isset($_SESSION['feusername'])){?>
+                               
                                 <a class="btn btn-success" href="<?php echo base_url('TravelInsurance');?>" style="margin-top: 110px;">CONTACT US</a>
-                            <?php } else{ ?>
-                                <a class="btn btn-success" href="<?php echo base_url(); ?>Register/login" style="margin-top: 110px;">CONTACT US</a>
-                            <?php } ?> 
+                            
                             </div>
                         </div>
                     </div>
@@ -577,230 +559,167 @@ function closeForm() {
                     ?>
 
     </section>
-    <section>
-        <div class="container-fluid" style="background-color: white; margin-top: 30px; border: 2px solid green;">
-            <div class="row">
-                <div class="col-md-11">
+   <section>
+<div class="container-fluid" style="background-color: white; margin-top: 30px; border: 2px solid green;">
+<div class="row">
+<div class="col-md-11">
 
-                    <h2 style="  padding-top: 30px; padding-bottom: 30px; margin-left: 20px;">Cheap Flights from Nigeria</h2>
+<h2 style="  padding-top: 30px; padding-bottom: 30px; margin-left: 20px;">Cheap Flights from Nigeria</h2>
 
-                    <div class="row">
-                        <div class="col-md-3"> 
-                            <ul  >
-                                <h5><b>Asian Flights</b></h5>   
-                                <li> <?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Dubai</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Dubai</a>
-                        <?php } ?></li>                                     
-                                <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Abu Dhabi</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Abu Dhabi</a>
-                        <?php } ?></li>
-                                <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to New Delhi</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to New Delhi</a>
-                        <?php } ?></li>
+<div class="row">
+<div class="col-md-3"> 
+<ul  >
+<h5><b>Asian Flights</b></h5>   
+<li> 
+<a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Dubai</a>
+</li>                                     
+<li>
+<a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Abu Dhabi</a>
+</li>
+<li>
+<a class="nav-link" href="<?php echo base_url();?>flight" >Flights to New Delhi</a>
+</li>
 
 
-                            </ul> 
-                        </div>
-                        <div class="col-md-3"> 
-                            <ul>
-                                <h5><b>North American Flights</b></h5>
-                                <li> <?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Atlanta</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Atlanta</a>
-                        <?php } ?></li>                                     
-                                <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Toronto</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Toronto</a>
-                        <?php } ?></li>
-                                <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Houston</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Houston</a>
-                        <?php } ?> </li> 
-                        <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to New York</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to New York</a>
-                        <?php } ?> </li> 
+</ul> 
+</div>
+<div class="col-md-3"> 
+<ul>
+<h5><b>North American Flights</b></h5>
+<li>
+<a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Atlanta</a>
+</li>                                     
+<li>
+<a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Toronto</a>
+</li>
+<li>
+<a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Houston</a>
+ </li> 
+<li>
+<a class="nav-link" href="<?php echo base_url();?>flight" >Flights to New York</a>
+</li> 
 
-                            </ul>
-                        </div>
+</ul>
+</div>
 
-                        <div class="col-md-3"> 
-                            <ul >
-                                <h5><b>African Flights</b></h5>
-                                <li> <?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Accra</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Accra</a>
-                        <?php } ?></li>                                     
-                                <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Nairobi</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Nairobi</a>
-                        <?php } ?></li>
-                                <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Cape Town</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Cape Town</a>
-                        <?php } ?> </li> 
-                        <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Johannesburg</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Johannesburg</a>
-                        <?php } ?> </li>             
-                            </ul>
-                        </div>
-                        <div class="col-md-3"> 
-                            <ul >
-                                <h5><b>European Flights</b></h5>
-                                <li> <?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to London</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to London</a>
-                        <?php } ?></li>                                     
-                                <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Istanbul</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Istanbul</a>
-                        <?php } ?></li>
-                                <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Frankfurt</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Frankfurt</a>
-                        <?php } ?> </li> 
-                        <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Paris</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Flights to Paris</a>
-                        <?php } ?> </li>                                                                               
-                            </ul>
-                        </div>
+<div class="col-md-3"> 
+<ul >
+<h5><b>African Flights</b></h5>
+<li> 
+<a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Accra</a>
+</li>                                     
+<li>
+<a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Nairobi</a>
+</li>
+<li>
+<a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Cape Town</a>
+</li> 
+<li>
+<a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Johannesburg</a>
+</ul>
+</div>
+<div class="col-md-3"> 
+<ul >
+<h5><b>European Flights</b></h5>
+<li> 
+<a class="nav-link" href="<?php echo base_url();?>flight" >Flights to London</a>
+<li>
+<a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Istanbul</a>
+<li>
+<a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Frankfurt</a>
+</li> 
+<li>
+<a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Paris</a>
+</li>                                                                               
+</ul>
+</div>
 
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-11">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-11">
 
-                    <h4 style="  padding-top: 30px; padding-bottom: 30px; margin-left: 20px;">Cheap hotels in popular destinations</h4>
+<h4 style="  padding-top: 30px; padding-bottom: 30px; margin-left: 20px;">Cheap hotels in popular destinations</h4>
 
-                    <div class="row">
-                        <div class="col-md-3"> 
-                            <ul  >
-                                <h5><b>Asian Hotels</b></h5>   
-                                <li> <?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Dubai</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Dubai</a>
-                        <?php } ?></li>                                     
-                                <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Abu Dhabi</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Abu Dhabi</a>
-                        <?php } ?></li>
-                                <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in New Delhi</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in New Delhi</a>
-                        <?php } ?></li>
+<div class="row">
+<div class="col-md-3"> 
+<ul  >
+<h5><b>Asian Hotels</b></h5>   
+<li> 
+<a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Dubai</a>
+</li>                                     
+<li>
+<a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Abu Dhabi</a>
+</li>
+<li>
+<a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in New Delhi</a>
+</li>
 
 
-                            </ul> 
-                        </div>
-                        <div class="col-md-3"> 
-                            <ul>
-                                <h5><b>North American Hotels</b></h5>   
-                                <li> <?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Atlanta</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Atlanta</a>
-                        <?php } ?></li>                                     
-                                <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Toronto</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Toronto</a>
-                        <?php } ?></li>
-                                <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Houston</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Houston</a>
-                        <?php } ?> </li> 
-                        <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in New York</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in New York</a>
-                        <?php } ?> </li> 
+</ul> 
+</div>
+<div class="col-md-3"> 
+<ul>
+<h5><b>North American Hotels</b></h5>   
+<li> 
+<a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Atlanta</a>
+</li>                                     
+<li>
+<a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Toronto</a>
+</li>
+<li>
+<a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Houston</a>
+</li> 
+<li>
+<a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in New York</a>
+</li> 
 
-                            </ul>
-                        </div>
+</ul>
+</div>
 
-                        <div class="col-md-3"> 
-                            <ul >
-                                <h5><b>African Hotels</b></h5>
-                              <li> <?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Accra</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Accra</a>
-                        <?php } ?></li>                                     
-                                <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Nairobi</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Nairobi</a>
-                        <?php } ?></li>
-                                <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Cape Town</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Cape Town</a>
-                        <?php } ?> </li> 
-                        <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Johannesburg</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Johannesburg</a>
-                        <?php } ?> </li>                  
-                            </ul>
-                        </div>
-                        <div class="col-md-3"> 
-                            <ul >
-                                <h5><b>European Hotels</b></h5>
-                                                                <li> <?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in London</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in London</a>
-                        <?php } ?></li>                                     
-                                <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Istanbul</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Istanbul</a>
-                        <?php } ?></li>
-                                <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Frankfurt</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Frankfurt</a>
-                        <?php } ?> </li> 
-                        <li><?php if(isset($_SESSION['feusername'])){?>
-                            <a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Paris</a>
-                            <?php } else{ ?>
-                              <a class="nav-link" href="<?php echo base_url(); ?>Register/login">Hotels in Paris</a>
-                        <?php } ?> </li>  
-                            </ul>
-                        </div>
+<div class="col-md-3"> 
+<ul >
+<h5><b>African Hotels</b></h5>
+<li> 
+<a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Accra</a>
+</li>                                     
+<li>
+<a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Nairobi</a>
+</li>
+<li>
+<a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Cape Town</a>
+</li> 
+<li>
+<a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Johannesburg</a>
+</li>                  
+</ul>
+</div>
+<div class="col-md-3"> 
+<ul >
+<h5><b>European Hotels</b></h5>
+<li> 
+<a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in London</a>
+</li>                                     
+<li>
+<a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Istanbul</a>
+</li>
+<li>
+<a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Frankfurt</a>
+</li> 
+<li>
+<a class="nav-link" href="<?php echo base_url();?>hotels" >Hotels in Paris</a>
+</li>  
+</ul>
+</div>
 
-                    </div>
-                </div>
-            </div>
-        </div>
+</div>
+</div>
+</div>
+</div>
 
 
-    </section>
+</section>
 
 
 
