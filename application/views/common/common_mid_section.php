@@ -41,7 +41,12 @@
 
                                 <img src="<?php echo base_url();?>images/card2.jpg" width="100%">
                                 <p class="card-text" style="padding-bottom: 25px;">Get your Local and International Flight Tickets seamlessly with best price guarantee on flight deals, promotional fares with easy ticket upgrade and real time flight change.</p>
-                                <a href="<?php echo base_url('flight');?>" class="btn btn-success" style="margin-top: 95px;">GET LATEST UPDATES</a>
+                                <?php if(isset($_SESSION['feusername'])){?>
+                                 <a href="<?php echo base_url('flight');?>" class="btn btn-success" style="margin-top: 95px;">GET LATEST UPDATES</a>
+                         <?php } else{ ?>
+                             <a class="btn btn-success" style="margin-top: 95px;" href="<?php echo base_url(); ?>Register/login">GET LATEST UPDATES</a>
+                        <?php } ?>
+                               
                             </div>
                         </div>
                     </div>
@@ -55,7 +60,7 @@
                                 <?php if(isset($_SESSION['feusername'])){?>
                                 <a class="btn btn-success" href="<?php echo base_url('TravelSimCard');?>" style="margin-top: 110px;">READ MORE</a>
                             <?php } else{ ?>
-                                <div class="btn btn-success" onclick="openForm();">Visa Booking</div>
+                                <a class="btn btn-success" href="<?php echo base_url(); ?>Register/login" style="margin-top: 110px;">READ MORE</a>
                             <?php } ?> 
                             </div>
                         </div>
@@ -106,7 +111,7 @@
                                 <?php if(isset($_SESSION['feusername'])){?>
                                 <a class="btn btn-success" href="<?php echo base_url('TravelInsurance');?>" style="margin-top: 110px;">CONTACT US</a>
                             <?php } else{ ?>
-                                <div class="btn btn-success" onclick="openForm();">Visa Booking</div>
+                                <a class="btn btn-success" href="<?php echo base_url(); ?>Register/login" style="margin-top: 110px;">CONTACT US</a>
                             <?php } ?> 
                             </div>
                         </div>
