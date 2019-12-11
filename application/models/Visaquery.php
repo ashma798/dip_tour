@@ -78,7 +78,7 @@ class Visaquery extends CI_Model{
 		return $this->dip->insert('visa_uae_dubai' , $data);
 	}
 
-	public function getDubaiUAE($data){
+	public function getDubaiUAE(){
 		$query = $this->dip->get('visa_uae_dubai');
 		$result = array();
 		foreach ($query->result() as $row)
