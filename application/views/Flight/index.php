@@ -148,6 +148,9 @@
                                                         <label class="label-form-card" for="validationCustom01"><br></label>
                                                         <select class="form-control form-control-sm" name="airline_1" >
                                                             <option>Select Airline</option>
+                                                            <option value="indian airlines">Indian Arilines</option>
+                                                            <option value="jet airways">Jet Airways</option>
+                                                            <option value="emarites">Emarites</option>
                                                         </select>
                                                     </div>
                                                 </div>

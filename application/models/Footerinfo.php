@@ -48,8 +48,9 @@ class Footerinfo extends CI_Model{
 
 
 	public function insertData($data){
-		$this->update();
-		return $this->dip->insert($this->getTableName(), $data);
+		//$this->update();
+		$this->dip->where('id', '1');
+		return $this->dip->update($this->getTableName(), $data);
 	}
 
 

@@ -48,8 +48,8 @@ class Banners extends CI_Model{
 
 
 	public function insertData($data){
-		$this->update();
-		return $this->dip->insert($this->getTableName(), $data);
+		$this->dip->where('id', '1'); 		
+		return $this->dip->update($this->getTableName(), $data);
 	}
 
 
