@@ -49,10 +49,10 @@ class Visa extends CI_Controller {
 		try{
 			$data = $this->input->post();
 			$this->load->model('Visaquery');
-			$data['user_email'] = $_SESSION['feusername'];
-	        $data['user_id'] = $_SESSION['feuser_id'];
+			//$data['user_email'] = $_SESSION['feusername'];
+	        //$data['user_id'] = $_SESSION['feuser_id'];
 	        $tripdetails = $this->Visaquery->insertData($data);
-	        $message = "Our executives will connect with you over you query";
+	        $message = "<span style='background-color:#28a745; color:white'>Our executives will connect with you over your query</span>";;
 	        $this->session->set_flashdata('item', $message);
 	        redirect(base_url('Visa/visaquery'));
 	    }catch(Exception $e){
@@ -111,7 +111,7 @@ class Visa extends CI_Controller {
 			$data['scanned_data_page'] = $this->uploadImageFileToPath($_FILES, 'visa_docs', 'scanned_data_page');
 			$data['scanned_data_page_parent_guardian_spouse'] = $this->uploadImageFileToPath($_FILES, 'visa_docs', 'scanned_data_page_parent_guardian_spouse');
 	        $tripdetails = $this->Visaquery->insertDubaiUAE($data);
-	        $message = "<span style='background-color:green;color:white;'>Our executives will connect with you over you query</span>";
+	        $message = "<span style='background-color:green;color:white;'>Our executives will connect with you over your query</span>";
 	        $this->session->set_flashdata('item', $message);
 	        redirect(base_url('Visa/DubaiUAE'));
 	    }catch(Exception $e){

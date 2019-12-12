@@ -93,7 +93,7 @@ class Flight extends CI_Controller {
                 $insertData['email'] = $data['email'];
                 $this->load->model('Flightsearch');
                 $tripdetails = $this->Flightsearch->insertData($insertData);
-                $message = "<span style='background-color:#28a745; color:white;'>Our executives will connect with you over you query</span>";
+                $message = "<span style='background-color:#28a745; color:white;'>Our executives will connect with your over you query</span>";
                 $this->session->set_flashdata('item', $message);
                 redirect(base_url('Flight'));
 	

@@ -35,7 +35,7 @@ class TourPackageEnquiry extends CI_Controller {
 			$data = $this->input->post();
 			$this->load->model('TourPackage');
 	        $tripdetails = $this->TourPackage->addTourPackages($data);
-	        $message = "<span style='background-color:green;'> Our executives will connect with you over you query </span>";
+	        $message = "<span style='background-color:green;'> Our executives will connect with you over your query </span>";
 	        $this->session->set_flashdata('item', $message);
 	        redirect(base_url('TourPackageEnquiry'));
 		}catch(Exception $e){

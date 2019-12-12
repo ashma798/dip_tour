@@ -212,7 +212,7 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom04">Phone</label>
-                            <input type="number" class="form-control" id="validationCustom04" name="phone" placeholder="Enter Phone Number" required>
+                            <input type="number" class="form-control" id="validationCustom04" name="phone" placeholder="Enter Phone Number" required min="1111111111">
                             <div class="invalid-feedback">
                                 Please provide a valid Phone Number.
                             </div>

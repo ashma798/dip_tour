@@ -1,4 +1,4 @@
-<section>
+ <section>
 
             <div class="card border-0">
                 <div class="container" style="margin-top: 20px; border:5px solid green; ">
@@ -26,7 +26,7 @@
                                         </div> <br>
                                         <div class="col-lg-12 row" style="padding-bottom: 20px;">
                                             <label class="col-lg-4"> Contact Number</label>
-                                            <input type="text" name="contact_number" placeholder="Number" class=" col-lg-4 form-control" required>
+                                            <input type="text" name="contact_number" placeholder="Number" class=" col-lg-4 form-control" required min='1111111111'>
                                         </div> <br>
                                          <div class="col-lg-12 row" style="padding-bottom: 20px;">
                                             <label class="col-lg-4"> Country of Usage</label>

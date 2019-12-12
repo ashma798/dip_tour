@@ -15,47 +15,47 @@
 
                <h2>Transfer Details</h2>
 
-                    <div class="container-fluid" >
+<div class="container-fluid" >
+    <?php $table_headers = array_keys(max($data)); ?>
+  <div class="col-lg-12">
+    <table id="visa" class="table table-striped table-bordered nowrap" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <?php 
+                foreach($table_headers as $k=>$headername){
+                    if($k == 0){
+                        echo '<th>Sr No.</th>';
+                                          }
+                    else{
+                        echo '<th>'.trim(ucwords(str_replace('_',' ',$headername))).'</th>';
+                    }
+                }?>
+              
+            </tr>
+        </thead>
+        <tbody>
+               <?php if (empty($data)) { ?>
+                  <tr>
+                      <td style="color: red;" colspan = "<?php echo count($table_headers); ?>">No Data present</td>
+                  </tr>
+              <?php } else { 
+                  foreach ($data as $k => $v) {
+                    ?>
+                    <tr> 
+                    <?php  foreach($table_headers as $headername){
+                              echo '<td>'.$v[$headername].'</td>';
+                      }
+                      echo '</tr>';
+                      ?>                                        
+                  <?php } ?>
+                  </tr> 
+              <?php } ?>            
+                  
+        </tbody>
+    </table>
+  </div>
+</div>
 
-                        <div class="col-lg-12">
-                            <table id="transfer" class="table table-striped table-bordered nowrap" cellspacing="0" width="100%">
-                                <thead>
-                                    <tr>
-                                        <th>Pick-up</th>
-                                        <th>Drop-off</th>
-                                        <th>Pick-up Date Time</th>
-                                        <th>Drop-off Date Time</th>
-                                        <th>Vehicle Type</th>
-                                        <th>Class</th>
-                                        <th>Transmission Type</th>
-                                        <th>Air Condition</th>
-                                        <th>Mileage Charge Type</th>
-                                        <th>Email</th>
-                                        <th>User Id</th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach($data as $k=>$v){ ?>
-                                    <tr>
-                                        <td><?php echo $v->pick_up_city ;?></td>
-                                        <td><?php echo $v->drop_off_city ;?></td>
-                                        <td><?php echo $v->pick_up_date." ".$v->pick_up_time ;?></td>
-                                        <td><?php echo $v->drop_off_date." ".$v->drop_off_time ;?></td>
-                                        <td><?php echo $v->vechical_type ;?></td>
-                                        <td><?php echo $v->vehicle_class ;?></td>
-                                        <td><?php echo $v->vehicle_transmission_type ;?></td>
-                                        <td><?php echo $v->vehicle_air_conditioning ;?></td>
-                                        <td><?php echo $v->vehicle_charge_type  ;?></td>
-                                        <td><?php echo $v->user_email  ;?></td>
-                                        <td><?php echo $v->user_id  ;?></td>
-                                    </tr> 
-                                    <?php }?>
-                                </tbody>
-                                
-                            </table>
-                        </div>
-                    </div>
 
 <script>
     $(document).ready(function() {

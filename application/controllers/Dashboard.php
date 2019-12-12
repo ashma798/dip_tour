@@ -32,7 +32,7 @@ class Dashboard extends CI_Controller {
 		$getDataForFlightQuery = $this->Flightsearch->getFlightQueryData();
 		$data['viewName'] = 'Flights';
 		$data['v'] = 'Dashboard/flights';
-		$data['data'] = $getDataForFlightQuery;
+		$data['data'] = json_decode(json_encode($getDataForFlightQuery), true);
 		$this->load->view('template',$data);
 	}
 
@@ -41,7 +41,7 @@ class Dashboard extends CI_Controller {
 		$getDataForTransferQuery = $this->Cartransfer->getTransferQueryData();
 		$data['v'] = 'Dashboard/transfer';
 		$data['viewName'] = 'Transfer';
-		$data['data'] = $getDataForTransferQuery;
+		$data['data'] = json_decode(json_encode($getDataForTransferQuery	), true);
 		$this->load->view('template',$data);
 	}
 

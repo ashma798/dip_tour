@@ -39,10 +39,10 @@ class TravelInsurance extends CI_Controller {
 	        /* Array ( [name] => banners [proposed_country_of_arrival] => USA [number_of_days_for_insurance] => 200 [client_age] => 60 )*/
 	        //print_r($data); exit;
 	        $this->load->model('Travelinsurancequery');
-	        $data['user_email'] = $_SESSION['feusername'];
-	        $data['user_id'] = $_SESSION['feuser_id'];
+	        //$data['user_email'] = $_SESSION['feusername'];
+	        //$data['user_id'] = $_SESSION['feuser_id'];
 	        $tripdetails = $this->Travelinsurancequery->insertData($data);
-	        $message = "<span style='background-color:#28a745;'>Our executives will connect with you over you query</span>";
+	        $message = "<span style='background-color:#28a745;'>Our executives will connect with you over your query</span>";
 	        $this->session->set_flashdata('item', $message);
 	        redirect(base_url('TravelInsurance'));
 		}catch(Exception $e){

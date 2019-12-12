@@ -154,7 +154,7 @@ h3{
     <div class="col-sm-6">
       <div class="input-block">
         <label for="">Title</label>
-        <input type="text" class="form-control" name="title">
+        <input type="text" class="form-control" name="title" required>
       </div>
     </div>
   </div>
@@ -163,25 +163,25 @@ h3{
     <div class="col-sm-3">
       <div class="input-block">
         <label for="">Duration</label>
-        <input type="text" class="form-control" name="duration">
+        <input type="text" class="form-control" name="duration" required >
       </div>
     </div>
      <div class="col-sm-3">
       <div class="input-block">
         <label for="">No. of Reviews</label>
-        <input type="text" class="form-control" name="no_of_reviews">
+        <input type="text" class="form-control" name="no_of_reviews" required>
       </div>
     </div>
     <div class="col-sm-3">
       <div class="input-block">
         <label for="">Rating</label>
-        <input type="text" class="form-control" name="rating">
+        <input type="text" class="form-control" name="rating" required >
       </div>
     </div>
     <div class="col-sm-3">
       <div class="input-block">
         <label for="">Cost per head</label>
-        <input type="text" class="form-control" name="cost_per_head">
+        <input type="text" class="form-control" name="cost_per_head" required>
       </div>
     </div>
     </div>
@@ -227,7 +227,7 @@ h3{
       <div class="input-block">
         <label for="">Upload Image</label>
 
-          <input type="file" id="fileinput" class="form-control" name ="tour_image">
+          <input type="file" id="fileinput" class="form-control" name ="tour_image" required>
       <!--button class="square-button" style="margin-top: 30px; padding-bottom: 20px; padding-top: 20px;">Note: Partner Logo Image Size:</button-->
       </div>
     </div>

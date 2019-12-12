@@ -34,6 +34,20 @@
                                             <input type="text" name="client_age" placeholder="Age" class=" col-lg-4 form-control">
                                         </div> <br>
                                         
+                                        <div class="col-lg-12 row" style="padding-bottom: 20px;">
+                                            <label class="col-lg-4"> Full Name</label>
+                                                <input type="text" class="form-control col-lg-4" id="full_name" placeholder="Full Name" name="full_name" required>
+                                        </div><br>
+                                        <div class="col-lg-12 row" style="padding-bottom: 20px;">
+                                            <label class="col-lg-4">Email</label>
+                                                <input type="email" class="form-control col-lg-4" id="email" placeholder="Email" name="email" minlength=10 required>
+                                            </div><br>
+                                            <div class="col-lg-12 row" style="padding-bottom: 20px;">
+                                            <label class="col-lg-4"> Phone</label>
+                                                <input type="number" class="form-control col-lg-4" id="Phone" placeholder="phone" name="phone" min='1111111111' required>
+                                            </div>
+                                        </div>
+                                        <br/>
  <br>
                                             <button type="submit" class="btn btn-primary float-right searchbtnflight">SUBMIT</button>
                                         

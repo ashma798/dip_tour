@@ -168,11 +168,11 @@
                                 </div>
                                 <div class="col-4">
                                     <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold;">Email</label>
-                                    <input type="email" class="form-control font-sm-four" id="email" placeholder="Email" name="email" required>
+                                    <input type="email" class="form-control font-sm-four" id="email" placeholder="Email" name="email" required minlength="10">
                                 </div>
                                 <div class="col-4">
                                     <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold;">Phone</label>
-                                    <input type="number" class="form-control font-sm-four" id="phone" placeholder="phone" name="phone" required>
+                                    <input type="number" class="form-control font-sm-four" id="phone" placeholder="phone" name="phone" required min='1111111111'>
                                 </div>
                             </div>
                             <br/>

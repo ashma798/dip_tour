@@ -49,7 +49,7 @@ class Hotels extends CI_Controller {
 	        //$data['user_email'] = $_SESSION['feusername'];
 	        //$data['user_id'] = $_SESSION['feuser_id'];
 	        $tripdetails = $this->Hotelquery->insertData($data);
-	        $message = "<span style='background-color:#28a745; color:white;'>Our executives will connect with you over you query</span>";
+	        $message = "<span style='background-color:#28a745; color:white;'>Our executives will connect with you over your query</span>";
 	        $this->session->set_flashdata('item', $message);
 	        redirect(base_url('Hotels'));
 		}catch(Exception $e){

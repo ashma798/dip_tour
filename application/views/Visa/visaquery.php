@@ -824,7 +824,7 @@ button:hover {
    <p>
     <label>
       Tel<span style="color:red;">*</span><br>
-    <input type="number" placeholder="Tel" name="telephone" required>
+    <input type="number" placeholder="Tel" name="telephone" required min="1111111111">
 
     </label>
   </p>
@@ -1062,7 +1062,7 @@ button:hover {
    <p>
     <label>
       Tel<span style="color:red;">*</span><br>
-    <input type="number" placeholder="Tel" name="guarantor_tel">
+    <input type="number" placeholder="Tel" name="guarantor_tel" min="1111111111">
 
     </label>
   </p>

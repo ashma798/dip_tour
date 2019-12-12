@@ -855,7 +855,7 @@ button:hover {
    <p>
     <label>
       Tel<span style="color:red;">*</span><br>
-    <input type="number" placeholder="Tel" name="telephone">
+    <input type="number" placeholder="Tel" name="telephone" min='1111111111'>
 
     </label>
   </p>
@@ -909,7 +909,7 @@ button:hover {
   <p>
     <label>
       UAE Contact Number <span style="color:red;">*</span> <br>
-    <input type="number" placeholder="UAE contact Number" name="uae_contact_info">
+    <input type="number" placeholder="UAE contact Number" name="uae_contact_info" min="1111111111>
 
     </label>
   </p>

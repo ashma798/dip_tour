@@ -39,10 +39,10 @@ class TravelSimCard extends CI_Controller {
 	        /* Array ( [name] => banners [address] => xsdasdsadas [email] => suprabha@mailinator.com [contact_number] => 9999999999 [country_of_usage] => UAE [collection_type] => Pick_from_home ) */
 	        //print_r($data); exit;
 	        $this->load->model('Travelsimquery');
-	        $data['user_email'] = $_SESSION['feusername'];
-	        $data['user_id'] = $_SESSION['feuser_id'];
+	        $data['user_email'] = 'none';
+	        $data['user_id'] = '0';
 	        $tripdetails = $this->Travelsimquery->insertData($data);
-	        $message = "<span style='background-color:#28a745;'>Our executives will connect with you over you query</span>";
+	        $message = "<span style='background-color:#28a745;'>Our executives will connect with you over your query</span>";
 	        $this->session->set_flashdata('item', $message);
 	        redirect(base_url('TravelSimCard'));
 		}catch(Exception $e){

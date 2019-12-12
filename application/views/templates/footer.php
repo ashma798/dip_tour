@@ -21,9 +21,9 @@
     <script src="<?php echo base_url();?>js/bootstrap.min.js"></script>
     <script src="<?php echo base_url();?>js/DataTables/datatables.min.js"></script>
 <!-- Flot -->
-  <script src="<?php echo base_url();?>js/jquery.flot.js"></script>
+  <!--script src="<?php echo base_url();?>js/jquery.flot.js"></script>
   <script src="<?php echo base_url();?>js/jquery.flot.tooltip.min.js"></script>
-  <script src="<?php echo base_url();?>js/jquery.flot.resize.js"></script>
+  <script src="<?php echo base_url();?>js/jquery.flot.resize.js"></script-->
 
 
     <!-- icheck -->
@@ -43,7 +43,7 @@
                 { label: "Data 1", data: d1, color: '#3391ad'},
                 { label: "Data 2", data: d2, color: '#0e83a5' }
             ];
-            $.plot($("#flot-chart1"), data1, {
+            /*$.plot($("#flot-chart1"), data1, {
                 xaxis: {
                     tickDecimals: 0
                 },
@@ -145,7 +145,7 @@
                 radioClass: 'iradio_square-blue'
             });
 
-
+*/
 
         });
     </script>
