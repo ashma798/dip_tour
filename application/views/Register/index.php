@@ -100,18 +100,18 @@ background:#2d2d2d;}</style>       <h6>Passport Photo upload:</h6>
                       
                           <div class="col-md-12 error_message" id="company_error_message"></div>
                          <div class="row">
-                                <div class="col-md-3 form-group"> 
+                                <div class="col-md-3 col-sm-12 col-xs-12 form-group"> 
 
 <label for="exampleInputPassword1">Password</label>
-<input type="password" placeholder="Password" id="password" name="password" required></div>
-<div class="col-md-3 form-group"> 
+<input class="form-control" type="password" placeholder="Password" id="password" name="password" required></div>
+<div class="col-md-3 col-sm-12 col-xs-12 form-group"> 
   <label for="exampleInputPassword1">Confirm Password</label>
-        <input type="password" placeholder="Confirm Password" id="confirm_password" required>
+        <input class="form-control" type="password" placeholder="Confirm Password" id="confirm_password" required>
 
         
     </div>
     
-                                <div class="col-md-6 form-group"><div class="row" style="padding-top: 30px"><form method="post" id="subForm">
+                                <div class="col-md-6 form-group"><div class="row" ><form method="post" id="subForm">
 <script type="text/javascript">
   var password = document.getElementById("password");
   var confirm_password = document.getElementById("confirm_password");

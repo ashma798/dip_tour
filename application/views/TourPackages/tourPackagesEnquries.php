@@ -157,7 +157,13 @@
         .button:hover {
             background: black;
         }
-
+@media screen and (max-width: 990px) and (min-width: 320px) {
+						
+						.width100 {
+							width:100% !important;
+						}
+						
+					}
 
 
 
@@ -270,7 +276,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="float: right">Submit</button>
+                    <button type="submit" class="btn btn-primary width100" style="float: right">Submit</button>
                     <br><br>
                 </div>
             </div>

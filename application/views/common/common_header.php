@@ -43,6 +43,9 @@ overflow-x:hidden;
 .currency-amount {
 	width:75px;
 }
+input::placeholder {
+	font-size:12px;
+}
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
   background-color: #555;
@@ -192,6 +195,9 @@ overflow-x:hidden;
 .dnone {
 	display:none !important;
 }
+.lineht li {
+	line-height:25px !important;
+}
 }
 
 @media screen and (max-width: 1196px) and (min-width: 576px) {
@@ -328,7 +334,7 @@ margin-left:auto;
                 </button>
                 <div class="navbar-collapse collapse" id="navbarCustom">
                     <span class="rounded-bottom"></span>
-                    <ul class="navbar-nav dnone2" style=" padding-left: 60px;">
+                    <ul class="navbar-nav dnone2 lineht" style=" padding-left: 60px;display:inline-flex;">
                         <li class="nav-item active">
                             <a class="nav-link" href="<?php echo base_url();?>" style="color: black;">HOME<span class="dnone1" style="padding-left: 20px;">|</span></a>
                         </li>                      

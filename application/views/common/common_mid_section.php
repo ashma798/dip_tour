@@ -2,7 +2,7 @@
        
 
 
-         <section>
+         <section class="mrtop" style="margin-top:50px;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -19,13 +19,13 @@
 
 
 
-        <section  style="margin-top: 50px;"> 
+        <section   style="margin-top: 30px;"> 
             <div class="container">
                 <h3 class="text-center">TOP TRAVEL PRODUCTS</h3>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="display:flex">
                         <div class="card border-success mb-3">
-                            <h5 class="card-header bg-success text-white" style="text-align: center;">--INBOUND TRAVEL PROCESS--</h5>
+                            <h5 class="card-header bg-success text-white" style="text-align: center;height:75px;">--INBOUND TRAVEL PROCESS--</h5>
                             <div class="card-body ">
 
                                 <img src="<?php echo base_url();?>images/card1.jpg" width="100%">
@@ -34,9 +34,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="display:flex">
                         <div class="card border-success mb-3">
-                            <h5 class="card-header bg-success text-white" style="text-align: center;">---TRAVEL DEALS---</h5>
+                            <h5 class="card-header bg-success text-white" style="text-align: center;height:75px;">---TRAVEL DEALS---</h5>
                             <div class="card-body ">
 
                                 <img src="<?php echo base_url();?>images/card2.jpg" width="100%">
@@ -47,9 +47,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="display:flex">
                         <div class="card border-success mb-3">
-                            <h5 class="card-header bg-success text-white" style="text-align: center;">---TRAVEL SIM CARD---</h5>
+                            <h5 class="card-header bg-success text-white" style="text-align: center; height:75px;">---TRAVEL SIM CARD---</h5>
                             <div class="card-body ">
 
                                 <img src="<?php echo base_url();?>images/card_1.jpg" width="100%">
@@ -63,9 +63,9 @@
                 </div>
 
                 <div class="row" style="margin-top:80px;">
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="display:flex">
                         <div class="card border-success mb-3">
-                            <h5 class="card-header bg-success text-white" style="text-align: center;">--EDUCATIONAL, MEDICAL & SPORT TOURISM--</h5>
+                            <h5 class="card-header bg-success text-white" style="text-align: center;height:75px;">--EDUCATIONAL, MEDICAL & SPORT TOURISM--</h5>
                             <div class="card-body ">
 
                                 <img src="<?php echo base_url();?>images/card4.jpg" width="100%">
@@ -85,9 +85,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="display:flex">
                         <div class="card border-success mb-3">
-                            <h5 class="card-header bg-success text-white" style="text-align: center; padding-bottom: 35px;">---TOUR PACKAGES---</h5>
+                            <h5 class="card-header bg-success text-white" style="text-align: center; padding-bottom: 35px;height:75px;">---TOUR PACKAGES---</h5>
                             <div class="card-body ">
 
                                 <img src="<?php echo base_url();?>images/card5.jpg" width="100%">
@@ -96,9 +96,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="display:flex">
                         <div class="card border-success mb-3">
-                            <h5 class="card-header bg-success text-white" style="text-align: center; padding-bottom: 12px;">--TRAVEL & HEALTH INSURANCE--</h5>
+                            <h5 class="card-header bg-success text-white" style="text-align: center; padding-bottom: 12px;height:75px;">--TRAVEL & HEALTH INSURANCE--</h5>
                             <div class="card-body ">
 
                                 <img src="<?php echo base_url();?>images/card6.jpg" width="100%">
