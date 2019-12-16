@@ -525,6 +525,12 @@ input[type=checkbox]:checked + label:before {
     text-align: left;
   }
 }
+@media screen and (max-width: 990px) and (min-width: 320px) {
+						.widthauto {
+							width:100% !important;
+						}
+						
+					}
     </style>
     <section class="container p-t-1">
     <div class="row" style="margin-top:20px; margin-bottom: 50px;border-radius: 5px solid ">
@@ -539,7 +545,7 @@ input[type=checkbox]:checked + label:before {
 <h3 style="font-weight: bold; text-align: center;">FILL THE FORM</h3>
  <hr class="small" style="border:1px solid green;">
          
-<div style="width: 1200px; margin: 0px auto;">
+<div class="widthauto" style="width: 1200px; margin: 0px auto;">
      <div class="container">
 
     <h1 class="brand"><span>Diptour</span></h1>

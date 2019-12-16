@@ -171,6 +171,9 @@ input::placeholder {
 	.navbar-collapse ul li a {
 		color:#fff !important;
 	}
+	.navbar-collapse ul li .submenu a {
+		color:#212529 !important;
+	}
 .fontsize
 {
 	font-size:14px;
@@ -241,6 +244,9 @@ margin-left:auto;
 	}
 	.navbar-collapse ul li a {
 		color:#fff !important;
+	}
+	.navbar-collapse ul li .submenu a {
+		color:#212529 !important;
 	}
 }
 </style>
@@ -316,7 +322,7 @@ margin-left:auto;
                 <div class="col-lg-4 col-12 col-sm-5">
                     <a href="<?php echo base_url(); ?>"><img class="nav-img" src="<?php echo base_url();?>images/logo.png" alt=""/></a>
                 </div>
-                <div class="offset-lg-5 col-lg-3 col-12 offset-sm-2 col-sm-5">
+                <div class="offset-lg-4 col-lg-4 col-12 offset-sm-2 col-sm-5">
                     <ul class="fontsize" style="list-style-type: none; margin-top: 30px; font-weight: bold;">
                         <li>Contact Us</li>
                         <li><?php  echo $contact_info[0]['phone_no_1']; ?></li>
@@ -357,7 +363,7 @@ margin-left:auto;
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
                                 TOUR PACKAGES
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu submenu" aria-labelledby="navbarDropdown">
                                <a class="dropdown-item" href="<?php echo base_url();?>TourPackageEnquiry">Asia</a>
                                 <a class="dropdown-item" href="<?php echo base_url();?>TourPackageEnquiry">Africa</a>
                                 <a class="dropdown-item" href="<?php echo base_url();?>TourPackageEnquiry">Europe</a>
@@ -365,8 +371,8 @@ margin-left:auto;
                         </li>
                         <li class="nav-item  dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
                                 VISAS</a>                          
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                
+                            <div class="dropdown-menu submenu" aria-labelledby="navbarDropdown">
+                               
                                 <a class="dropdown-item" href="<?php echo base_url();?>Visa/visa_search">Search</a>
                                 <a class="dropdown-item" href="<?php echo base_url();?>Visa/visaquery">Visa Booking</a>  
                         <a class="dropdown-item" href="<?php echo base_url();?>Visa/DubaiUAE">Dubai - UAE</a>                          

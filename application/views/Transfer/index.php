@@ -162,7 +162,13 @@
                     border-color: MediumSeaGreen;
                     color: #fff;
                 }
-
+              .newsletter .container  {
+				  margin-top:35px !important;
+                   margin-bottom:0px !important;				  
+			  }
+			  .mrtop {
+				  margin-top:194px !important;
+			  }
 
                 @media only screen and (min-width: 400px) {
                     .wrapper {
@@ -188,6 +194,18 @@
                         text-align: left;
                     }
                 }
+				@media screen and (max-width: 990px) and (min-width: 320px) {
+						.newsletter .container{
+							margin-top:15px !important;
+						}
+						 .mrtop {
+				              margin-top:703px !important;
+			              }
+						.searchbtnflight  {
+							width:100% !important;
+						}
+					}
+		
             </style>
             <section>
 
@@ -326,23 +344,25 @@
                                         </div>
 
 
+
+
                                         <hr>
 
                                         <br/>
-                            <div class="row">
-                                <div class="col-4">
+                            
+                                <div class="col-md-2 col-12 padding-row-card font-sm-three">
                                     <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold;">Full Name</label>
                                     <input type="text" class="form-control font-sm-four" id="full_name" placeholder="Full Name" name="full_name" required>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-md-2 col-12 padding-row-card font-sm-three">
                                     <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold;">Email</label>
                                     <input type="email" class="form-control font-sm-four" id="email" placeholder="Email" name="email" required minlength="10">
                                 </div>
-                                <div class="col-4">
+                                <div class="col-md-2 col-12 padding-row-card font-sm-three">
                                     <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold;">Phone</label>
-                                    <input type="number" class="form-control font-sm-four" id="phone" placeholder="phone" name="phone" required min='1111111111'>
+                                    <input type="number" class="form-control font-sm-four" id="phone" placeholder="Phone" name="phone" required min='1111111111'>
                                 </div>
-                            </div>
+                            
                             <br/>
 
 
@@ -366,7 +386,7 @@
             </section>
 
 
-<br/><br/><br/>
+
 
 
 
@@ -424,7 +444,7 @@
                 </div>
             </section>
 
-<br/><br/><br/>
+
 
         </section>
         <script type="text/javascript">

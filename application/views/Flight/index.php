@@ -1,4 +1,19 @@
-        <section>
+        <style>
+		
+		@media screen and (max-width: 990px) and (min-width: 320px) {
+						.searchbtnflight {
+							width:100% !important;
+						}
+						.tabs li {
+							font-size:12px !important;
+						}
+					}
+		
+		</style>
+		
+		
+		
+		<section>
 
             <div class="card border-0">
                 <div class="container" style="margin-top: 20px; border:5px solid green;">
@@ -42,7 +57,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-row">
-                                                    <div class="col-md-4 col-4 padding-row-card font-sm-three">
+                                                    <div class="col-md-2 col-4 padding-row-card font-sm-three">
                                                         <label class="label-form-card" for="validationCustom01">Adults(11 Yrs)</label>
                                                         <!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
                                                         <div class="quantity">
@@ -51,7 +66,7 @@
                                                             <a href="#" class="quantity__plus adult_plus"><span>+</span></a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-4 col-4 padding-row-card font-sm-three" style="white-space:nowrap">
+                                                    <div class="col-md-2 col-4 padding-row-card font-sm-three" style="white-space:nowrap">
                                                         <label class="label-form-card" for="validationCustom01">Children(2-11 Yrs)</label>
                                                         <div class="quantity">
                                                             <a href="#" class="quantity__minus children_minus"><span>-</span></a>
@@ -59,7 +74,7 @@
                                                             <a href="#" class="quantity__plus children_plus"><span>+</span></a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-4 col-4 padding-row-card font-sm-three">
+                                                    <div class="col-md-2 col-4 padding-row-card font-sm-three">
                                                         <label class="label-form-card" for="validationCustom01">Infant(-2yrs)</label>
                                                         <div class="quantity">
                                                             <a href="#" class="quantity__minus infant_minus"><span>-</span></a>
@@ -164,20 +179,20 @@
                                     <br/>
                                     <hr>
                                     <br/>
-                            <div class="row">
-                                <div class="col-4">
+                           
+                                <div class="col-md-3 col-12 padding-row-card font-sm-three">
                                     <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold;">Full Name</label>
                                     <input type="text" class="form-control font-sm-four" id="full_name" placeholder="Full Name" name="full_name" required>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-md-3 col-12 padding-row-card font-sm-three">
                                     <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold;">Email</label>
                                     <input type="email" class="form-control font-sm-four" id="email" placeholder="Email" name="email" required minlength="10">
                                 </div>
-                                <div class="col-4">
+                                <div class="col-md-3 col-12 padding-row-card font-sm-three">
                                     <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold;">Phone</label>
-                                    <input type="number" class="form-control font-sm-four" id="phone" placeholder="phone" name="phone" required min='1111111111'>
+                                    <input type="number" class="form-control font-sm-four" id="phone" placeholder="Phone" name="phone" required min='1111111111'>
                                 </div>
-                            </div>
+                            
                             <br/>
                                     <div class="checkbox">
                                         <label><input type="checkbox" name="non_stop_only" value="">&nbsp;Show Direct Flights Only</label>
@@ -187,7 +202,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <button style="margin:auto -43px;" class="btn btn-primary float-right searchbtnflight" type="submit">SEARCH FLIGHT</button>
+                                            <button  class="btn btn-primary float-right searchbtnflight" type="submit">SEARCH FLIGHT</button>
                                         </div>
                                     </div>
                                 </form>

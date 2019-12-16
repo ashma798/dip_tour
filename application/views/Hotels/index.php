@@ -1,4 +1,22 @@
-        <section>
+       
+<style>
+		
+		@media screen and (max-width: 990px) and (min-width: 320px) {
+						.roomdiv{
+							padding-top:15px !important;
+						}
+						.marlft {
+							margin-left:0rem !important;
+						}
+						#search_hotel  {
+							width:100% !important;
+						}
+					}
+		
+		</style>
+
+
+	   <section>
 
             <div class="card border-0">
                 <div class="container" style="margin-top: 20px; border:5px solid green;">
@@ -30,7 +48,7 @@
                                                        required >
                                             </div>
                                             
-                                            <span  class="ordiv" style="margin-left:15px;">
+                                            <span  class="ordiv" >
                                             OR
                                             </span>
                                             
@@ -84,11 +102,11 @@
                                     </div>
                                         <div class="col-12 user-details pl-0 pr-0">
                                         <div id="divRoom1" class="form-row user_data">
-                                          <div class="col-md-2  col-3 roomdiv" style="margin-left:10px;">
+                                          <div class="col-md-2  col-12 roomdiv" style="margin-left:10px;">
                                             NUMBER OF GUESTS
                                             </div>
                                           
-                                            <div class="col-md-2 col-4 padding-row-card font-sm-three ">
+                                            <div class="col-md-1 col-6 padding-row-card font-sm-three ">
                                                 <label class="label-form-card" for="validationCustom01">Adults(>11 Yrs)</label>
                                                 <!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
 
@@ -104,7 +122,7 @@
 
 
                                             </div>
-                                            <div class="col-md-2  col-4 padding-row-card font-sm-three ml-4" style="white-space:nowrap">
+                                            <div class="col-md-1  col-6 padding-row-card font-sm-three ml-4 marlft" style="white-space:nowrap">
                                                 <label class="label-form-card" for="validationCustom01">Children(2-11 Yrs)</label>
                                                 <div class="quantity">
                                                     <input id="room1ChildMinus" class="quantity__minus children_minus" type="button" value="-" style="color:#ffffff;">
@@ -124,19 +142,25 @@
 
 
                             <hr>
-                            <div class="row">
-                                <div class="col-4">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-md-5 col-12 padding-row-card font-sm-three">
                                     <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold;">Full Name</label>
                                     <input type="text" class="form-control font-sm-four" id="full_name" placeholder="Full Name" name="full_name" required>
                                 </div>
-                                <div class="col-4">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5 col-12 padding-row-card font-sm-three">
                                     <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold;">Email</label>
                                     <input type="email" class="form-control font-sm-four" id="email" placeholder="Email" name="email" required minlength='10'>
                                 </div>
-                                <div class="col-4">
-                                    <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold;">Phone</label>
-                                    <input type="number" class="form-control font-sm-four" id="phone" placeholder="phone" name="phone" required min='1111111111'>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-5 col-12 padding-row-card font-sm-three">
+                                    <label class="label-form-card" for="validationcustom01" style="font-size:12px;font-weight:bold;">Phone</label>
+                                    <input type="number" class="form-control font-sm-four" id="phone" placeholder="Phone" name="phone" required min='1111111111'>
+                                </div>
+                            </div>
                             </div>
                             <br/>
                             <div class="row">

@@ -17,7 +17,7 @@
 
         <!--Start of Zendesk Chat Script-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <!--script src="https://kit.fontawesome.com/a076d05399.js"></script -->
 
         <link href="<?php echo base_url();?>css/newstyle.css" rel="stylesheet">
         <link href="<?php echo base_url();?>/css/rearrange.css" rel="stylesheet">

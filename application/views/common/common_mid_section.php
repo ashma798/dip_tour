@@ -1,7 +1,15 @@
-    <br><br><br>
-       
-
-
+   <style>
+@media screen and (max-width: 990px) and (min-width: 320px) {
+						.fontsize {
+							font-size:1.5rem !important
+						}
+						.marbot {
+							margin-bottom:15px !important;
+						}
+					}
+		
+            </style>
+<br><br><br>
          <section class="mrtop" style="margin-top:50px;">
             <div class="container">
                 <div class="row">
@@ -41,9 +49,7 @@
 
                                 <img src="<?php echo base_url();?>images/card2.jpg" width="100%">
                                 <p class="card-text" style="padding-bottom: 25px;">Get your Local and International Flight Tickets seamlessly with best price guarantee on flight deals, promotional fares with easy ticket upgrade and real time flight change.</p>
-                                
-                                 <a href="<?php echo base_url('flight');?>" class="btn btn-success" style="margin-top: 95px;">GET LATEST UPDATES</a>
-                         
+                                <a href="<?php echo base_url('flight');?>" class="btn btn-success" style="margin-top: 95px;">GET LATEST UPDATES</a>
                             </div>
                         </div>
                     </div>
@@ -196,10 +202,10 @@
 <div class="row">
 <div class="col-md-11">
 
-<h2 style="  padding-top: 30px; padding-bottom: 30px; margin-left: 20px;">Cheap Flights from Nigeria</h2>
+                    <h2 style="  padding-top: 30px; padding-bottom: 30px; margin-left: 20px;" class="fontsize1">Cheap Flights from Nigeria</h2>
 
 <div class="row">
-<div class="col-md-3"> 
+                        <div class="col-md-3 text-center">  
 <ul  >
 <h5><b>Asian Flights</b></h5>   
 <li> 
@@ -215,7 +221,7 @@
 
 </ul> 
 </div>
-<div class="col-md-3"> 
+<div class="col-md-3  text-center"> 
 <ul>
 <h5><b>North American Flights</b></h5>
 <li>
@@ -234,7 +240,7 @@
 </ul>
 </div>
 
-<div class="col-md-3"> 
+ <div class="col-md-3 text-center"> 
 <ul >
 <h5><b>African Flights</b></h5>
 <li> 
@@ -250,7 +256,7 @@
 <a class="nav-link" href="<?php echo base_url();?>flight" >Flights to Johannesburg</a>
 </ul>
 </div>
-<div class="col-md-3"> 
+ <div class="col-md-3 text-center">
 <ul >
 <h5><b>European Flights</b></h5>
 <li> 
@@ -272,10 +278,10 @@
 <div class="row">
 <div class="col-md-11">
 
-<h4 style="  padding-top: 30px; padding-bottom: 30px; margin-left: 20px;">Cheap hotels in popular destinations</h4>
+                    <h4 style="  padding-top: 30px; padding-bottom: 30px; margin-left: 20px;" class="fontsize1">Cheap hotels in popular destinations</h4>
 
 <div class="row">
-<div class="col-md-3"> 
+ <div class="col-md-3 text-center">
 <ul  >
 <h5><b>Asian Hotels</b></h5>   
 <li> 
@@ -310,7 +316,7 @@
 </ul>
 </div>
 
-<div class="col-md-3"> 
+ <div class="col-md-3 text-center">
 <ul >
 <h5><b>African Hotels</b></h5>
 <li> 
@@ -327,7 +333,7 @@
 </li>                  
 </ul>
 </div>
-<div class="col-md-3"> 
+<div class="col-md-3 text-center">
 <ul >
 <h5><b>European Hotels</b></h5>
 <li> 
@@ -374,7 +380,7 @@
         <section>
             <div class="container">
                 <div class="row" >
-                    <div class="col-md-4">
+                    <div class="col-md-4 marbot">
                         <div class="card" style="background-color: #D3D3D3;">
                             <div class="text-center">
                                 <img class="card-img-top" src="<?php echo base_url();?>images/logo1.png" alt="Card image top" style="height: 73px; width: 100px;  padding-top: 20px;" >
@@ -387,7 +393,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 marbot">
                         <div class="card" style="background-color: #D3D3D3">
                             <div class="text-center">
                                 <img class="card-img-top" src="<?php echo base_url();?>images/logo1.png" alt="Card image top" style="height: 73px; width: 100px;  padding-top: 20px;">
@@ -400,7 +406,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 marbot">
                         <div class="card" style="background-color: #D3D3D3;">
                             <div class="text-center">
                                 <img class="card-img-top" src="<?php echo base_url();?>images/logo1.png" alt="Card image top" style="height: 73px; width: 100px;  padding-top: 20px;">

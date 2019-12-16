@@ -44,7 +44,7 @@
                                             </div><br>
                                             <div class="col-lg-12 row" style="padding-bottom: 20px;">
                                             <label class="col-lg-4"> Phone</label>
-                                                <input type="number" class="form-control col-lg-4" id="Phone" placeholder="phone" name="phone" min='1111111111' required>
+                                                <input type="number" class="form-control col-lg-4" id="Phone" placeholder="Phone" name="phone" min='1111111111' required>
                                             </div>
                                         </div>
                                         <br/>
