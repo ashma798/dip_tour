@@ -465,7 +465,7 @@ function closeForm() {
                             </div>
                         </div>
                     </div><!--/.card-->
-                </div>
+                
                 <div class="col-md-4">
                     <div class="card border-success mb-3">
                         <h5 class="card-header bg-success text-white" style="text-align: center; padding-bottom: 35px;">--TRAVEL & HEALTH INSURANCE--</h5>

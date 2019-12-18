@@ -42,7 +42,7 @@ class TravelSimCard extends CI_Controller {
 	        $data['user_email'] = 'none';
 	        $data['user_id'] = '0';
 	        $tripdetails = $this->Travelsimquery->insertData($data);
-	        $message = "<span style='background-color:#28a745;'>Our executives will connect with you over your query</span>";
+	        $message = "<span style='background-color:#28a745; color:white'>Our executives will connect with you over your query</span>";
 	        $this->session->set_flashdata('item', $message);
 	        redirect(base_url('TravelSimCard'));
 		}catch(Exception $e){
