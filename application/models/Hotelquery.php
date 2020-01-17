@@ -61,4 +61,11 @@ class Hotelquery extends CI_Model{
 		return $result; 
 
 	}
+	public function deleteDataForId($id){
+		$this->dip->where('id',$id);
+		$query = $this->dip->delete($this->getTableName());
+		//print_r($query);die;
+		$result = $query;
+		return $result; 
+	}
 }
