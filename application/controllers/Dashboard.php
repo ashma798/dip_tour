@@ -382,6 +382,26 @@ class Dashboard extends CI_Controller {
         }
 
 	}
+	
+		public function deleteFlight($id){
+		$getId=$_GET['id'];
+		//print_r($getId);die;
+		$this->load->model('Flightsearch');
+		$data['viewName'] = 'Flights';
+		$data['v'] = 'Dashboard/flights';
+		$getData = $this->Flightsearch->deleteDataForId($getId);
+		redirect(base_url('Dashboard/flights'));
+		
+	}
+	public function deleteHotel($id){
+		$getId=$_GET['id'];
+		$this->load->model('Hotelquery');
+		$data['viewName'] = 'hotel';
+		$data['v'] = 'Dashboard/hotel';
+		$this->Hotelquery->deleteDataForId($getId);
+		redirect(base_url('Dashboard/Hotel'));
+		
+	}
 
 
 }
