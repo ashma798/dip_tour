@@ -402,6 +402,60 @@ class Dashboard extends CI_Controller {
 		redirect(base_url('Dashboard/Hotel'));
 		
 	}
+public function UserList(){
+		$this->load->model('Registereduser');
+		$getUser = $this->Registereduser->get();
+		$data['v'] = 'Dashboard/UserList';
+		$data['viewName'] = 'Registered Users';
+		$data['data'] = json_decode(json_encode($getUser), true);
+		$this->load->view('template', $data);
+	}
 
+	public function deleteUser($id){
+		
+		$getId=$_GET['id'];
+		$this->load->model('Registereduser');
+		$data['viewName'] = 'User List';	
+		$data['v'] = 'Dashboard/UserList';
+		$this->Registereduser->deleteDataForId($getId);
+		//print_r("hi");
+		redirect(base_url('Dashboard/UserList'));
+		
+	}
+		public function editUser($id){
+		$getId=$_GET['id'];
+		//print_r($getId);die;
+		$this->load->model('Registereduser');
+		$data['v'] = 'Dashboard/edit_userlist';
+		$data['viewName'] = 'edit user';
+		$getData = $this->Registereduser->getDataId($getId);
+		$data['data'] = json_decode(json_encode($getData), true);
+		//print_r($data);die;
+		$this->load->view('template', $data);
+	}
+	public function updateUserDetails(){
+		try{
+			$this->load->model('Registereduser');
+			$data = $this->input->post();
+			//print_r($data);die;
+			$edit_id = $data['id'];
+			if(!empty($_FILES['tour_image']['name'])){
+				$data['tour_image'] = $this->uploadImageFileToPath($_FILES, 'tour_images', 'tour_image');
+			}else{
+				$getDataForId = $this->Registereduser->getDataForId($edit_id);
+				$data['tour_image'] = json_decode(json_encode($getDataForId), true)[0]['tour_image'];
+			}
+			$this->Registereduser->edit($data);
+			$message = "<span style='background-color:green;color:white;'>User Details saved</span>";
+	        $this->session->set_flashdata('item', $message);
+			redirect(base_url('Dashboard/UserList'));
+
+		}catch(Exception $e){
+                $message = "<span style='background-color:red;'>Something went wrong... Try again</span>";
+                $this->session->set_flashdata('item', $message);
+                redirect(base_url('Dashboard/ListTourPackages'));
+        }
+
+	}
 
 }
