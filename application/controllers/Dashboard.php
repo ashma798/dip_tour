@@ -98,11 +98,12 @@ class Dashboard extends CI_Controller {
 
 
 	public function banners(){
-		//$this->load->model('Partnerdetails');
+		$this->load->model('Banners');
 
 		$data['v'] = 'Dashboard/banners';
 		$data['viewName'] = 'CMS | Banners';
-		//$data['data'] = json_decode(json_encode($getDataForVisaQuery), true);
+		$get_banner =$this->Banners->get();
+		$data['data'] = json_decode(json_encode($get_banner), true);
 		$this->load->view('template',$data);
 
 	}
@@ -117,6 +118,7 @@ class Dashboard extends CI_Controller {
 			$this->load->model('Banners');
 			if($inputData['banner1'] != 0 && $inputData['banner2'] != 0 && $inputData['banner3'] != 0){
 				$partnerLogo = $this->Banners->insertData($inputData);
+				$data['data'] =$this->Banners->get();
 				$message = "<span style='background-color:green;color:white;'>Banner data saved successfully</span>";
 				$this->session->set_flashdata('item', $message);
 				redirect(base_url('Dashboard/banners'));
@@ -456,6 +458,15 @@ public function UserList(){
                 redirect(base_url('Dashboard/ListTourPackages'));
         }
 
+	}
+	public function deleteTravelsim($id){
+		$getId=$_GET['id'];
+		$this->load->model('Travelsimquery');
+		$data['viewName'] = 'Travel sim';
+		$data['v'] = 'Dashboard/Travelsim';
+		$this->Travelsimquery->deleteDataForId($getId);
+		redirect(base_url('Dashboard/TravelSimData'));
+		
 	}
 
 }
