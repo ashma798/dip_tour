@@ -468,5 +468,68 @@ public function UserList(){
 		redirect(base_url('Dashboard/TravelSimData'));
 		
 	}
+	public function flightPopup(){
+		$data['v'] = 'Dashboard/flight_popup';
+		$data['viewName'] = 'send email';
+		$this->load->view('template',$data);
+
+	}
+	public function send_email($from,$to,$subject,$message) {
+   $host = 'cbhbooking.com';
+   $port = '';
+    $config = Array(
+        'protocol' => 'smtp',
+        'smtp_host' => '$host',
+        'smtp_port' => '$port',
+        'smtp_user' => '$user_name',
+        'smtp_pass' => 'xxxxxx',
+        'mailtype' => 'html',
+        'charset' => 'utf-8',
+        'smtp_timeout' => 7,
+        'newline' => '\r\n',
+        'validation' => TRUE,
+    );
+    $this->load->library('email', $config);
+    $this->email->set_newline("\r\n");
+
+    $config['newline'] = "\r\n";
+
+    $this->email->initialize($config);
+
+    $this->email->from($from);
+    $this->email->to($to);
+   
+    $this->email->subject($subject);
+    $this->email->message($message);
+   
+    $this->email->send();
+}
+
+	 public function contact_insert() {
+		try{
+			$data = $this->input->post();
+			$name=$data['userName'];
+			$content =$data['message'];
+			$from= 'dip_tour@demo.tkies.com';
+			$email_to = $data['userEmail'];
+			$subject=$data['subject'];
+			$message = '<html><body>';
+			$message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
+			$message .= "<tr style='background: #eee;'><td><strong>Dear ".$name.",</strong> </td></tr>";
+			$message .= "<tr><td>" .$content. "</td></tr>";
+			$message .= "</table>";
+			$message .= "</body></html>";
+			$this->send_email($from,$email_to,$subject,$message);
+			$message = "<span style='background-color:white;color:green;'>Email sent</span>";
+			redirect(base_url('Dashboard/flights'));
+
+				}
+	    catch(Exception $e){
+	    	 $message = "<span style='background-color:red;'>please try again</span>";
+                $this->session->set_flashdata('item', $message);
+                redirect(base_url('Dashboard/flights'));
+	    }
+		
+	}
 
 }
