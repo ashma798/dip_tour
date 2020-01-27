@@ -218,7 +218,7 @@ h3{
 <td> <?php echo $val['non_stop_only']; ?></td>	
 <td> <?php echo $val['search_time']; ?></td>
 <td> <?php echo $val['full_name']; ?></td>	
-<td> <?php echo $val['email']; ?></td>	
+<td><a href = "<?php echo base_url();?>dashboard/flightPopup"><?php echo $val['email']  ;?></a></td>	
 <td> <?php echo $val['phone']; ?></td>											
 							<td>
 							
